@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hugh f ( ͡ᵔ ͜ʖ ͡ᵔ )</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="window" id="window0">
+        <div class="title-bar" onmousedown="startDrag(event, 'window0')">
+            <span class="title">hugh f</span>
+            <div class="buttons">
+                <button class="button" onclick="minimizeWindow('window0')">_</button>
+                <button class="button" onclick="toggleMaximizeWindow('window0')">□</button>
+                <button class="button" onclick="closeWindow('window0')">X</button>
+            </div>
+        </div>
+        <div class="content">
+            <p>
+                hi! i'm hugh f, and i grew up near kiewa, in dhudhuroa country.
+                ​<br><br>
+                my passion lies in singing <a href="#" onclick="showWindow('window2')">folk stories</a>, particularly those centred around people and pets.
+                ​<br><br>
+                i also delve into the realm of game development with my latest project, adventure to the pony zone.
+                ​<br><br>
+                under the alias chef jef, i also like crafting music and supplementary audio effects for video games and visual entertainment to enhance the beauty of a world inside a screen.
+                ​<br><br>
+                if you want to chat about anything under the sun, feel free to drop me an email.
+                ​<br><br>
+                thanks for reading!
+                hugh f</p>
+            <!-- <div class="embed">
+                <iframe width="100%"  src="" frameborder="0" allowfullscreen></iframe>
+            </div> -->
+            <p></p>
+        </div>
+    </div>
+    <div class="window" id="window1">
+        <div class="title-bar" onmousedown="startDrag(event, 'window1')">
+            <span class="title">hugh f</span>
+            <div class="buttons">
+                <button class="button" onclick="minimizeWindow('window1')">_</button>
+                <button class="button" onclick="toggleMaximizeWindow('window1')">□</button>
+                <button class="button" onclick="closeWindow('window1')">X</button>
+            </div>
+        </div>
+        <div class="content">
+            <p>here is a pic of me</p>
+            <div class="image-container">
+                <img src="/Users/hughfuchsen/Dropbox/New Site/img/withGuitar.JPG" alt="Picture of Hugh F" class="responsive-image">
+            </div>
+        </div>
+    </div>
+
+    <div class="window" id="window2" style="display: none;">
+        <div class="title-bar" onmousedown="startDrag(event, 'window2')">
+            <span class="title">Second Window</span>
+            <div class="buttons">
+                <button class="button" onclick="minimizeWindow('window2')">_</button>
+                <button class="button" onclick="toggleMaximizeWindow('window2')">□</button>
+                <button class="button" onclick="closeWindow('window2')">X</button>
+            </div>
+        </div>
+        <div class="content">
+            <p>This is the second window.</p>
+        </div>
+    </div>
+   
+    <div class="window" id="window3" style="display: none;">
+        <div class="title-bar" onmousedown="startDrag(event, 'window3')">
+            <span class="title">Second Window</span>
+            <div class="buttons">
+                <button class="button" onclick="minimizeWindow('window3')">_</button>
+                <button class="button" onclick="toggleMaximizeWindow('window3')">□</button>
+                <button class="button" onclick="closeWindow('window3')">X</button>
+            </div>
+        </div>
+        <div class="content">
+            <p>This is the second window.</p>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
