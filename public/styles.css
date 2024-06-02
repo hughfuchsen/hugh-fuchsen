@@ -4,33 +4,68 @@ body {
     color: black;
     padding: 20px;
     cursor: none; /* Hide the default cursor */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera, and Firefox */
 }
 
-body:hover {
+.everything-containter {
+    display: flex-grid;
+}
+
+html:hover {
     cursor: none; /* Hide the default cursor */
+}
+a:hover {
+    cursor: none; /* Hide the default cursor */
+}
+
+iframe {
+    margin: 2rem auto;
 }
 
 .window {
     width: 40%;
-    border: 2px solid #000;
+    max-height: 70%;
+    border: 2px solid #000; /* Corrected border property */
     box-shadow: 2px 2px 0 #000, 3px 3px 0 #fff, 4px 4px 0 #000;
     background-color: #c0c0c0;
     margin: 2rem auto;
     position: absolute;
     transition: width 0.3s, height 0.3s, left 0.3s, top 0.3s;
+    overflow: hidden; /* Ensure content inside the window doesn't overflow */
+    cursor: none; /* Hide the default cursor */
     -webkit-user-select: none; /* Safari */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-    cursor: none; /* Hide the default cursor */
-    overflow: hidden; /* Ensure content inside the window doesn't overflow */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera, and Firefox */
+}
+
+.responsive-image {
+    max-width: 40%;
+    height: auto;
+    box-shadow: 2px 2px 0 #000, 3px 3px 0 #fff, 4px 4px 0 #000; /* Optional: Add a shadow to match the window style */
 }
 
 #window1 {
-    bottom: 10px; /* Distance from the bottom */
-    right: 20px; /* Distance from the right */
-    position: absolute; 
-    width: 40%; /* Ensure the width is defined */
+    bottom: 2rem; /* Distance from the bottom */
+    right: 2rem; /* Distance from the right */
+    width: 40%;
+    height: 40%;
+    margin: 2rem auto;
+}
+
+#window2 {
+    top: 1rem; /* Distance from the bottom */
+    right: 6rem; /* Distance from the right */
+    width: 100%;
+}
+
+#window3 {
+    bottom: 2rem; 
+    left: 2rem;
+    margin: 2rem auto;
 }
 
 .title-bar {
@@ -44,6 +79,10 @@ body:hover {
     border-bottom: 2px solid #000;
     height: 25px;
     cursor: none;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera, and Firefox */
 }
 
 .title-bar .buttons {
@@ -53,13 +92,6 @@ body:hover {
 .image-container {
     text-align: center;
     margin: auto;
-}
-
-.responsive-image {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid #000; /* Optional: Add a border to match the window style */
-    box-shadow: 2px 2px 0 #000, 3px 3px 0 #fff, 4px 4px 0 #000; /* Optional: Add a shadow to match the window style */
 }
 
 .button {
@@ -80,6 +112,10 @@ body:hover {
     align-items: center;
     justify-content: center;
     transition: background-color 0.2s;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera, and Firefox */
 }
 
 .button:hover {
@@ -97,13 +133,20 @@ body:hover {
 }
 
 .content {
-    padding: 2rem;
+    padding: 1rem;
+    flex-grow: 1;
+    overflow-y: auto;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera, and Firefox */
 }
 
 .embed iframe {
     width: 100%;
     height: auto;
     border: none;
+    margin: 2rem auto;
 }
 
 .window.maximized {
@@ -117,33 +160,56 @@ body:hover {
 }
 
 @media screen and (max-width: 750px) {
+    body {
+        padding: 0;
+    }
+
     .window {
-        width: 90%;
-        margin: 1rem auto;
+        width: 100%;
+        max-height: none;
+        margin: 2rem auto;
         position: relative;
-        cursor: none; 
+        border-bottom: 2px solid #000;
+        border-radius: 0;
+    }
+
+    #window1 {
+        display: block;
+        bottom: 0px; /* Distance from the bottom */
+        right: 0px; /* Distance from the right */
+        width: 100%;
+        margin: 2rem auto;
+    }
+    
+    #window2 {
+        display: block;
+        top: 0rem; /* Distance from the bottom */
+        right: 0rem; /* Distance from the right */
+        width: 100%;
+        margin: 2rem auto;
+    }
+
+    #window3 {
+        display: block;
+        top: 0rem; /* Distance from the bottom */
+        left: 0rem; /* Distance from the right */
+        width: 100%;
+        margin: 2rem auto;
     }
 
     .title-bar {
         cursor: default; /* Disable dragging on smaller screens */
+        border-radius: 0;
+        border-bottom: 2px solid #000;
     }
-}
 
-.grid-layout .window {
-    position: relative !important;
-    width: 90% !important;
-    margin: 10px auto !important;
-    left: auto !important;
-    top: auto !important;
-    cursor: none;
-}
+    .content {
+        padding: 1rem;
+        flex-grow: 1;
+        overflow-y: auto;
+    }
 
-.custom-cursor {
-    width: 0.5rem;
-    height: 0.5rem;
-    background-color: blue;
-    position: fixed;
-    pointer-events: none; /* Ensure the cursor does not interfere with mouse events */
-    z-index: 9999; /* Ensure the cursor stays on top of other elements */
-    border-radius: 50%; /* Make it round */
+    .window + .window {
+        border-top: none;
+    }
 }

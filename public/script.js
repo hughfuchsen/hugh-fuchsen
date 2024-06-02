@@ -1,81 +1,5 @@
-let isDragging = false;
 let offsetX, offsetY;
 let requestId;
-let verticalOffset = 0;
-let dragTimeout;  // To store the timeout ID
-
-// function startDrag(event, windowId) {
-//     const windowElement = document.getElementById(windowId);
-
-//     if (windowElement.classList.contains('maximized')) {
-//         return; // Prevent dragging when maximized
-//     }
-
-//     offsetX = event.clientX - windowElement.offsetLeft;
-//     offsetY = event.clientY - windowElement.offsetTop;
-
-//     // Set a timeout to activate dragging after 0.2 seconds
-//     dragTimeout = setTimeout(() => {
-//         isDragging = true;
-//     }, 200);
-
-//     document.onmousemove = (event) => onMouseMove(event, windowId);
-//     document.onmouseup = stopDrag;
-// }
-
-// function onMouseMove(event, windowId) {
-//     if (isDragging) {
-//         if (!requestId) {
-//             requestId = requestAnimationFrame(() => dragWindow(event, windowId));
-//         }
-//     }
-// }
-
-// function dragWindow(event, windowId) {
-//     const windowElement = document.getElementById(windowId);
-//     const margin = 5;
-
-//     // Calculate new positions
-//     let newLeft = event.clientX - offsetX;
-//     let newTop = event.clientY - offsetY;
-
-//     // Get the window dimensions
-//     const windowWidth = windowElement.offsetWidth;
-//     const windowHeight = windowElement.offsetHeight;
-
-//     // Get the viewport dimensions
-//     const viewportWidth = document.documentElement.clientWidth;
-//     const viewportHeight = document.documentElement.clientHeight;
-
-//     // Boundary checks
-//     if (newLeft < margin) {
-//         newLeft = margin;
-//     } else if (newLeft + windowWidth > viewportWidth - margin) {
-//         newLeft = viewportWidth - windowWidth - margin;
-//     }
-
-//     if (newTop < margin) {
-//         newTop = margin;
-//     } else if (newTop + windowHeight > viewportHeight - margin) {
-//         newTop = viewportHeight - windowHeight - margin;
-//     }
-
-//     // Apply the new positions
-//     windowElement.style.left = `${newLeft}px`;
-//     windowElement.style.top = `${newTop}px`;
-//     requestId = null;
-// }
-
-// function stopDrag() {
-//     clearTimeout(dragTimeout);  // Clear the timeout if mouse is released before 0.2 seconds
-//     isDragging = false;
-//     document.onmousemove = null;
-//     document.onmouseup = null;
-//     if (requestId) {
-//         cancelAnimationFrame(requestId);
-//         requestId = null;
-//     }
-// }
 
 function toggleMaximizeWindow(windowId) {
     const windowElement = document.getElementById(windowId);
@@ -93,35 +17,75 @@ function toggleMaximizeWindow(windowId) {
 function minimizeWindow(windowId) {
     const windowElement = document.getElementById(windowId);
     windowElement.style.display = 'none';
-    if (windowId !== 'window2') {
-        setTimeout(() => resetWindow(windowId), 1500);
-    }
+
 }
 
 function closeWindow(windowId) {
     const windowElement = document.getElementById(windowId);
     windowElement.style.display = 'none';
-    if (windowId == 'window0') {
+    if (windowId == 'window0' || windowId == 'window1') {
         setTimeout(() => resetWindow(windowId), 1500);
     }
 }
 
 function resetWindow(windowId) {
     const windowElement = document.getElementById(windowId);
-    windowElement.style.display = 'block';
-    windowElement.style.left = 'auto';
-    windowElement.style.top = `${verticalOffset}px`;
-    verticalOffset += 20; // Increase vertical offset for the next window
     windowElement.classList.remove('maximized');
+    windowElement.style.left = 'auto';
+    windowElement.style.top = 'auto';
+    windowElement.style.display = 'block';
 }
 
 function showWindow(windowId) {
     const windowElement = document.getElementById(windowId);
+    const window0 = document.getElementById('window0');
+    const isMobileView = window.matchMedia("screen and (max-width: 750px)").matches;
+
+    if (isMobileView) {
+        windowElement.style.position = 'relative';
+        windowElement.style.margin = '2rem auto';
+        windowElement.style.width = window0.style.width;
+        document.body.appendChild(windowElement);
+        windowElement.scrollIntoView({ behavior: 'smooth' });
+    } 
+    else {
+        
+        // // Reset position for desktop view
+        // if (windowId === 'window3') {
+        //     windowElement.style.bottom = '2rem';
+        //     windowElement.style.left = '2rem';
+        // }
+        // if (windowId === 'window2') {
+        //     windowElement.style.top = '3rem';
+        //     windowElement.style.right = '4rem';
+        // } else {
+        //     windowElement.style.left = 'auto';
+        //     windowElement.style.top = 'auto';
+        // }
+        windowElement.style.position = 'absolute';
+    }
+
     windowElement.style.display = 'block';
-    if (windowId === 'window2') {
-        // Position the second window on the right side of the screen
-        windowElement.style.left = 'calc(100% - 45%)';
-        windowElement.style.top = '5%';
+}
+
+// Function to adjust layout based on screen size
+function adjustLayout() {
+    const isMobileView = window.matchMedia("screen and (max-width: 750px)").matches;
+    const windows = document.querySelectorAll('.window');
+    const window0 = document.getElementById('window0');
+
+    if (isMobileView) {
+        windows.forEach(windowElement => {
+            windowElement.style.position = 'relative';
+            windowElement.style.width = '90%';
+            windowElement.style.margin = '2rem auto';
+        });
+    } else {
+        windows.forEach(windowElement => {
+            windowElement.style.position = 'absolute';
+            windowElement.style.width = '40%';
+            windowElement.style.margin = '2rem auto';
+        });
     }
 }
 
@@ -145,3 +109,8 @@ document.addEventListener('mousemove', (e) => {
     customCursor.style.top = e.clientY + 'px';
 });
 
+// Add an event listener to handle screen resizing
+window.addEventListener('resize', adjustLayout);
+
+// Initial layout adjustment on page load
+document.addEventListener('DOMContentLoaded', adjustLayout);
