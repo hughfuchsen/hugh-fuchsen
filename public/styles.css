@@ -1,6 +1,7 @@
 body {
     background-color: #008080;
     font-family: monospace;
+    line-height: 1.1rem;
     color: black;
     padding: 20px;
     cursor: none; /* Hide the default cursor */
@@ -23,15 +24,25 @@ a:hover {
 
 iframe {
     margin: 2rem auto;
+    cursor: none; /* Hide the default cursor */
+}
+
+.video {
+    text-align: center;
+    margin: auto;
+}
+
+
+#youtube-video {
+    width: 304px; /* Fixed width for your video */
+    height: 171px; /* Fixed height for your video */
 }
 
 .window {
     width: 40%;
     max-height: 70%;
-    border: 2px solid #000; /* Corrected border property */
     box-shadow: 2px 2px 0 #000, 3px 3px 0 #fff, 4px 4px 0 #000;
-    background-color: #c0c0c0;
-    margin: 2rem auto;
+    background-color: #c6c6c6;
     position: absolute;
     transition: width 0.3s, height 0.3s, left 0.3s, top 0.3s;
     overflow: hidden; /* Ensure content inside the window doesn't overflow */
@@ -48,6 +59,13 @@ iframe {
     box-shadow: 2px 2px 0 #000, 3px 3px 0 #fff, 4px 4px 0 #000; /* Optional: Add a shadow to match the window style */
 }
 
+#window0 {
+    top: 0rem;
+    left: 2rem;
+    z-index: 100;
+    margin: auto;
+}
+
 #window1 {
     bottom: 2rem; /* Distance from the bottom */
     right: 2rem; /* Distance from the right */
@@ -60,11 +78,12 @@ iframe {
     top: 1rem; /* Distance from the bottom */
     right: 6rem; /* Distance from the right */
     width: 100%;
+    margin: auto;
 }
 
 #window3 {
     bottom: 2rem; 
-    left: 2rem;
+    left: 4rem;
     margin: 2rem auto;
 }
 
@@ -72,7 +91,7 @@ iframe {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #0000d1;
+    background: #00009e;
     color: white;
     padding: 5px;
     font-weight: bold;
@@ -99,6 +118,7 @@ iframe {
     border: 2px solid #ffffff; /* Light border */
     border-left-color: #808080; /* Darker left border */
     border-top-color: #808080; /* Darker top border */
+    color: black;
     width: 20px;
     height: 20px;
     margin-left: 2px;
@@ -143,7 +163,6 @@ iframe {
 }
 
 .embed iframe {
-    width: 100%;
     height: auto;
     border: none;
     margin: 2rem auto;
@@ -157,6 +176,64 @@ iframe {
     left: 5%;
     margin: auto;
     cursor: none;
+}
+
+.copy-icon {
+    display: inline-block;
+    transition: background-color 0.3s;
+    vertical-align: middle;
+}
+
+.copy-icon:hover {
+    background-color: #a5a5a5;
+}
+
+.copy-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.copy-icon-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Toast message styles */
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    color: #333;
+    background-color: #c0c0c0;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 50%;
+    font-size: 17px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
 }
 
 @media screen and (max-width: 750px) {
@@ -173,8 +250,14 @@ iframe {
         border-radius: 0;
     }
 
+    #window0 {
+        top: 0px; /* Distance from the bottom */
+        left: 0px; /* Distance from the right */
+        width: 100%;
+        margin: 2rem auto;
+    }
+
     #window1 {
-        display: block;
         bottom: 0px; /* Distance from the bottom */
         right: 0px; /* Distance from the right */
         width: 100%;
@@ -182,7 +265,6 @@ iframe {
     }
     
     #window2 {
-        display: block;
         top: 0rem; /* Distance from the bottom */
         right: 0rem; /* Distance from the right */
         width: 100%;
@@ -190,7 +272,6 @@ iframe {
     }
 
     #window3 {
-        display: block;
         top: 0rem; /* Distance from the bottom */
         left: 0rem; /* Distance from the right */
         width: 100%;
