@@ -23,6 +23,10 @@ a:link {
     color: purple;
 }
 
+span {
+    font-size: 16px;
+}
+
 /* Visited link */
 a:visited {
     color: purple;
@@ -324,5 +328,9 @@ iframe {
         text-align: center;
         justify-content: center;
         margin: 0 auto;
+    }
+    
+    span {
+        font-size: 16px;
     }
 }
