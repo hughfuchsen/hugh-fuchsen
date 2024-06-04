@@ -83,7 +83,14 @@ function adjustLayout() {
     } else {
         windows.forEach(windowElement => {
             windowElement.style.position = 'absolute';
-            windowElement.style.width = '40%';
+            if (windowElement !== document.getElementById('window0'))
+            {
+                windowElement.style.width = '40%';
+            }
+            else
+            {
+                windowElement.style.width = '45%';
+            }
             windowElement.style.margin = '2rem auto';
         });
     }

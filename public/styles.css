@@ -18,8 +18,25 @@ body {
 html:hover {
     cursor: none; /* Hide the default cursor */
 }
+
+a:link {
+    color: purple;
+}
+
+/* Visited link */
+a:visited {
+    color: purple;
+}
+
+/* Mouse over link */
 a:hover {
+    color: yellow;
     cursor: none; /* Hide the default cursor */
+}
+
+/* Selected link */
+a:active {
+    color: yellow;
 }
 
 iframe {
@@ -69,7 +86,6 @@ iframe {
 #window1 {
     bottom: 2rem; /* Distance from the bottom */
     right: 2rem; /* Distance from the right */
-    width: 40%;
     height: 40%;
     margin: 2rem auto;
 }
@@ -82,9 +98,12 @@ iframe {
 }
 
 #window3 {
+    display: none;
     bottom: 2rem; 
     left: 4rem;
     margin: 2rem auto;
+    height: 60%;
+    z-index: 500;
 }
 
 .title-bar {
@@ -276,6 +295,7 @@ iframe {
         left: 0rem; /* Distance from the right */
         width: 100%;
         margin: 2rem auto;
+        display: block;
     }
 
     .title-bar {
