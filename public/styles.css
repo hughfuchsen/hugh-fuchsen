@@ -34,6 +34,8 @@ a:hover {
     cursor: none; /* Hide the default cursor */
 }
 
+
+
 /* Selected link */
 a:active {
     color: yellow;
@@ -46,7 +48,8 @@ iframe {
 
 .video {
     text-align: center;
-    margin: auto;
+    justify-content: center;
+    margin: 2rem auto;
 }
 
 
@@ -69,6 +72,7 @@ iframe {
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera, and Firefox */
 }
+
 
 .responsive-image {
     max-width: 40%;
@@ -100,7 +104,7 @@ iframe {
 #window3 {
     display: none;
     bottom: 2rem; 
-    left: 4rem;
+    left: 10rem;
     margin: 2rem auto;
     height: 60%;
     z-index: 500;
@@ -233,6 +237,8 @@ iframe {
     opacity: 1;
 }
 
+
+
 /* Toast message styles */
 .toast {
     visibility: hidden;
@@ -312,5 +318,11 @@ iframe {
 
     .window + .window {
         border-top: none;
+    }
+
+    .video {
+        text-align: center;
+        justify-content: center;
+        margin: 0 auto;
     }
 }

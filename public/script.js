@@ -96,6 +96,11 @@ function adjustLayout() {
     }
 }
 
+// function changeTabBarColor(windowID) {
+//     document.getElementsByClassName(windowID).style.backgroundColor = 'yellow';
+//     // upon hover, make the element's background color fade to yellow, then make its background color fade to its original color when the cursor leaves the element
+// }
+
 // Create a custom cursor element
 const customCursor = document.createElement('div');
 customCursor.classList.add('custom-cursor');
