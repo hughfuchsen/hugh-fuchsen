@@ -1,8 +1,8 @@
 let offsetX, offsetY;
 let requestId;
 
-function toggleMaximizeWindow(windowId) {
-    const windowElement = document.getElementById(windowId);
+function toggleMaximizeWindow(windowID) {
+    const windowElement = document.getElementById(windowID);
     windowElement.classList.toggle('maximized');
 
     if (windowElement.classList.contains('maximized')) {
@@ -14,30 +14,31 @@ function toggleMaximizeWindow(windowId) {
     }
 }
 
-function minimizeWindow(windowId) {
-    const windowElement = document.getElementById(windowId);
+function minimizeWindow(windowID) {
+    const windowElement = document.getElementById(windowID);
     windowElement.style.display = 'none';
 
 }
 
-function closeWindow(windowId) {
-    const windowElement = document.getElementById(windowId);
+function closeWindow(windowID) {
+    const windowElement = document.getElementById(windowID);
     windowElement.style.display = 'none';
-    if (windowId == 'window0' || windowId == 'window1') {
-        setTimeout(() => resetWindow(windowId), 1500);
+    if (windowID == 'window0') {
+        setTimeout(() => resetWindow(windowID), 1500);
     }
 }
 
-function resetWindow(windowId) {
-    const windowElement = document.getElementById(windowId);
+function resetWindow(windowID) {
+    const windowElement = document.getElementById(windowID);
     windowElement.classList.remove('maximized');
     windowElement.style.left = 'auto';
     windowElement.style.top = 'auto';
     windowElement.style.display = 'block';
 }
 
-function showWindow(windowId) {
-    const windowElement = document.getElementById(windowId);
+// for clicking
+function showWindow(windowID) {
+    const windowElement = document.getElementById(windowID);
     const window0 = document.getElementById('window0');
     const isMobileView = window.matchMedia("screen and (max-width: 750px)").matches;
 
@@ -49,28 +50,34 @@ function showWindow(windowId) {
         windowElement.scrollIntoView({ behavior: 'smooth' });
     } 
     else {
-        
-        // // Reset position for desktop view
-        // if (windowId === 'window3') {
-        //     windowElement.style.bottom = '2rem';
-        //     windowElement.style.left = '2rem';
-        // }
-        // if (windowId === 'window2') {
-        //     windowElement.style.top = '3rem';
-        //     windowElement.style.right = '4rem';
-        // } else {
-        //     windowElement.style.left = 'auto';
-        //     windowElement.style.top = 'auto';
-        // }
+
+                
         windowElement.style.position = 'absolute';
     }
 
     windowElement.style.display = 'block';
+}            
+//for mouse over
+function showColor(windowID) {
+    const windowElement = document.getElementById(windowID);
+
+    windowElement.style.transition = 'background-color 0.5s';
+    windowElement.style.backgroundColor = 'yellow';
 }
+
+//for mouse out
+function revertColor(windowID) {
+    const windowElement = document.getElementById(windowID);
+
+    // Reverting back to original color after click
+    windowElement.style.transition = 'background-color 0.5s';
+    windowElement.style.backgroundColor = '';
+}
+
 
 // Function to adjust layout based on screen size
 function adjustLayout() {
-    const isMobileView = window.matchMedia("screen and (max-width: 750px)").matches;
+    const isMobileView = window.matchMedia("screen and (max-width: 1200px)").matches;
     const windows = document.querySelectorAll('.window');
     const window0 = document.getElementById('window0');
 
@@ -96,10 +103,27 @@ function adjustLayout() {
     }
 }
 
-// function changeTabBarColor(windowID) {
-//     document.getElementsByClassName(windowID).style.backgroundColor = 'yellow';
-//     // upon hover, make the element's background color fade to yellow, then make its background color fade to its original color when the cursor leaves the element
-// }
+function changeTabBarColor(windowID) {
+    const element = document.getElementById(windowID);
+    element.style.backgroundColor = 'yellow';
+    
+    // Adding event listener for click
+    element.addEventListener('click', function() {
+        // Changing background color to yellow on click
+        element.style.transition = 'background-color 0.5s';
+        element.style.backgroundColor = 'yellow';
+        
+        // Adding event listener for mouseup to revert color
+        function revertColor() {
+            element.removeEventListener('mouseup', revertColor);
+            // Reverting back to original color after click
+            element.style.transition = 'background-color 0.5s';
+            element.style.backgroundColor = '';
+        }
+        element.addEventListener('mouseup', revertColor);
+    });
+}
+
 
 // Create a custom cursor element
 const customCursor = document.createElement('div');

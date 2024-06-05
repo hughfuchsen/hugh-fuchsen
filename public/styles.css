@@ -49,7 +49,7 @@ iframe {
 .video {
     text-align: center;
     justify-content: center;
-    margin: 2rem auto;
+    margin: 0 auto;
 }
 
 
@@ -60,10 +60,11 @@ iframe {
 
 .window {
     width: 40%;
-    max-height: 70%;
+    max-height: 90%;
     box-shadow: 2px 2px 0 #000, 3px 3px 0 #fff, 4px 4px 0 #000;
+    border: 1px solid black;
     background-color: #c6c6c6;
-    position: absolute;
+    /* position: absolute; */
     transition: width 0.3s, height 0.3s, left 0.3s, top 0.3s;
     overflow: hidden; /* Ensure content inside the window doesn't overflow */
     cursor: none; /* Hide the default cursor */
@@ -73,6 +74,13 @@ iframe {
     user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera, and Firefox */
 }
 
+.pic-of-hugh {
+    width: 160px; 
+    aspect-ratio: 1; 
+    right: 0.5rem; 
+    bottom: 0; 
+    position: absolute;
+}
 
 .responsive-image {
     max-width: 40%;
@@ -178,7 +186,6 @@ iframe {
 .content {
     padding: 1rem;
     flex-grow: 1;
-    overflow-y: auto;
     -webkit-user-select: none; /* Safari */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
@@ -261,9 +268,17 @@ iframe {
     opacity: 1;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1200px) {
     body {
         padding: 0;
+    }
+
+    .pic-of-hugh {
+        width: 100px; 
+        aspect-ratio: 1; 
+        right: 0.5rem; 
+        bottom: 0; 
+        position: absolute;
     }
 
     .window {
