@@ -55,9 +55,19 @@ function showWindow(windowID) {
 //for mouse over
 function showColor(windowID) {
     const windowElement = document.getElementById(windowID);
+    const isMobileView = window.matchMedia("screen and (max-width: 1200px)").matches;
 
-    windowElement.style.transition = 'background-color 0.5s';
-    windowElement.style.backgroundColor = 'yellow';
+    if (isMobileView) {
+        setTimeout(windowElement.style.transition = '', 2000);
+        windowElement.style.transition = 'background-color 0.5s';
+        windowElement.style.backgroundColor = 'yellow';
+    }
+    else {
+        windowElement.style.transition = 'background-color 0.5s';
+        windowElement.style.backgroundColor = 'yellow';
+    }
+
+
 }
 
 //for mouse out
