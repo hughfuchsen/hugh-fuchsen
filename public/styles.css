@@ -12,7 +12,7 @@ body {
 }
 
 .everything-containter {
-    display: flex-grid;
+    display: flex;
 }
 
 html:hover {
@@ -42,14 +42,13 @@ a:active {
 }
 
 iframe {
-    margin: 2rem auto;
     cursor: none; /* Hide the default cursor */
 }
 
 .video {
+    width: 100%;
     text-align: center;
     justify-content: center;
-    margin: 0 auto;
 }
 
 
@@ -57,15 +56,17 @@ iframe {
     width: 304px; /* Fixed width for your video */
     height: 171px; /* Fixed height for your video */
 }
+#youtube-video-small {
+    width: 160px; /* Fixed width for your video */
+    height: 90px; /* Fixed height for your video */
+    margin: 0.5rem auto;
+}
 
 .window {
-    width: 40%;
-    max-height: 90%;
     box-shadow: 2px 2px 0 #000, 3px 3px 0 #fff, 4px 4px 0 #000;
+    position: absolute;
     border: 1px solid black;
     background-color: #c6c6c6;
-    /* position: absolute; */
-    transition: width 0.3s, height 0.3s, left 0.3s, top 0.3s;
     overflow: hidden; /* Ensure content inside the window doesn't overflow */
     cursor: none; /* Hide the default cursor */
     -webkit-user-select: none; /* Safari */
@@ -75,10 +76,11 @@ iframe {
 }
 
 .pic-of-hugh {
-    width: 160px; 
-    aspect-ratio: 1; 
     right: 0.5rem; 
     bottom: 0; 
+    width: 160px; 
+    aspect-ratio: 1; 
+
     position: absolute;
 }
 
@@ -88,34 +90,53 @@ iframe {
     box-shadow: 2px 2px 0 #000, 3px 3px 0 #fff, 4px 4px 0 #000; /* Optional: Add a shadow to match the window style */
 }
 
+#window-picture {
+    width: 10%;
+    height: 35%;
+    top: 24rem;
+    left: 46rem;
+    z-index: 200;
+    margin: 0 auto;
+}
+
 #window0 {
-    top: 0rem;
+    max-width: 60%;
+    max-height: 80%;
+    top: 2rem;
     left: 2rem;
     z-index: 100;
-    margin: auto;
+    margin: 0 auto;
 }
 
 #window1 {
-    bottom: 2rem; /* Distance from the bottom */
+    width: 30%;
+    max-height: 40%;
+    top: 4rem; /* Distance from the bottom */
     right: 2rem; /* Distance from the right */
-    height: 40%;
-    margin: 2rem auto;
-}
-
-#window2 {
-    top: 1rem; /* Distance from the bottom */
-    right: 6rem; /* Distance from the right */
-    width: 100%;
     margin: auto;
 }
 
+#window2 {
+    bottom: 1rem; /* Distance from the bottom */
+    left: 5rem; /* Distance from the right */
+    margin: 0 auto;
+    z-index: 101;
+}
+
 #window3 {
-    display: none;
-    bottom: 2rem; 
-    left: 10rem;
-    margin: 2rem auto;
-    height: 60%;
-    z-index: 500;
+    bottom: 2.5rem; /* Distance from the bottom */
+    left: 28rem; /* Distance from the right */
+    margin: 0 auto;
+    z-index: 101;
+}
+
+
+#window4 {
+    width: 30%;
+    height: 40%;
+    bottom: 2rem; /* Distance from the bottom */
+    right: 4rem; /* Distance from the right */
+    margin: auto;
 }
 
 .title-bar {
@@ -198,15 +219,6 @@ iframe {
     margin: 2rem auto;
 }
 
-.window.maximized {
-    width: 90% !important;
-    height: 90% !important;
-    position: fixed;
-    top: 5%;
-    left: 5%;
-    margin: auto;
-    cursor: none;
-}
 
 .copy-icon {
     display: inline-block;
@@ -268,6 +280,12 @@ iframe {
     opacity: 1;
 }
 
+
+
+
+
+
+
 @media screen and (max-width: 1200px) {
     body {
         padding: 0;
@@ -282,41 +300,56 @@ iframe {
     }
 
     .window {
-        width: 100%;
+        max-width: none;
         max-height: none;
-        margin: 2rem auto;
         position: relative;
+        transition: width 0.3s, height 0.3s, left 0.3s, top 0.3s;
         border-bottom: 2px solid #000;
         border-radius: 0;
     }
 
+    #window-picture {
+        width: 95%;
+        top: 0;
+        left: 0;
+        margin: 2rem auto;
+    }
+
     #window0 {
+        max-width: none;
+        max-height: none;
         top: 0px; /* Distance from the bottom */
         left: 0px; /* Distance from the right */
-        width: 100%;
+        width: 95%;
         margin: 2rem auto;
     }
 
     #window1 {
-        bottom: 0px; /* Distance from the bottom */
+        top: 0px; /* Distance from the bottom */
         right: 0px; /* Distance from the right */
-        width: 100%;
+        width: 95%;
         margin: 2rem auto;
     }
     
     #window2 {
-        top: 0rem; /* Distance from the bottom */
-        right: 0rem; /* Distance from the right */
-        width: 100%;
+        bottom: 0rem; /* Distance from the bottom */
+        left: 0rem; /* Distance from the right */
+        width: 95%;
         margin: 2rem auto;
     }
 
     #window3 {
         top: 0rem; /* Distance from the bottom */
         left: 0rem; /* Distance from the right */
-        width: 100%;
+        width: 95%;
         margin: 2rem auto;
-        display: block;
+    }
+
+    #window4 {
+        top: 0rem; /* Distance from the bottom */
+        left: 0rem; /* Distance from the right */
+        width: 95%;
+        margin: 2rem auto;
     }
 
     .title-bar {
@@ -336,7 +369,6 @@ iframe {
     }
 
     .video {
-        text-align: center;
         justify-content: center;
         margin: 0 auto;
     }

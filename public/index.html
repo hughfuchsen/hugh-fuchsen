@@ -15,20 +15,22 @@
                     <button class="button" onclick="closeWindow('window0')">X</button>
                 </div>
             </div>
+
             <div class="content">
-                <div class="pic-of-hugh">
-                    <img style="width: 100%" src="./img/withGtar123.png" alt="picture of hugh f">
-                </div>
+
                 <p>
                     hi! 
                     <br><br>
                     i'm hugh f, and i grew up near kiewa, in dhudhuroa country.
                     <br><br>
-                    i specialise in crafting <a href="#" onclick="showWindow('window1')" onmouseover="showColor('window1')" onmouseout="revertColor('window1')">music and supplementary audio effects</a> for video games and visual entertainment to enhance the beauty of a world inside a screen.
+                    i specialise in crafting music and supplementary audio effects for 
+                    <a href="#" onclick="showWindow('window2')" onmouseover="showColor('window2')" onmouseout="revertColor('window2')">video games</a> and 
+                    <a href="#" onclick="showWindow('window3')" onmouseover="showColor('window3')" onmouseout="revertColor('window3')">visual entertainment</a>
+                    to enhance the beauty of a world inside a screen.
                     <br><br>
-                    my passion also lies in singing <br> <a style href="#" onclick="showWindow('window2')" onmouseover="showColor('window2')" onmouseout="revertColor('window2');">folk stories</a>, particularly those centred around people and pets.
+                    my passion also lies in singing <br> <a style href="#" onclick="showWindow('window1')" onmouseover="showColor('window1')" onmouseout="revertColor('window1');">folk stories</a>, particularly those centred around people and pets.
                     <br><br>
-                    this video game i am currently designing is called <br> <a href="#" onclick="showWindow('window3')" onmouseover="showColor('window3')" onmouseout="revertColor('window3')">adventure to the pony zone</a> (working title). you will need to help people find their ponies (working story). it's a colourful game and it makes me happy.                     
+                    this video game i am currently designing is called <br> <a href="#" onclick="showWindow('window4')" onmouseover="showColor('window4')" onmouseout="revertColor('window4')">adventure to the pony zone</a> (working title). you will need to help people find their ponies (working story). it's a colourful game and it makes me happy.                     
                     <br><br>
                     if you want to chat about anything under the sun, feel free to drop me a message!!!
                     <br><br>
@@ -59,24 +61,10 @@
         </div>
 
         <div class="window" id="window1">
-            <div class="title-bar" id="title-bar1">
-                <span class="title">game soundtrack design</span>
-                <div class="buttons">
-                    <!-- <button class="button" onclick="minimizeWindow('window1')">_</button> -->
-                    <!-- <button class="button" onclick="toggleMaximizeWindow('window1')">□</button> -->
-                    <button class="button" onclick="closeWindow('window1')">X</button>
-                </div>
-            </div>
-            <div class="video">
-                <iframe width="304" height="171" id="youtube-video" src="https://www.youtube.com/embed/kfW4RMkdEzI?si=JJBZ2bYNwt2IZ1LO" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            
-            </div>
-        </div>
-
-        <div class="window" id="window2">
             <div class="title-bar">
                 <span class="title">singing-songwriting music</span>
                 <div class="buttons">
-                    <button class="button" onclick="closeWindow('window2')">X</button>
+                    <button class="button" onclick="closeWindow('window1')">X</button>
                 </div>
             </div>
             <div class="content">
@@ -86,11 +74,41 @@
             </div>
         </div>
 
+        <div class="window" id="window2">
+            <div class="title-bar" id="title-bar1">
+                <span class="title">soundtrack and sound design</span>
+                <div class="buttons">
+                    <!-- <button class="button" onclick="minimizeWindow('window1')">_</button> -->
+                    <!-- <button class="button" onclick="toggleMaximizeWindow('window1')">□</button> -->
+                    <button class="button" onclick="closeWindow('window2')">X</button>
+                </div>
+            </div>
+            <div class="video">
+                <iframe id="youtube-video-small" src="https://www.youtube.com/embed/kfW4RMkdEzI?si=JJBZ2bYNwt2IZ1LO" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            
+            </div>
+
+        </div>
+
         <div class="window" id="window3">
+            <div class="title-bar" id="title-bar1">
+                <span class="title">soundtrack and sound design</span>
+                <div class="buttons">
+                    <!-- <button class="button" onclick="minimizeWindow('window1')">_</button> -->
+                    <!-- <button class="button" onclick="toggleMaximizeWindow('window1')">□</button> -->
+                    <button class="button" onclick="closeWindow('window3')">X</button>
+                </div>
+            </div>
+            <div class="video">
+                <iframe id="youtube-video-small" src="https://www.youtube.com/embed/kfW4RMkdEzI?si=JJBZ2bYNwt2IZ1LO" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            
+            </div>
+
+        </div>
+
+        <div class="window" id="window4">
             <div class="title-bar">
                 <span class="title">video game dev</span>
                 <div class="buttons">
-                    <button class="button" onclick="closeWindow('window3')">X</button>
+                    <button class="button" onclick="closeWindow('window4')">X</button>
                 </div>
             </div>
             <div class="content">
@@ -99,6 +117,17 @@
             <div class="video">
                 <iframe width="304" height="171" src="https://www.youtube.com/embed/FoJFloVwk2Y?si=9CbCz5M0IbLP6kmV" title="youTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
         </div>
+
+        <div class="window" id="window-picture">
+            <div class="title-bar">
+                <span class="title">photo of me</span>
+                <div class="buttons">
+                    <button class="button" onclick="closeWindow('window-picture')">X</button>
+                </div>
+            </div>
+            <img style="width: 100%" src="./img/HUGH FUCHSEN-88.jpg" alt="picture of hugh f">
+        </div>
+
    
     <script src="script.js"></script>
 </body>

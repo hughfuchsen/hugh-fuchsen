@@ -33,29 +33,24 @@ function resetWindow(windowID) {
     windowElement.classList.remove('maximized');
     windowElement.style.left = 'auto';
     windowElement.style.top = 'auto';
-    windowElement.style.display = 'block';
 }
 
 // for clicking
 function showWindow(windowID) {
     const windowElement = document.getElementById(windowID);
-    const window0 = document.getElementById('window0');
-    const isMobileView = window.matchMedia("screen and (max-width: 750px)").matches;
+    const isMobileView = window.matchMedia("screen and (max-width: 1200px)").matches;
 
     if (isMobileView) {
-        windowElement.style.position = 'relative';
-        windowElement.style.margin = '2rem auto';
-        windowElement.style.width = window0.style.width;
-        document.body.appendChild(windowElement);
-        windowElement.scrollIntoView({ behavior: 'smooth' });
-    } 
-    else {
-
-                
-        windowElement.style.position = 'absolute';
+        // Ensure the element is visible first
+        windowElement.style.display = 'block';
+        // Add a small delay before scrolling into view
+        setTimeout(() => {
+            windowElement.scrollIntoView({ behavior: 'smooth' });
+        }, 100); // Adjust the delay as necessary
     }
-
-    windowElement.style.display = 'block';
+    else {
+        windowElement.style.display = 'block';
+    }
 }            
 //for mouse over
 function showColor(windowID) {
@@ -67,41 +62,50 @@ function showColor(windowID) {
 
 //for mouse out
 function revertColor(windowID) {
+    const isMobileView = window.matchMedia("screen and (max-width: 1200px)").matches;
     const windowElement = document.getElementById(windowID);
 
-    // Reverting back to original color after click
-    windowElement.style.transition = 'background-color 0.5s';
-    windowElement.style.backgroundColor = '';
+    if (isMobileView) {
+         // Reverting back to original color after click
+         windowElement.style.transition = 'background-color 2.5s';
+         windowElement.style.backgroundColor = '';
+    }
+    else {
+        // Reverting back to original color after click
+        windowElement.style.transition = 'background-color 0.5s';
+        windowElement.style.backgroundColor = '';
+    }
+
 }
 
 
 // Function to adjust layout based on screen size
-function adjustLayout() {
-    const isMobileView = window.matchMedia("screen and (max-width: 1200px)").matches;
-    const windows = document.querySelectorAll('.window');
-    const window0 = document.getElementById('window0');
+// function adjustLayout() {
+//     const isMobileView = window.matchMedia("screen and (max-width: 1px)").matches;
+//     const windows = document.querySelectorAll('.window');
+//     const window0 = document.getElementById('window0');
 
-    if (isMobileView) {
-        windows.forEach(windowElement => {
-            windowElement.style.position = 'relative';
-            windowElement.style.width = '90%';
-            windowElement.style.margin = '2rem auto';
-        });
-    } else {
-        windows.forEach(windowElement => {
-            windowElement.style.position = 'absolute';
-            if (windowElement !== document.getElementById('window0'))
-            {
-                windowElement.style.width = '40%';
-            }
-            else
-            {
-                windowElement.style.width = '45%';
-            }
-            windowElement.style.margin = '2rem auto';
-        });
-    }
-}
+//     if (isMobileView) {
+//         windows.forEach(windowElement => {
+//             windowElement.style.position = 'relative';
+//             windowElement.style.width = '90%';
+//             windowElement.style.margin = '2rem auto';
+//         });
+//     } else {
+//         windows.forEach(windowElement => {
+//             windowElement.style.position = 'absolute';
+//             if (windowElement !== document.getElementById('window0'))
+//             {
+//                 windowElement.style.width = '40%';
+//             }
+//             else
+//             {
+//                 windowElement.style.width = '45%';
+//             }
+//             windowElement.style.margin = '2rem auto';
+//         });
+//     }
+// }
 
 function changeTabBarColor(windowID) {
     const element = document.getElementById(windowID);
