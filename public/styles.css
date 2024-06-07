@@ -93,7 +93,7 @@ iframe {
 #window-picture {
     width: 10%;
     height: 35%;
-    top: 24rem;
+    top: 26rem;
     left: 46rem;
     z-index: 200;
     margin: 0 auto;
@@ -117,14 +117,14 @@ iframe {
 }
 
 #window2 {
-    bottom: 1rem; /* Distance from the bottom */
+    bottom: 2rem; /* Distance from the bottom */
     left: 5rem; /* Distance from the right */
     margin: 0 auto;
     z-index: 101;
 }
 
 #window3 {
-    bottom: 2.5rem; /* Distance from the bottom */
+    bottom: 3.5rem; /* Distance from the bottom */
     left: 28rem; /* Distance from the right */
     margin: 0 auto;
     z-index: 101;
