@@ -31,7 +31,7 @@ a:visited {
 
 /* Mouse over link */
 a:hover {
-    color: yellow;
+    color: rgb(255, 255, 123);
     cursor: none; /* Hide the default cursor */
 }
 
@@ -39,7 +39,7 @@ a:hover {
 
 /* Selected link */
 a:active {
-    color: yellow;
+    color: rgb(255, 255, 123);
 }
 
 iframe {
@@ -95,10 +95,9 @@ iframe {
 }
 
 #window-singer-songerwriter-music {
-    display: none;
     width: 30%;
     max-height: 40%;
-    top: 20%; /* Distance from the bottom */
+    top: 3%; /* Distance from the bottom */
     right: 3%; /* Distance from the right */
     margin: auto;
     z-index: 300;
@@ -120,13 +119,12 @@ iframe {
 
 
 #window-game-dev {
-    display: none;
     width: 30%;
     height: 40%;
-    bottom: 2rem; /* Distance from the bottom */
-    right: 4rem; /* Distance from the right */
+    bottom: 7%; /* Distance from the bottom */
+    right: 7%; /* Distance from the right */
     margin: auto;
-    z-index: 300;
+    z-index: 600;
 }
 
 .title-bar {

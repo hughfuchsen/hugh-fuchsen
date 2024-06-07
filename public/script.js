@@ -1,39 +1,16 @@
 let offsetX, offsetY;
 let requestId;
 
-function toggleMaximizeWindow(windowID) {
-    const windowElement = document.getElementById(windowID);
-    windowElement.classList.toggle('maximized');
 
-    if (windowElement.classList.contains('maximized')) {
-        windowElement.style.left = '5%';
-        windowElement.style.top = '5%';
-    } else {
-        windowElement.style.left = 'auto';
-        windowElement.style.top = 'auto';
-    }
-}
-
-function minimizeWindow(windowID) {
-    const windowElement = document.getElementById(windowID);
-    windowElement.style.display = 'none';
-
-}
 
 function closeWindow(windowID) {
     const windowElement = document.getElementById(windowID);
     windowElement.style.display = 'none';
-    if (windowID == 'window0') {
-        setTimeout(() => resetWindow(windowID), 1500);
+    if (windowID == 'window-bio') {
+        setTimeout(() => showWindow(windowID), 1000);
     }
 }
 
-function resetWindow(windowID) {
-    const windowElement = document.getElementById(windowID);
-    windowElement.classList.remove('maximized');
-    windowElement.style.left = 'auto';
-    windowElement.style.top = 'auto';
-}
 
 // for clicking
 function showWindow(windowID) {
@@ -60,11 +37,11 @@ function showColor(windowID) {
     if (isMobileView) {
         setTimeout(revertColor(windowID), 2000);
         windowElement.style.transition = 'background-color 0.5s';
-        windowElement.style.backgroundColor = 'yellow';
+        windowElement.style.backgroundColor = 'rgb(255, 255, 123)';
     }
     else {
         windowElement.style.transition = 'background-color 0.5s';
-        windowElement.style.backgroundColor = 'yellow';
+        windowElement.style.backgroundColor = 'rgb(255, 255, 123)';
     }
 
 
@@ -90,42 +67,38 @@ function revertColor(windowID) {
 
 
 // Function to adjust layout based on screen size
-// function adjustLayout() {
-//     const isMobileView = window.matchMedia("screen and (max-width: 1px)").matches;
-//     const windows = document.querySelectorAll('.window');
-//     const window0 = document.getElementById('window0');
+function adjustLayout() {
+    const isMobileView = window.matchMedia("screen and (max-width: 1200px)").matches;
+    const windows = document.querySelectorAll('.window');
 
-//     if (isMobileView) {
-//         windows.forEach(windowElement => {
-//             windowElement.style.position = 'relative';
-//             windowElement.style.width = '90%';
-//             windowElement.style.margin = '2rem auto';
-//         });
-//     } else {
-//         windows.forEach(windowElement => {
-//             windowElement.style.position = 'absolute';
-//             if (windowElement !== document.getElementById('window0'))
-//             {
-//                 windowElement.style.width = '40%';
-//             }
-//             else
-//             {
-//                 windowElement.style.width = '45%';
-//             }
-//             windowElement.style.margin = '2rem auto';
-//         });
-//     }
-// }
+    if (isMobileView) {
+        windows.forEach(windowElement => {
+            windowElement.style.display = 'block';
+        });
+    } else {
+        windows.forEach(windowElement => {
+            if (windowElement === document.getElementById('window-singer-songerwriter-music') ||
+                windowElement === document.getElementById('window-game-dev'))
+            {
+                windowElement.style.display = 'none';
+            }
+            else
+            {
+                windowElement.style.display = 'block';
+            }
+        });
+    }
+}
 
 function changeTabBarColor(windowID) {
     const element = document.getElementById(windowID);
-    element.style.backgroundColor = 'yellow';
+    element.style.backgroundColor = 'rgb(255, 255, 123)';
     
     // Adding event listener for click
     element.addEventListener('click', function() {
-        // Changing background color to yellow on click
+        // Changing background color to rgb(255, 255, 123) on click
         element.style.transition = 'background-color 0.5s';
-        element.style.backgroundColor = 'yellow';
+        element.style.backgroundColor = 'rgb(255, 255, 123)';
         
         // Adding event listener for mouseup to revert color
         function revertColor() {
