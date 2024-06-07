@@ -120,10 +120,8 @@ iframe {
 
 #window-game-dev {
     width: 30%;
-    height: 40%;
     bottom: 7%; /* Distance from the bottom */
     right: 7%; /* Distance from the right */
-    margin: auto;
     z-index: 600;
 }
 
