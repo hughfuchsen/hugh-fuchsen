@@ -78,8 +78,7 @@ function showColorOfMediaLinks(className) {
     const isMobileView = window.matchMedia("screen and (max-width: 1200px)").matches;
     elements.forEach(element => {
         if (isMobileView) {
-            showWindow(media-link-parent)
-            setTimeout(() => revertColorOfMediaLinks(className), 3000);
+            setTimeout(() => revertColorOfMediaLinks(className), 2000);
             element.style.transition = 'color 0.5s';
             element.style.color = 'rgb(255, 255, 123)';
         } else {
@@ -95,7 +94,7 @@ function revertColorOfMediaLinks(className) {
     const isMobileView = window.matchMedia("screen and (max-width: 1200px)").matches;
     elements.forEach(element => {
         if (isMobileView) {
-            element.style.transition = 'color 8.5s';
+            element.style.transition = 'color 2.5s';
             element.style.color = 'purple';
         } else {
             element.style.transition = 'color 0.5s';
@@ -109,16 +108,9 @@ function revertColorOfMediaLinks(className) {
 
 
 document.querySelectorAll('.guide-to-socials').forEach(element => {
-    const isMobileView = window.matchMedia("screen and (max-width: 1200px)").matches;
-    element.addEventListener('mouseover', () => document.getElementById('media-link-parent').style.color = 'rgb(255, 255, 123)');
-    element.addEventListener('mouseout', () => document.getElementById('media-link-parent').style.color = 'purple');
-    if (isMobileView) {
-        element.addEventListener('mouseover', () =>  showWindow('media-link-parent'));
-        element.addEventListener('mouseover', () => document.getElementById('media-link-parent').style.color = 'rgb(255, 255, 123)');
-    }
-
+    element.addEventListener('mouseover', () => showColorOfMediaLinks('.media-link'));
+    element.addEventListener('mouseout', () => revertColorOfMediaLinks('.media-link'));
 });
-
 
 
 
