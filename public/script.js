@@ -21,6 +21,7 @@ function closeWindow(windowID) {
 
 
 
+
 // for clicking
 function showWindow(windowID) {
     const windowElement = document.getElementById(windowID);
@@ -71,46 +72,6 @@ function revertColor(windowID) {
     }
 
 }
-
-//for mouse over
-function showColorOfMediaLinks(className) {
-    const elements = document.querySelectorAll(className);
-    const isMobileView = window.matchMedia("screen and (max-width: 1200px)").matches;
-    elements.forEach(element => {
-        if (isMobileView) {
-            setTimeout(() => revertColorOfMediaLinks(className), 2000);
-            element.style.transition = 'color 0.5s';
-            element.style.color = 'rgb(255, 255, 123)';
-        } else {
-            element.style.transition = 'background-color 0.5s';
-            element.style.color = 'rgb(255, 255, 123)';
-        }
-    });
-}
-
-//for mouse out
-function revertColorOfMediaLinks(className) {
-    const elements = document.querySelectorAll(className);
-    const isMobileView = window.matchMedia("screen and (max-width: 1200px)").matches;
-    elements.forEach(element => {
-        if (isMobileView) {
-            element.style.transition = 'color 2.5s';
-            element.style.color = 'purple';
-        } else {
-            element.style.transition = 'color 0.5s';
-            element.style.color = 'purple';
-        }
-    });
-}
-
-
-
-
-
-document.querySelectorAll('.guide-to-socials').forEach(element => {
-    element.addEventListener('mouseover', () => showColorOfMediaLinks('.media-link'));
-    element.addEventListener('mouseout', () => revertColorOfMediaLinks('.media-link'));
-});
 
 
 
