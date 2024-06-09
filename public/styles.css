@@ -20,6 +20,19 @@ html:hover {
     cursor: none; /* Hide the default cursor */
 }
 
+#media-link-parent:hover {
+    color: rgb(255, 255, 123);
+
+}
+.media-link {
+    color: purple;
+}
+
+
+.guide-to-socials {
+
+}
+
 a:link {
     color: purple;
 }
@@ -131,15 +144,7 @@ iframe {
     z-index: 800;
 }
 
-#media-link-parent {
-}
-.media-link {
-    color: purple;
-}
 
-.guide-to-socials {
-
-}
 
 .title-bar {
     display: flex;
