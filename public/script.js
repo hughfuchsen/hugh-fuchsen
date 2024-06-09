@@ -125,8 +125,8 @@ function changeTabBarColor(windowID) {
 // Create a custom cursor element
 const customCursor = document.createElement('div');
 customCursor.classList.add('custom-cursor');
-customCursor.style.width = '0.5rem';
-customCursor.style.height = '0.5rem';
+customCursor.style.width = '0.4rem';
+customCursor.style.height = '0.4rem';
 customCursor.style.backgroundColor = 'blue';
 customCursor.style.position = 'fixed';
 customCursor.style.pointerEvents = 'none'; // Ensure the cursor does not interfere with mouse events

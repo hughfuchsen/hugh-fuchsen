@@ -2,7 +2,7 @@ body {
     /* background-color: #008080; */
     background-color: #81bad5;
     font-family: monospace;
-    line-height: 1.1rem;
+    line-height: 1.2rem;
     color: black;
     padding: 20px;
     cursor: none; /* Hide the default cursor */
@@ -104,7 +104,7 @@ iframe {
 }
 
 #window-video-game-sound {
-    bottom: 10%; /* Distance from the bottom */
+    bottom: 8%; /* Distance from the bottom */
     left: 29%; /* Distance from the right */
     margin: 0 auto;
     z-index: 101;
