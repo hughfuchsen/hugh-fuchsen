@@ -131,12 +131,14 @@ iframe {
     z-index: 800;
 }
 
+#media-link-parent {
+}
 .media-link {
     color: purple;
 }
 
 .guide-to-socials {
-    
+
 }
 
 .title-bar {
