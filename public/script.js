@@ -6,10 +6,19 @@ let requestId;
 function closeWindow(windowID) {
     const windowElement = document.getElementById(windowID);
     windowElement.style.display = 'none';
-    if (windowID == 'window-bio') {
+
+    // Stop YouTube videos from playing
+    const iframes = windowElement.getElementsByTagName('iframe');
+    for (let i = 0; i < iframes.length; i++) {
+        const src = iframes[i].src;
+        iframes[i].src = src;  // Resetting the src attribute
+    }
+
+    if (windowID === 'window-bio') {
         setTimeout(() => showWindow(windowID), 1000);
     }
 }
+
 
 
 // for clicking
@@ -43,8 +52,6 @@ function showColor(windowID) {
         windowElement.style.transition = 'background-color 0.5s';
         windowElement.style.backgroundColor = 'rgb(255, 255, 123)';
     }
-
-
 }
 
 //for mouse out
@@ -64,6 +71,47 @@ function revertColor(windowID) {
     }
 
 }
+
+//for mouse over
+function showColorOfMediaLinks(className) {
+    const elements = document.querySelectorAll(className);
+    const isMobileView = window.matchMedia("screen and (max-width: 1200px)").matches;
+    elements.forEach(element => {
+        if (isMobileView) {
+            setTimeout(() => revertColorOfMediaLinks(className), 2000);
+            element.style.transition = 'color 0.5s';
+            element.style.color = 'rgb(255, 255, 123)';
+        } else {
+            element.style.transition = 'background-color 0.5s';
+            element.style.color = 'rgb(255, 255, 123)';
+        }
+    });
+}
+
+//for mouse out
+function revertColorOfMediaLinks(className) {
+    const elements = document.querySelectorAll(className);
+    const isMobileView = window.matchMedia("screen and (max-width: 1200px)").matches;
+    elements.forEach(element => {
+        if (isMobileView) {
+            element.style.transition = 'color 2.5s';
+            element.style.color = 'purple';
+        } else {
+            element.style.transition = 'color 0.5s';
+            element.style.color = 'purple';
+        }
+    });
+}
+
+
+
+
+
+document.querySelectorAll('.guide-to-socials').forEach(element => {
+    element.addEventListener('mouseover', () => showColorOfMediaLinks('.media-link'));
+    element.addEventListener('mouseout', () => revertColorOfMediaLinks('.media-link'));
+});
+
 
 
 // Function to adjust layout based on screen size
