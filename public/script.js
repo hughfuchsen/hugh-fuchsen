@@ -78,9 +78,9 @@ function showColorOfMediaLinks(className) {
     const isMobileView = window.matchMedia("screen and (max-width: 1200px)").matches;
     elements.forEach(element => {
         if (isMobileView) {
+            setTimeout(() => revertColorOfMediaLinks(className), 3000);
             element.style.transition = 'color 0.5s';
             element.style.color = 'rgb(255, 255, 123)';
-            revertColorOfMediaLinks(className);
         } else {
             element.style.transition = 'background-color 0.5s';
             element.style.color = 'rgb(255, 255, 123)';
