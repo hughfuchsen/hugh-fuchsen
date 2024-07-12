@@ -105,7 +105,7 @@ iframe {
 
 #window-video-game-sound {
     bottom: 2%; /* Distance from the bottom */
-    right: 29%; /* Distance from the right */
+    left: 29%; /* Distance from the right */
     margin: 0 auto;
     z-index: 101;
 }
