@@ -87,8 +87,8 @@ function adjustLayout() {
     } else {
         windows.forEach(windowElement => {
             if (
-                // windowElement === document.getElementById('window-singer-songerwriter-music') ||
-                // windowElement === document.getElementById('window-game-dev')||
+                windowElement === document.getElementById('window-singer-songerwriter-music') ||
+                windowElement === document.getElementById('window-game-dev')||
                 windowElement === document.getElementById('window-video-game-sound')||
                 windowElement === document.getElementById('window-film-animation-music')||
                 windowElement === document.getElementById('window-more-bio'))
