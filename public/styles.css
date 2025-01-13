@@ -62,9 +62,9 @@ a:active {
 
 
 #window-tour {
-    height: 45%;
+    height: 100%;
     top: 5%;
-    right: 50%;
+    right: 40%;
     z-index: 300;
     margin: 0 auto;
 }
