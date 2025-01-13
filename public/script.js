@@ -151,29 +151,5 @@ window.addEventListener('resize', adjustLayout);
 // Initial layout adjustment on page load
 document.addEventListener('DOMContentLoaded', adjustLayout);
 
-function copyEmail() {
-    // Create a temporary input element
-    const tempInput = document.createElement('input');
-    // Set its value to the email address
-    tempInput.value = 'hughfuchsen@gmail.com';
-    // Append it to the body
-    document.body.appendChild(tempInput);
-    // Select the content of the input
-    tempInput.select();
-    // Copy the content to the clipboard
-    document.execCommand('copy');
-    // Remove the temporary input element from the DOM
-    document.body.removeChild(tempInput);
 
-    // Show the toast message
-    showToast();
-}
-
-function showToast() {
-    const toast = document.getElementById('toast');
-    toast.className = 'toast show';
-    setTimeout(() => {
-        toast.className = 'toast';
-    }, 2000);
-}
 
