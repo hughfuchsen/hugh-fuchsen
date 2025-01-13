@@ -77,6 +77,14 @@ iframe {
     box-shadow: 2px 2px 0 #000, 3px 3px 0 #fff, 4px 4px 0 #000; /* Optional: Add a shadow to match the window style */
 }
 
+#window-tour {
+    width: 25%;
+    top: 5%;
+    right: 50%;
+    z-index: 500;
+    margin: 0 auto;
+}
+
 #window-picture {
     width: 25%;
     top: 5%;
