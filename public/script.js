@@ -139,11 +139,11 @@ function changeTabBarColor(windowID) {
 // // Append the cursor to the body
 // document.body.appendChild(customCursor);
 
-// Update the cursor position based on mouse movement
-document.addEventListener('mousemove', (e) => {
-    customCursor.style.left = e.clientX + 'px';
-    customCursor.style.top = e.clientY + 'px';
-});
+// // Update the cursor position based on mouse movement
+// document.addEventListener('mousemove', (e) => {
+//     customCursor.style.left = e.clientX + 'px';
+//     customCursor.style.top = e.clientY + 'px';
+// });
 
 // Add an event listener to handle screen resizing
 window.addEventListener('resize', adjustLayout);
