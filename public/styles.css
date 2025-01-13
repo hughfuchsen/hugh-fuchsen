@@ -15,10 +15,6 @@ body {
     display: flex;
 }
 
-html:hover {
-    cursor: none; /* Hide the default cursor */
-}
-
 a:link {
     color: purple;
 }
