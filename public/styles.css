@@ -102,6 +102,15 @@ iframe {
     margin: 0 auto;
 }
 
+#window-links {
+    max-width: 60%;
+    max-height: 80%;
+    top: 9%;
+    left: 1%;
+    z-index: 300;
+    margin: 0 auto;
+}
+
 #window-singer-songerwriter-music {
     width: 30%;
     max-height: 40%;
