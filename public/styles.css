@@ -345,6 +345,15 @@ iframe {
         margin: 2rem auto;
     }
 
+    #window-links{
+        max-width: none;
+        max-height: none;
+        top: 0px; /* Distance from the bottom */
+        left: 0px; /* Distance from the right */
+        width: 95%;
+        margin: 2rem auto;
+    }
+    
     #window-bio {
         max-width: none;
         max-height: none;
