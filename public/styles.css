@@ -81,7 +81,7 @@ iframe {
     width: 25%;
     top: 5%;
     right: 50%;
-    z-index: 310;
+    z-index: 1000;
     margin: 0 auto;
 }
 
