@@ -125,19 +125,19 @@ function changeTabBarColor(windowID) {
 }
 
 
-// Create a custom cursor element
-const customCursor = document.createElement('div');
-customCursor.classList.add('custom-cursor');
-customCursor.style.width = '0.4rem';
-customCursor.style.height = '0.4rem';
-customCursor.style.backgroundColor = 'blue';
-customCursor.style.position = 'fixed';
-customCursor.style.pointerEvents = 'none'; // Ensure the cursor does not interfere with mouse events
-customCursor.style.zIndex = '9999'; // Ensure the cursor stays on top of other elements
-customCursor.style.borderRadius = '50%'; // Make it round
+// // Create a custom cursor element
+// const customCursor = document.createElement('div');
+// customCursor.classList.add('custom-cursor');
+// customCursor.style.width = '0.4rem';
+// customCursor.style.height = '0.4rem';
+// customCursor.style.backgroundColor = 'blue';
+// customCursor.style.position = 'fixed';
+// customCursor.style.pointerEvents = 'none'; // Ensure the cursor does not interfere with mouse events
+// customCursor.style.zIndex = '9999'; // Ensure the cursor stays on top of other elements
+// customCursor.style.borderRadius = '50%'; // Make it round
 
-// Append the cursor to the body
-document.body.appendChild(customCursor);
+// // Append the cursor to the body
+// document.body.appendChild(customCursor);
 
 // Update the cursor position based on mouse movement
 document.addEventListener('mousemove', (e) => {
