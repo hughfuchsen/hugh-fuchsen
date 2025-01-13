@@ -149,7 +149,7 @@ document.addEventListener('mousemove', (e) => {
 // window.addEventListener('resize', adjustLayout);
 
 // Initial layout adjustment on page load
-document.addEventListener('DOMContentLoaded', adjustLayout);
+// document.addEventListener('DOMContentLoaded', adjustLayout);
 
 function copyEmail() {
     // Create a temporary input element
