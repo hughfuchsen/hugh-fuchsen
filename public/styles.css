@@ -13,7 +13,7 @@ body {
 }
 
 .everything-containter {
-    display: flex;
+    /* display: flex; */
 }
 
 html:hover {
