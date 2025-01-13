@@ -327,6 +327,12 @@ iframe {
         left: 0;
         margin: 2rem auto;
     }
+    #window-tour {
+        width: 95%;
+        top: 0;
+        left: 0;
+        margin: 2rem auto;
+    }
 
     #window-bio {
         max-width: none;
