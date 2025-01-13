@@ -71,12 +71,6 @@ iframe {
 }
 
 
-.responsive-image {
-    max-width: 40%;
-    height: auto;
-    box-shadow: 2px 2px 0 #000, 3px 3px 0 #fff, 4px 4px 0 #000; /* Optional: Add a shadow to match the window style */
-}
-
 #window-tour {
     width: 25%;
     top: 5%;
@@ -94,9 +88,9 @@ iframe {
 }
 
 #window-links {
-    max-width: 80%;
+    max-width: 60%;
     max-height: 80%;
-    top: 90%;
+    top: 9%;
     left: 1%;
     z-index: 300;
     margin: 0 auto;
