@@ -103,47 +103,6 @@ function adjustLayout() {
     }
 }
 
-function changeTabBarColor(windowID) {
-    const element = document.getElementById(windowID);
-    element.style.backgroundColor = 'rgb(255, 255, 123)';
-    
-    // Adding event listener for click
-    element.addEventListener('click', function() {
-        // Changing background color to rgb(255, 255, 123) on click
-        element.style.transition = 'background-color 0.5s';
-        element.style.backgroundColor = 'rgb(255, 255, 123)';
-        
-        // Adding event listener for mouseup to revert color
-        function revertColor() {
-            element.removeEventListener('mouseup', revertColor);
-            // Reverting back to original color after click
-            element.style.transition = 'background-color 0.5s';
-            element.style.backgroundColor = '';
-        }
-        element.addEventListener('mouseup', revertColor);
-    });
-}
-
-
-// // Create a custom cursor element
-// const customCursor = document.createElement('div');
-// customCursor.classList.add('custom-cursor');
-// customCursor.style.width = '0.4rem';
-// customCursor.style.height = '0.4rem';
-// customCursor.style.backgroundColor = 'blue';
-// customCursor.style.position = 'fixed';
-// customCursor.style.pointerEvents = 'none'; // Ensure the cursor does not interfere with mouse events
-// customCursor.style.zIndex = '9999'; // Ensure the cursor stays on top of other elements
-// customCursor.style.borderRadius = '50%'; // Make it round
-
-// // Append the cursor to the body
-// document.body.appendChild(customCursor);
-
-// // Update the cursor position based on mouse movement
-// document.addEventListener('mousemove', (e) => {
-//     customCursor.style.left = e.clientX + 'px';
-//     customCursor.style.top = e.clientY + 'px';
-// });
 
 // Add an event listener to handle screen resizing
 window.addEventListener('resize', adjustLayout);
