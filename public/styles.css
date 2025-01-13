@@ -80,8 +80,8 @@ iframe {
 #window-tour {
     width: 25%;
     top: 5%;
-    right: 50%;
-    z-index: 1000;
+    right: 5%;
+    z-index: 910;
     margin: 0 auto;
 }
 
