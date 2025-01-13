@@ -60,6 +60,9 @@ a:active {
     user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera, and Firefox */
 }
 
+#link-space {
+    line-height: 2rem;
+}
 
 #window-tour {
     width: 30%;
