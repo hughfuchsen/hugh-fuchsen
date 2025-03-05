@@ -45,7 +45,7 @@ function showColor(windowID) {
     const isMobileView = window.matchMedia("screen and (max-width: 1200px)").matches;
 
     if (isMobileView) {
-        setTimeout(revertColor(windowID), 2000);
+        setTimeout(() => revertColor(windowID), 2000);
         windowElement.style.transition = 'background-color 0.5s';
         windowElement.style.backgroundColor = 'rgb(255, 255, 123)';
     }
