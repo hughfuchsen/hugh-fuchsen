@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/fyr/static/css/main.cd8f6cf5.css",
+    "main.js": "/fyr/static/js/main.0eb80af9.js",
+    "static/js/453.9134a3ee.chunk.js": "/fyr/static/js/453.9134a3ee.chunk.js",
+    "index.html": "/fyr/index.html",
+    "main.cd8f6cf5.css.map": "/fyr/static/css/main.cd8f6cf5.css.map",
+    "main.0eb80af9.js.map": "/fyr/static/js/main.0eb80af9.js.map",
+    "453.9134a3ee.chunk.js.map": "/fyr/static/js/453.9134a3ee.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd8f6cf5.css",
+    "static/js/main.0eb80af9.js"
+  ]
+}
