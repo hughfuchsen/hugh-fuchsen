@@ -1,6 +1,5 @@
 let offsetX, offsetY;
 let requestId;
-app.use('/fyr_wireframes', express.static(path.join(__dirname, 'build')));
 
 
 
