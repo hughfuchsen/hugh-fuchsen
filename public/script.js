@@ -115,7 +115,7 @@ link.addEventListener("click", function(e) {
 
   // Copy email to clipboard
   navigator.clipboard.writeText(email).then(() => {
-    link.textContent = "alex's email copied!";
+    link.textContent = "email copied!";
 
     // Revert text after 6 seconds
     setTimeout(() => {
