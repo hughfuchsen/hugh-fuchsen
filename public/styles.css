@@ -404,9 +404,13 @@ a:active {
         margin: 0 auto;
     }
 
-    /* Mouse over link */
-    a:hover {
-        color: purple;
-    }
+    a {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none; /* disables long-press menus on iOS */
+        user-select: none;           /* prevents text selection */
+        -webkit-user-select: none;   /* Safari-specific */
+        color: inherit;              /* keeps your original text color */
+        text-decoration: none;       /* optional: if you don’t want underlines */
+      }
 
 }
