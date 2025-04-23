@@ -105,6 +105,28 @@ function adjustLayout() {
 }
 
 
+
+const email = "xandermaex@gmail.com";
+const link = document.getElementById("emailCopyLink");
+const originalText = link.textContent;
+
+link.addEventListener("click", function(e) {
+  e.preventDefault(); // prevent default link behavior
+
+  // Copy email to clipboard
+  navigator.clipboard.writeText(email).then(() => {
+    link.textContent = "alex's email copied!";
+
+    // Revert text after 6 seconds
+    setTimeout(() => {
+      link.textContent = originalText;
+    }, 6000);
+  }).catch(err => {
+    console.error("Failed to copy email: ", err);
+  });
+});
+
+
 // Add an event listener to handle screen resizing
 window.addEventListener('resize', adjustLayout);
 
