@@ -15,12 +15,6 @@ body {
     display: flex;
 }
 
-a 
-{
-    -webkit-tap-highlight-color: transparent;
-}
-  
-
 
 a:link {
     color: purple;
@@ -409,4 +403,10 @@ a:active {
         justify-content: center;
         margin: 0 auto;
     }
+
+    /* Mouse over link */
+    a:hover {
+        color: purple;
+    }
+
 }
