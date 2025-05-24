@@ -15,6 +15,9 @@ body {
     display: flex;
 }
 
+button {
+    font-family: monospace;
+}
 
 a:link {
     color: purple;
