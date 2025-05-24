@@ -21,6 +21,19 @@ function closeWindow(windowID) {
 }
 
 
+function toggleLanguage() {
+  const en = document.getElementById('english-version');
+  const jp = document.getElementById('japanese-version');
+  if (en.style.display === 'none') {
+    en.style.display = 'block';
+    jp.style.display = 'none';
+  } else {
+    en.style.display = 'none';
+    jp.style.display = 'block';
+  }
+}
+
+
 
 
 // for clicking
