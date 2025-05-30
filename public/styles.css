@@ -75,6 +75,13 @@ a:active {
     z-index: 300;
     margin: 0 auto;
 }
+#window-tour-2 {
+    width: 30%;
+    top: 5%;
+    right: 40%;
+    z-index: 299;
+    margin: 0 auto;
+}
 
 #window-picture {
     width: 25%;
@@ -328,6 +335,12 @@ a:active {
         margin: 2rem auto;
     }
     #window-tour {
+        width: 95%;
+        top: 0;
+        left: 0;
+        margin: 2rem auto;
+    }
+    #window-tour-2 {
         width: 95%;
         top: 0;
         left: 0;
