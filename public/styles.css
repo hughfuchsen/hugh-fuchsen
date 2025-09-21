@@ -56,7 +56,7 @@ a:active {
     box-shadow: 2px 2px 0 #4a4a4a, 3px 3px 0 #fff, 4px 4px 0 #4a4a4a;
     position: absolute;
     border: 1px solid #4a4a4a;
-    background-color: #e6e6e6;
+    background-color: #ffcd98;
     overflow: hidden; /* Ensure content inside the window doesn't overflow */
     -webkit-user-select: none; /* Safari */
     -moz-user-select: none; /* Firefox */
