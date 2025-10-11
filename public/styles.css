@@ -120,16 +120,16 @@ a:active {
 }
 
 #window-portfolio {
-    width: 30%;
+    width: 40%;
     max-height: 40%;
-    bottom: 2%; /* Distance from the bottom */
-    left: 29%; /* Distance from the right */
+    bottom: 5%; /* Distance from the bottom */
+    left: 27%; /* Distance from the right */
     margin: 0 auto;
     z-index: 101;
 }
 
 #window-film-animation-music {
-    bottom: 5%; /* Distance from the bottom */
+    bottom: 13%; /* Distance from the bottom */
     left: 54%; /* Distance from the right */
     margin: 0 auto;
     z-index: 400;
