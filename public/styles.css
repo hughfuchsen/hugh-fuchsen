@@ -120,6 +120,8 @@ a:active {
 }
 
 #window-portfolio {
+    width: 30%;
+    max-height: 40%;
     bottom: 2%; /* Distance from the bottom */
     left: 29%; /* Distance from the right */
     margin: 0 auto;
