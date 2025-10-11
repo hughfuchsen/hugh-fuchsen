@@ -72,7 +72,7 @@
             <div class="content">
                 <div id="english-version">
                   <p>
-                    <button onclick="toggleLanguage()">日本語</button>
+                    <button class="button-language" onclick="toggleLanguage()">日本語</button>
                     <br><br>
                     i'm hugh f, and i grew up near kiewa, on dudhuroa country.
                     <br><br>
@@ -101,7 +101,7 @@
               
                 <div id="japanese-version" style="display: none;">
                   <p>
-                    <button onclick="toggleLanguage()">english</button>
+                    <button class="button-language"  onclick="toggleLanguage()">english</button>
                     <br><br>
                     私はヒュー・Fと申します。ドゥードゥロア族の土地にあるキーワ付近で育ちました。
                     <br><br>
@@ -130,6 +130,22 @@
             </div>
         </div>
               
+        <div class="window" id="window-portfolio">
+            <div class="title-bar" id="title-bar1">
+                <span class="title">portfolio snippets</span>
+                <div class="buttons">
+                    <button class="button" onclick="closeWindow('window-portfolio')">X</button>
+                </div>
+            </div>
+            <div class="content">
+                <div class="video">
+                    <iframe title="youtube-video-small" src="https://widget.deezer.com/widget/dark/playlist/14398867241" width="100%" height="100%" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>               
+                </div>
+                <!-- <br> -->
+                <!-- <a href="https://linktr.ee/chefjef.wav" target="_blank">more of this</a> -->
+            </div>
+
+        </div>
         
 
         <div class="window" id="window-picture">
@@ -168,23 +184,6 @@
                     <iframe id="youtube-video-small" src="https://www.youtube-nocookie.com/embed/HYFo11qa2JA?si=1Gw5dK3MGC-JxtNN" title="hugh f" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
-        </div>
-
-        <div class="window" id="window-portfolio">
-            <div class="title-bar" id="title-bar1">
-                <span class="title">portfolio snippets</span>
-                <div class="buttons">
-                    <button class="button" onclick="closeWindow('window-portfolio')">X</button>
-                </div>
-            </div>
-            <div class="content">
-                <div class="video">
-                    <iframe title="youtube-video-small" src="https://widget.deezer.com/widget/dark/playlist/14398867241" width="100%" height="100%" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>               
-                </div>
-                <!-- <br> -->
-                <!-- <a href="https://linktr.ee/chefjef.wav" target="_blank">more of this</a> -->
-            </div>
-
         </div>
 
         <div class="window" id="window-film-animation-music">

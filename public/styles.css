@@ -199,6 +199,31 @@ a:active {
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera, and Firefox */
 }
+.button-language {
+    background-color: #c0c0c0;
+    border: 2px solid #ffffff; /* Light border */
+    border-left-color: #808080; /* Darker left border */
+    border-top-color: #808080; /* Darker top border */
+    color: black;
+    /* width: 20px;
+    height: 20px; */
+    margin-left: 2px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px; /* Center the text vertically */
+    box-shadow: inset 1px 1px #ffffff, inset -1px -1px #808080; /* Inner shadows for 3D effect */
+    padding: 0.4em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera, and Firefox */
+}
 
 .button:hover {
     background-color: #808080;
@@ -207,8 +232,20 @@ a:active {
     border-top-color: #000000; /* Darker top border on hover */
     box-shadow: inset 1px 1px #ffffff, inset -1px -1px #000000; /* Darker inner shadows on hover */
 }
+.button-language:hover {
+    background-color: #808080;
+    border: 2px solid #ffffff;
+    border-left-color: #000000; /* Darker left border on hover */
+    border-top-color: #000000; /* Darker top border on hover */
+    box-shadow: inset 1px 1px #ffffff, inset -1px -1px #000000; /* Darker inner shadows on hover */
+}
 
 .button:active {
+    background-color: #808080;
+    border: 2px solid #000000; /* Darker border when active */
+    box-shadow: inset 1px 1px #000000, inset -1px -1px #ffffff; /* Reverse inner shadows when active */
+}
+.button-language:active {
     background-color: #808080;
     border: 2px solid #000000; /* Darker border when active */
     box-shadow: inset 1px 1px #000000, inset -1px -1px #ffffff; /* Reverse inner shadows when active */
@@ -430,5 +467,21 @@ a:active {
         color: inherit;              /* keeps your original text color */
         text-decoration: none;       /* optional: if you don’t want underlines */
       }
+
+      /* For WebKit browsers */
+        ::-webkit-scrollbar {
+            width: 12px; /* width of the scrollbar */
+            height: 12px; /* height for horizontal scrollbar */
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #ffb86d; /* the track background */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #ff9727; /* the draggable part */
+            border-radius: 0; /* square corners */
+        }
+        
 
 }
