@@ -68,21 +68,6 @@ a:active {
     line-height: 3rem;
 }
 
-#window-tour {
-    width: 30%;
-    top: 5%;
-    right: 40%;
-    z-index: 300;
-    margin: 0 auto;
-}
-#window-tour-2 {
-    width: 30%;
-    top: 5%;
-    right: 40%;
-    z-index: 300;
-    margin: 0 auto;
-}
-
 #window-picture {
     width: 25%;
     top: 5%;
@@ -96,6 +81,14 @@ a:active {
     max-height: 80%;
     top: 8%;
     left: 1%;
+    z-index: 300;
+    margin: 0 auto;
+}
+#window-links-2 {
+    max-width: 25%;
+    max-height: 80%;
+    top: 15%;
+    left: 4%;
     z-index: 300;
     margin: 0 auto;
 }

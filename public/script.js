@@ -105,7 +105,8 @@ function adjustLayout() {
                 windowElement === document.getElementById('window-game-dev')||
                 windowElement === document.getElementById('window-video-game-sound')||
                 windowElement === document.getElementById('window-film-animation-music')||
-                windowElement === document.getElementById('window-more-bio'))
+                windowElement === document.getElementById('window-links-2')||
+                windowElement === document.getElementById('window-portfolio'))
             {
                 windowElement.style.display = 'none';
             }
