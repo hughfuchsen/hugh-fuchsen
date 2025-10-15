@@ -115,7 +115,7 @@ a:active {
 #window-portfolio-1 {
     width: 40%;
     max-height: 40%;
-    bottom: 5%; /* Distance from the bottom */
+    bottom: 8%; /* Distance from the bottom */
     left: 27%; /* Distance from the right */
     margin: 0 auto;
     z-index: 202;
@@ -123,7 +123,7 @@ a:active {
 #window-portfolio-2 {
     width: 40%;
     max-height: 40%;
-    bottom: 15%; /* Distance from the bottom */
+    bottom: 17%; /* Distance from the bottom */
     right: 27%; /* Distance from the right */
     margin: 0 auto;
     z-index: 201;
