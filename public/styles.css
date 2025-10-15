@@ -118,7 +118,7 @@ a:active {
     bottom: 5%; /* Distance from the bottom */
     left: 27%; /* Distance from the right */
     margin: 0 auto;
-    z-index: 101;
+    z-index: 202;
 }
 #window-portfolio-2 {
     width: 40%;
@@ -126,7 +126,7 @@ a:active {
     bottom: 15%; /* Distance from the bottom */
     right: 27%; /* Distance from the right */
     margin: 0 auto;
-    z-index: 101;
+    z-index: 201;
 }
 
 #window-film-animation-music {
