@@ -112,11 +112,19 @@ a:active {
     z-index: 300;
 }
 
-#window-portfolio {
+#window-portfolio-1 {
     width: 40%;
     max-height: 40%;
     bottom: 5%; /* Distance from the bottom */
     left: 27%; /* Distance from the right */
+    margin: 0 auto;
+    z-index: 101;
+}
+#window-portfolio-2 {
+    width: 40%;
+    max-height: 40%;
+    bottom: 15%; /* Distance from the bottom */
+    right: 27%; /* Distance from the right */
     margin: 0 auto;
     z-index: 101;
 }
@@ -413,7 +421,14 @@ a:active {
         margin: 2rem auto;
     }
     
-    #window-portfolio {
+    #window-portfolio-1 {
+        bottom: 0rem; /* Distance from the bottom */
+        left: 0rem; /* Distance from the right */
+        width: 95%;
+        margin: 2rem auto;
+    }
+    
+    #window-portfolio-2 {
         bottom: 0rem; /* Distance from the bottom */
         left: 0rem; /* Distance from the right */
         width: 95%;
