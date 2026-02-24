@@ -11,6 +11,14 @@ body {
     user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera, and Firefox */
 }
 
+.hidden{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
 .everything-containter {
     display: flex;
 }
@@ -96,7 +104,7 @@ a:active {
 #window-bio {
     max-width: 60%;
     max-height: 80%;
-    top: 15%;
+    top: 11%;
     left: 5%;
     z-index: 100;
     margin: 0 auto;
@@ -366,6 +374,14 @@ a:active {
         transition: width 0.3s, height 0.3s, left 0.3s, top 0.3s;
         border-bottom: 2px solid #000;
         border-radius: 0;
+    }
+
+    .hidden{
+        display: none;
+    }
+
+    .show{
+        display: block;
     }
 
     #window-picture {

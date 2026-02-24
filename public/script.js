@@ -20,6 +20,19 @@ function closeWindow(windowID) {
     }
 }
 
+function toggleReadMore(e) {
+    e.preventDefault();
+
+    const hiddenParagraph = document.querySelector('.hidden');
+    hiddenParagraph.classList.toggle('show');
+
+    const link = e.target;
+
+    link.textContent =
+        link.textContent === 'read more' ? 'read less' : 'read more';
+}
+
+
 
 function toggleLanguage() {
   const en = document.getElementById('english-version');
@@ -119,6 +132,12 @@ function adjustLayout() {
     }
 }
 
+function setZIndex(windowID) {
+    const windowElement = document.getElementById(windowID);
+    windowElement.style.zIndex = "front";
+    // all other windows behind it
+}
+
 
 
 const email = "xandermaex@gmail.com";
@@ -144,6 +163,7 @@ link.addEventListener("click", function(e) {
 
 // Add an event listener to handle screen resizing
 window.addEventListener('resize', adjustLayout);
+window.addEventListener('z-index', setZIndex);
 
 // Initial layout adjustment on page load
 document.addEventListener('DOMContentLoaded', adjustLayout);

@@ -9,7 +9,7 @@
 <body>
     <div class="everything-container">
         
-        <div class="window" id="window-links">
+        <div class="window" id="window-links" onclick="setZ">
             <div class="title-bar">
                 <span class="title">hugh f</span>
                 <div class="buttons">
@@ -20,7 +20,7 @@
             <div class="content">
     
                 <p id="link-space">
-                    <a href="#" onclick="showWindow('window-portfolio-2')">catalogue</a> 
+                    <!-- <a href="#" onclick="showWindow('window-portfolio-2')">catalogue</a>  -->
                     // <a href="#" onclick="showWindow('window-portfolio-1')">motif design</a> 
                     // <a href="https://hughfuchsen.itch.io/pony-zone-prototype-1" target="_blank">game dev</a> 
                     // <a href="#" onclick="showWindow('window-links-2')">streaming links</a> 
@@ -48,32 +48,40 @@
 
             <div class="content">
                 <div id="english-version">
-                  <p>
-                    <button class="button-language" onclick="toggleLanguage()">日本語</button>
-                    <br><br>
-                    i'm hugh f, and i grew up near kiewa, on dudhuroa country.
-                    <br><br>
-                    i specialise in crafting <a href="#" onclick="showWindow('window-portfolio-1')">music</a> and supplementary audio effects for 
-                    video games and other <a href="#" onclick="showWindow('window-film-animation-music')">visual art</a>. the music leans toward a cute and playful aesthetic, with inspiration derived from video games such as pikuniku, crossy road and animal crossing. you can explore a wider range of moods and styles in my <a href="#" onclick="showWindow('window-portfolio-2')">full catalogue</a>.<br>
-                    it is good to use sound to enhance the beauty of a world inside a screen.
-                    <br><br>
-                    this video game i am currently designing is called <br> <a href="#" onclick="showWindow('window-game-dev')">adventure to the pony zone</a> (working title). it's an open-world adventure/town simulation. you will need to help people find their ponies (working story).                    
-                    <br><br>
-                    my passion also resides in singing <a href="#" onclick="showWindow('window-singer-songerwriter-music')">folk stories</a>.
-                    the work has been well-received online and onstage...
-                    touring australia and the united states supporting legends like darren hanlon and chastity belt was good fun. 
-                    that was in late 2019 and early 2020. 
-                    maybe one day i will meet you and sing in your town.
-                    <br><br>
-                    if you want to chat about anything under the sun, feel free to drop me an 
-                    <a href="https://www.instagram.com/hughfuchsen/" target="_blank">instagram direct message</a>!!!
-                    ...alternatively, send me an email - <script>document.write('email at hughfuchsen dot art...');</script>
-                    <br><br>
-                    thanks for reading :)<br>
-                    hugh f  
-                    <br><br>
-                    <a href="#" onclick="showWindow('window-links')">links</a>
-                  </p>
+                    <p>
+                        <button class="button-language" onclick="toggleLanguage()">日本語</button>
+                        <br><br>
+                        i'm hugh f, and i grew up near kiewa, on dudhuroa country 
+                        - currently making art in order to feel like i am riding an eagle the size of a jet plane
+                        <br><br>
+                        <a href="#" id="read-more" onclick="toggleReadMore(event)">read more</a>
+                        <br><br>
+                        <a href="#" onclick="showWindow('window-links')">links</a>
+                    </p>
+                    <p class="hidden">
+                        the work is ususually <a href="#" onclick="showWindow('window-portfolio-1')">music</a> and supplementary audio effects for 
+                        video games and other <a href="#" onclick="showWindow('window-film-animation-music')">visual art</a>. the music leans toward a cute and playful aesthetic, with inspiration derived from video games such as pikuniku, crossy road and animal crossing. you can explore a wider range of moods and styles in my <a href="#" onclick="showWindow('window-portfolio-2')">full catalogue</a>.<br>
+                        
+                        it is good to use sound to enhance the beauty of a world inside a screen.
+                        <br><br>
+                        this video game i am currently designing is called <br> <a href="#" onclick="showWindow('window-game-dev')">adventure to the pony zone</a> (working title). it's an open-world adventure/town simulation. you will need to help people find their ponies (working story).                    
+                        <br><br>
+                        my passion also resides in singing <a href="#" onclick="showWindow('window-singer-songerwriter-music')">folk stories</a>.
+                        the work has been well-received online and onstage...
+                        touring australia and the united states supporting legends like darren hanlon and chastity belt was good fun. 
+                        that was in late 2019 and early 2020. 
+                        maybe one day i will meet you and sing in your town.
+                        <br><br>
+                        if you want to chat about anything under the sun, feel free to drop me an 
+                        <a href="https://www.instagram.com/hughfuchsen/" target="_blank">instagram direct message</a>!!!
+                        ...alternatively, send me an email - <script>document.write('email at hughfuchsen dot art...');</script>
+                        <br><br>
+                        thanks for reading :)<br>
+                        <br><br>
+                        
+                        <!-- <a href="#" class="read-more" onclick="toggleReadMore(event)">read less</a> -->
+                    </p>
+                
                 </div>
               
                 <div id="japanese-version" style="display: none;">
