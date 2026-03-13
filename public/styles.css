@@ -209,10 +209,10 @@ a:active {
     user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera, and Firefox */
 }
 .button-language {
-    background-color: #c0c0c0;
-    border: 2px solid #ffffff; /* Light border */
-    border-left-color: #808080; /* Darker left border */
-    border-top-color: #808080; /* Darker top border */
+    background-color: #ffb86d;
+    border: 2px solid #a2a2a2; /* Light border */
+    border-left-color: #ffdbb4; /* Darker left border */
+    border-top-color: #ffdbb4; /* Darker top border */
     color: black;
     /* width: 20px;
     height: 20px; */
@@ -220,7 +220,7 @@ a:active {
     font-size: 12px;
     text-align: center;
     line-height: 20px; /* Center the text vertically */
-    box-shadow: inset 1px 1px #ffffff, inset -1px -1px #808080; /* Inner shadows for 3D effect */
+    /* box-shadow: inset 1px 1px #ffffff, inset -1px -1px #808080; Inner shadows for 3D effect */
     padding: 0.4em;
     padding-top: 0.1em;
     padding-bottom: 0.1em;
@@ -242,22 +242,22 @@ a:active {
     /* box-shadow: inset 1px 1px #ffffff, inset -1px -1px #000000; Darker inner shadows on hover */
 }
 .button-language:hover {
-    background-color: #808080;
-    border: 2px solid #ffffff;
-    border-left-color: #000000; /* Darker left border on hover */
-    border-top-color: #000000; /* Darker top border on hover */
-    box-shadow: inset 1px 1px #ffffff, inset -1px -1px #000000; /* Darker inner shadows on hover */
+    background-color: #ff9727;
+    border: 2px solid #ffdbb4;
+    border-left-color: #a2a2a2; /* Darker left border on hover */
+    border-top-color: #a2a2a2; /* Darker top border on hover */
+    /* box-shadow: inset 1px 1px #ffffff, inset -1px -1px #000000; Darker inner shadows on hover */
 }
 
 .button:active {
     background-color: #808080;
-    border: 2px solid #000000; /* Darker border when active */
-    box-shadow: inset 1px 1px #000000, inset -1px -1px #ffffff; /* Reverse inner shadows when active */
+    /* border: 2px solid #000000; Darker border when active */
+    /* box-shadow: inset 1px 1px #000000, inset -1px -1px #ffffff; Reverse inner shadows when active */
 }
 .button-language:active {
     background-color: #808080;
-    border: 2px solid #000000; /* Darker border when active */
-    box-shadow: inset 1px 1px #000000, inset -1px -1px #ffffff; /* Reverse inner shadows when active */
+    /* border: 2px solid #000000; Darker border when active */
+    /* box-shadow: inset 1px 1px #000000, inset -1px -1px #ffffff; Reverse inner shadows when active */
 }
 
 .content {
