@@ -28,12 +28,12 @@ button {
 }
 
 a:link {
-    color: purple;
+    color: rgb(178, 0, 178);
 }
 
 /* Visited link */
 a:visited {
-    color: purple;
+    color: rgb(178, 0, 178);
 }
 
 /* Mouse over link */
@@ -186,10 +186,10 @@ a:active {
 }
 
 .button {
-    background-color: #c0c0c0;
-    border: 2px solid #ffffff; /* Light border */
-    border-left-color: #808080; /* Darker left border */
-    border-top-color: #808080; /* Darker top border */
+    background-color: #ffb86d;
+    border: 2px solid #808080; /* Light border */
+    border-left-color: #ffcd98; /* Darker left border */
+    border-top-color: #ffcd98; /* Darker top border */
     color: black;
     width: 20px;
     height: 20px;
@@ -197,7 +197,7 @@ a:active {
     font-size: 12px;
     text-align: center;
     line-height: 20px; /* Center the text vertically */
-    box-shadow: inset 1px 1px #ffffff, inset -1px -1px #808080; /* Inner shadows for 3D effect */
+    /* box-shadow: inset 1px 1px #ffffff, inset -1px -1px #808080; Inner shadows for 3D effect */
     padding: 0;
     display: flex;
     align-items: center;
@@ -235,11 +235,11 @@ a:active {
 }
 
 .button:hover {
-    background-color: #808080;
-    border: 2px solid #ffffff;
-    border-left-color: #000000; /* Darker left border on hover */
-    border-top-color: #000000; /* Darker top border on hover */
-    box-shadow: inset 1px 1px #ffffff, inset -1px -1px #000000; /* Darker inner shadows on hover */
+    background-color: #ff9727;
+    border: 2px solid #ffcd98;
+    border-left-color: #808080; /* Darker left border on hover */
+    border-top-color: #808080; /* Darker top border on hover */
+    /* box-shadow: inset 1px 1px #ffffff, inset -1px -1px #000000; Darker inner shadows on hover */
 }
 .button-language:hover {
     background-color: #808080;
@@ -481,10 +481,6 @@ a:active {
         padding: 1rem;
         flex-grow: 1;
         overflow-y: auto;
-    }
-
-    .window + .window {
-        border-top: none;
     }
 
     .video {
