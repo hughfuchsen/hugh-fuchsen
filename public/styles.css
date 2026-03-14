@@ -65,6 +65,7 @@ a:active {
     position: absolute;
     border-bottom: 1px solid #656565;
     border-right: 1px solid #656565;
+    border-left: 1px solid #ffdbb4;
     background-color: #ffcd98;
     overflow: hidden; /* Ensure content inside the window doesn't overflow */
     -webkit-user-select: none; /* Safari */
@@ -170,6 +171,8 @@ a:active {
     padding: 5px;
     /* font-weight: bold; */
     border-bottom: 1px solid #656565;
+    border-left: 1px solid #ffcd98;
+    border-top: 1px solid #ffcd98;
     height: 25px;
     -webkit-user-select: none; /* Safari */
     -moz-user-select: none; /* Firefox */
