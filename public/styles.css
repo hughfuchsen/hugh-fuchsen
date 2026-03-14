@@ -3,7 +3,7 @@ body {
     background-color: #ffb86d;
     font-family: monospace;
     line-height: 1.2rem;
-    color: black;
+    color: #303030;
     padding: 20px;
     -webkit-user-select: none; /* Safari */
     -moz-user-select: none; /* Firefox */
@@ -166,7 +166,7 @@ a:active {
     align-items: center;
     /* background: #00009e; */
     background: #ff9727;
-    color: black;
+    color: #303030;
     padding: 5px;
     /* font-weight: bold; */
     border-bottom: 1px solid #656565;
@@ -191,7 +191,7 @@ a:active {
     border: 2px solid #656565; /* Light border */
     border-left-color: #ffcd98; /* Darker left border */
     border-top-color: #ffcd98; /* Darker top border */
-    color: black;
+    color: 303030;
     width: 20px;
     height: 20px;
     margin-left: 2px;
@@ -214,7 +214,7 @@ a:active {
     border: 2px solid #a2a2a2; /* Light border */
     border-left-color: #ffdbb4; /* Darker left border */
     border-top-color: #ffdbb4; /* Darker top border */
-    color: black;
+    color: 303030;
     /* width: 20px;
     height: 20px; */
     margin-left: 2px;
