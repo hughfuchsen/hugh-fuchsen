@@ -63,7 +63,8 @@ a:active {
 .window {
     box-shadow: 1px 1px 0 #ffb86d, 2px 2px 0 #ffb86d, 3px 3px 0 #656565;
     position: absolute;
-    border: 1px solid #656565;
+    border-bottom: 1px solid #656565;
+    border-right: 1px solid #656565;
     background-color: #ffcd98;
     overflow: hidden; /* Ensure content inside the window doesn't overflow */
     -webkit-user-select: none; /* Safari */
@@ -372,7 +373,8 @@ a:active {
         max-height: none;
         position: relative;
         transition: width 0.3s, height 0.3s, left 0.3s, top 0.3s;
-        border-bottom: 2px solid #656565;
+        border-bottom: 1px solid #656565;
+        border-right: 1px solid #656565;
         border-radius: 0;
     }
 
