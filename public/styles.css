@@ -242,7 +242,6 @@ a:active {
     border: 2px solid #ffcd98;
     border-left-color: #656565; /* Darker left border on hover */
     border-top-color: #656565; /* Darker top border on hover */
-    /* box-shadow: inset 1px 1px #ffffff, inset -1px -1px #000000; Darker inner shadows on hover */
 }
 .button-language:hover {
     background-color: #ff9727;
