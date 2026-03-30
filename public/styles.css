@@ -222,7 +222,7 @@ a:active {
     display: flex;
     align-items: center;
     justify-content: center; /* center them */
-    gap: 13px; /* space between buttons */
+    gap: 18px; /* space between buttons */
     font-size: larger;
 }
 
