@@ -51,26 +51,27 @@ function toggleLanguage() {
   }
 }
 
-
-
-
-// for clicking
 function showWindow(windowID) {
     const windowElement = document.getElementById(windowID);
     const isMobileView = window.matchMedia("screen and (max-width: 1200px)").matches;
-
+  
+    windowElement.style.display = 'block'; // make it visible
+  
     if (isMobileView) {
-        // Ensure the element is visible first
-        windowElement.style.display = 'block';
-        // Add a small delay before scrolling into view
-        setTimeout(() => {
-            windowElement.scrollIntoView({ behavior: 'smooth' });
-        }, 100); // Adjust the delay as necessary
+      // small delay to ensure element is rendered
+      setTimeout(() => {
+        const rect = windowElement.getBoundingClientRect();
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+        // target 20% down from top of viewport
+        const targetY = rect.top + scrollTop - window.innerHeight * 0.2;
+  
+        window.scrollTo({ top: targetY, behavior: 'smooth' });
+      }, 50);
     }
-    else {
-        windowElement.style.display = 'block';
-    }
-}            
+  }
+
+        
 //for mouse over
 function showColor(windowID) {
     const windowElement = document.getElementById(windowID);

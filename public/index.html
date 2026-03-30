@@ -25,7 +25,7 @@
             <div class="title-bar">
                 <span class="title">music</span>
                 <div class="buttons">
-                    <button class="button" onclick="closeWindow('window-music-player')">X</button>
+                    <button class="button" onclick="closeWindow('window-music-player'); playPause()">X</button>
                 </div>
             </div>
             <div>
@@ -130,7 +130,8 @@
             <div class="content"> 
      
                 <p id="link-space">
-                       <a href="#" onclick="showWindow('window-links-2')">stream ♫</a> 
+                       <a href="#" onclick="showWindow('window-music-player');">music</a> 
+                    // <a href="#" onclick="showWindow('window-links-2')">stream elsewhere</a> 
                     // <a href="#" onclick="showWindow('window-portfolio-1')">motif design</a> 
                     // <a href="https://hughfuchsen.itch.io/pony-zone-prototype-1">game dev</a> 
                     // <a href="https://flippinyeahindustries.bigcartel.com/artist/hugh-f">merch</a>               
