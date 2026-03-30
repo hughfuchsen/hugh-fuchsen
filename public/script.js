@@ -18,6 +18,11 @@ function closeWindow(windowID) {
     if (windowID === 'window-bio') {
         setTimeout(() => showWindow(windowID), 1000);
     }
+    else if (windowID === 'window-music-player') {
+              audio.pause();
+              document.getElementById('playPauseToggle').textContent = '▶';
+        };    
+
 }
 
 function toggleReadMore(e) {
@@ -193,27 +198,28 @@ for (let i = array.length - 1; i > 0; i--) {
 }
 }
 
-function loadTrack(index) {
-    audio.src = tracks[index];
-  
-    const file = tracks[index].split('/').pop();        // e.g., "track_MySongName.mp3"
-    const nameWithoutExt = file.replace('.mp3', '');    // "track_MySongName"
-    const parts = nameWithoutExt.split('_');            // ["track", "MySongName"]
-  
-    // take the part after the underscore
-    const rightPart = parts[1] || parts[0];            // fallback if no underscore
-  
-    // insert spaces for camelCase and lowercase everything
-    const displayName = rightPart
-      .replace(/([a-z])([A-Z])/g, '$1 $2')  // "My Song Name"
-      .toLowerCase();                        // "my song name"
-  
-    trackName.textContent = displayName;
+function camelToWords(str) {
+    // insert space before every uppercase letter, except at start
+    const withSpaces = str.replace(/([A-Z])/g, ' $1').trim();
+    return withSpaces.toLowerCase();
   }
+  
+function loadTrack(index) {
+const file = tracks[index].split('/').pop();       // e.g., "track_quarterOfACamel.mp3"
+const nameWithoutExt = file.replace('.mp3', '');   // remove extension
+const parts = nameWithoutExt.split('_');           // split by underscore
+const rightPart = parts[1] || parts[0];           // take part after underscore
+
+const displayName = camelToWords(rightPart);      // split camelCase & lowercase
+
+trackName.textContent = displayName;
+audio.src = tracks[index]; // set audio source
+}
 
 // play button handles playback
 
 // controls
+
 document.getElementById('playPauseToggle').onclick = () => {
     if (audio.paused) {
       audio.play();
@@ -246,7 +252,29 @@ audio.addEventListener('ended', () => {
     document.getElementById('playPauseToggle').textContent = '⏸';
 });
 
+const musicWindow = document.getElementById('window-music-player');
 
+document.addEventListener('keydown', (e) => {
+  // only trigger if window is "active" / focused
+
+  if (e.code === 'Space') {    // spacebar pressed
+    e.preventDefault();        // prevent scrolling
+
+    if(musicWindow.style.display !== 'none')
+    {
+        if (audio.paused)
+        { 
+            audio.play();
+            document.getElementById('playPauseToggle').textContent = '⏸';
+        }
+        else{
+            audio.pause();
+            document.getElementById('playPauseToggle').textContent = '▶';
+        } 
+    }
+
+  }
+});
 
 
 
