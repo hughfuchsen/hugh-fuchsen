@@ -168,8 +168,81 @@ window.addEventListener('z-index', setZIndex);
 // Initial layout adjustment on page load
 document.addEventListener('DOMContentLoaded', adjustLayout);
 
-//   07d49d3d996ed78774bc8bbc2483fa23
-// music
+
+const audio = document.getElementById('audio');
+const trackName = document.getElementById('trackName');
+let tracks = [];
+let current = 0;
+
+
+// load playlist from Worker
+fetch('https://music.hughfuchsen.workers.dev/playlist.json')
+  .then(res => res.json())
+  .then(list => {
+    tracks = list.map(t => `https://music.hughfuchsen.workers.dev/${t}`);
+    
+    shuffle(tracks); // 👈 shuffle happens here
+
+    loadTrack(0); // load first (random now)
+  });
+    
+function shuffle(array) {
+for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+}
+}
+
+function loadTrack(index) {
+    audio.src = tracks[index];
+  
+    const file = tracks[index].split('/').pop();        // e.g., "track_MySongName.mp3"
+    const nameWithoutExt = file.replace('.mp3', '');    // "track_MySongName"
+    const parts = nameWithoutExt.split('_');            // ["track", "MySongName"]
+  
+    // take the part after the underscore
+    const rightPart = parts[1] || parts[0];            // fallback if no underscore
+  
+    // insert spaces for camelCase and lowercase everything
+    const displayName = rightPart
+      .replace(/([a-z])([A-Z])/g, '$1 $2')  // "My Song Name"
+      .toLowerCase();                        // "my song name"
+  
+    trackName.textContent = displayName;
+  }
+
+// play button handles playback
+
+// controls
+document.getElementById('playPauseToggle').onclick = () => {
+    if (audio.paused) {
+      audio.play();
+      document.getElementById('playPauseToggle').textContent = '⏸';
+    } else {
+      audio.pause();
+      document.getElementById('playPauseToggle').textContent = '▶';
+    }
+  };
+
+document.getElementById('next').onclick = () => {
+    current = (current + 1) % tracks.length;
+    loadTrack(current);
+    audio.play();
+};
+document.getElementById('prev').onclick = () => {
+    current = (current - 1 + tracks.length) % tracks.length;
+    loadTrack(current);
+    audio.play();
+};
+
+// auto next track
+audio.addEventListener('ended', () => {
+    current = (current + 1) % tracks.length;
+    loadTrack(current);
+});
+
+
+
 
 
 
