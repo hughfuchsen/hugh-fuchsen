@@ -154,6 +154,13 @@ a:active {
     z-index: 600;
 }
 
+#window-music-player {
+    width: 30%;
+    bottom: 7%; /* Distance from the bottom */
+    right: 7%; /* Distance from the right */
+    z-index: 600;
+}
+
 #window-more-bio {
     width: 97%;
     height: 85%;

@@ -225,9 +225,69 @@
             </div>  
         </div>
 
-        
-    
+        <div class="window" id="window-music-player">
+            <div class="title-bar">
+                <span class="title">music</span>
+                <div class="buttons">
+                    <button class="button" onclick="closeWindow('window-music-player')">X</button>
+                </div>
+            </div>
+            <div>
+                <div id="music-player-container">
+                    <audio id="audio" controls></audio>
+                    <div style="margin-top: 10px;">
+                        <button id="prev">Prev</button>
+                        <button id="play">Play</button>
+                        <button id="pause">Pause</button>
+                        <button id="next">Next</button>
+                    </div>
+                    <div id="trackName" style="margin-top: 10px; font-weight: bold;"></div>
+                </div>
+                
+                <script>
+                const audio = document.getElementById('audio');
+                const trackName = document.getElementById('trackName');
+                let tracks = [];
+                let current = 0;
+                
+                // load playlist from Worker
+                fetch('https://music.hughfuchsen.workers.dev/playlist.json')
+                  .then(res => res.json())
+                  .then(list => {
+                    tracks = list.map(t => `https://music.hughfuchsen.workers.dev/${t}`);
+                    loadTrack(current);
+                  });
+                  
+                
+                function loadTrack(index) {
+                    audio.src = tracks[index];
+                    trackName.textContent = tracks[index].split('/').pop();
+                    audio.play();
+                }
+                
+                // controls
+                document.getElementById('play').onclick = () => audio.play();
+                document.getElementById('pause').onclick = () => audio.pause();
+                document.getElementById('next').onclick = () => {
+                    current = (current + 1) % tracks.length;
+                    loadTrack(current);
+                };
+                document.getElementById('prev').onclick = () => {
+                    current = (current - 1 + tracks.length) % tracks.length;
+                    loadTrack(current);
+                };
+                
+                // auto next track
+                audio.addEventListener('ended', () => {
+                    current = (current + 1) % tracks.length;
+                    loadTrack(current);
+                });
+                </script>            
+            </div>
+             
+
         </div>
+
 
 
    
