@@ -228,11 +228,14 @@ document.getElementById('next').onclick = () => {
     current = (current + 1) % tracks.length;
     loadTrack(current);
     audio.play();
+    document.getElementById('playPauseToggle').textContent = '⏸';
 };
+
 document.getElementById('prev').onclick = () => {
     current = (current - 1 + tracks.length) % tracks.length;
     loadTrack(current);
     audio.play();
+    document.getElementById('playPauseToggle').textContent = '⏸';
 };
 
 // auto next track
@@ -240,6 +243,7 @@ audio.addEventListener('ended', () => {
     current = (current + 1) % tracks.length;
     loadTrack(current);
     audio.play();
+    document.getElementById('playPauseToggle').textContent = '⏸';
 });
 
 
