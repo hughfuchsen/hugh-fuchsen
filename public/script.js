@@ -239,6 +239,7 @@ document.getElementById('prev').onclick = () => {
 audio.addEventListener('ended', () => {
     current = (current + 1) % tracks.length;
     loadTrack(current);
+    audio.play();
 });
 
 
