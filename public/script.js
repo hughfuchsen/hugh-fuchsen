@@ -73,8 +73,7 @@ function showWindow(windowID) {
 
         
 //for mouse over
-function showColor(e, windowID) {
-    e.preventDefault(); // stops the scroll
+function showColor(windowID) {
 
     const windowElement = document.getElementById(windowID);
 
