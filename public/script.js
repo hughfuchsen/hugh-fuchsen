@@ -51,8 +51,7 @@ function toggleLanguage() {
   }
 }
 
-function showWindow(e, windowID) {
-    e.preventDefault();
+function showWindow(windowID) {
     const windowElement = document.getElementById(windowID);
     const isMobileView = window.matchMedia("screen and (max-width: 1200px)").matches;
   
