@@ -51,7 +51,8 @@ function toggleLanguage() {
   }
 }
 
-function showWindow(windowID) {
+function showWindow(e, windowID) {
+    e.preventDefault();
     const windowElement = document.getElementById(windowID);
     const isMobileView = window.matchMedia("screen and (max-width: 1200px)").matches;
   
@@ -73,22 +74,17 @@ function showWindow(windowID) {
 
         
 //for mouse over
-function showColor(windowID) {
-    const windowElement = document.getElementById(windowID);
-    // const isMobileView = window.matchMedia("screen and (max-width: 1200px)").matches;
+function showColor(e, windowID) {
+    e.preventDefault(); // stops the scroll
 
-    // if (!isMobileView) {
-        // setTimeout(() => revertColor(windowID), 2000);
-        windowElement.style.transition = 'background-color 0.5s';
-        windowElement.style.backgroundColor = 'rgb(255, 255, 123)';
-        setTimeout(() => {
-            windowElement.style.backgroundColor = '';
-        }, 3000);
-    // }
-    // else {
-    //     windowElement.style.transition = 'background-color 0.5s';
-    //     windowElement.style.backgroundColor = 'rgb(255, 255, 123)';
-    // }
+    const windowElement = document.getElementById(windowID);
+
+    windowElement.style.transition = 'background-color 0.5s';
+    windowElement.style.backgroundColor = 'rgb(255, 255, 123)';
+
+    setTimeout(() => {
+        windowElement.style.backgroundColor = '';
+    }, 3000);
 }
 
 //for mouse out
