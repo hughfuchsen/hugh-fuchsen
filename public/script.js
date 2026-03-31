@@ -75,17 +75,20 @@ function showWindow(windowID) {
 //for mouse over
 function showColor(windowID) {
     const windowElement = document.getElementById(windowID);
-    const isMobileView = window.matchMedia("screen and (max-width: 1200px)").matches;
+    // const isMobileView = window.matchMedia("screen and (max-width: 1200px)").matches;
 
-    if (isMobileView) {
-        setTimeout(() => revertColor(windowID), 2000);
+    // if (!isMobileView) {
+        // setTimeout(() => revertColor(windowID), 2000);
         windowElement.style.transition = 'background-color 0.5s';
         windowElement.style.backgroundColor = 'rgb(255, 255, 123)';
-    }
-    else {
-        windowElement.style.transition = 'background-color 0.5s';
-        windowElement.style.backgroundColor = 'rgb(255, 255, 123)';
-    }
+        setTimeout(() => {
+            windowElement.style.backgroundColor = '';
+        }, 3000);
+    // }
+    // else {
+    //     windowElement.style.transition = 'background-color 0.5s';
+    //     windowElement.style.backgroundColor = 'rgb(255, 255, 123)';
+    // }
 }
 
 //for mouse out
