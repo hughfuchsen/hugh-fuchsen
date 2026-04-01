@@ -8,7 +8,9 @@
     <link rel="icon" href="./img/favicon.png" />
 </head>
 <body>
+
     <div class="everything-container">
+
 
         <div class="window" id="window-picture">
             <div class="title-bar">
@@ -57,11 +59,13 @@
                        <a href="#" onclick="showColor('window-music-player'); return false;">listen</a>  
                     // <a href="#" onclick="showWindow('window-portfolio-1')">motif design</a> 
                     // <a href="https://hughfuchsen.itch.io/pony-zone-prototype-1">game dev</a> 
+                    // <a href="#" onclick="showWindow('window-songkick')">shows</a>
                     // <a href="https://flippinyeahindustries.bigcartel.com/artist/hugh-f">merch</a>               
                     // <a href="https://www.instagram.com/hughfuchsen/">instagram</a> 
                     // <a href="https://www.tiktok.com/@hughfuchsen?is_from_webapp=1&sender_device=pc">tiktok</a> 
                     // <a href="#" onclick="showWindow('window-links-2')">stream links</a>
-                    // <a href="#" id="emailCopyLink">alex - booking</a>                          
+                    // <a href="#" id="emailCopyLink">alex - booking</a>
+                          
                     </div> 
                 </p>
     
@@ -245,7 +249,32 @@
             </div>  
         </div>
 
-        
+        <div class="window" id="window-songkick">
+            <div class="title-bar">
+                <span class="title">shows</span> 
+                <div class="buttons">
+                    <button class="button" onclick="closeWindow('window-songkick')">X</button>
+                </div>
+            </div>
+            <div style="padding: 3%;">
+                <a href="https://www.songkick.com/artists/10077082"
+                class="songkick-widget"
+                data-theme="light"
+                data-track-button="off"
+                data-detect-style="off"
+                data-locale="en"
+                data-other-artists="off"
+                data-share-button="off"
+                data-country-filter="on"
+                data-rsvp="off"
+                data-request-show="off"
+                data-past-events="on"
+                style="display: none; height: 100%; width: 100%;">
+             </a>
+             
+             <script src="https://widget-app.songkick.com/injector/10077082"></script>           
+            </div>    
+        </div>
 
 
 
