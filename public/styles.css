@@ -362,7 +362,16 @@ a:active {
 }
 
 
-
+#songkick-cover
+{
+    position: absolute;
+    background-color: #ffcd98;
+    z-index: 501;
+    height: 62px;
+    width: 200px;
+    top: 50px;
+    right: 0;
+}
 
 
 
@@ -527,6 +536,7 @@ a:active {
         justify-content: center;
         margin: 0 auto;
     }
+
 
     a {
         -webkit-tap-highlight-color: transparent;

@@ -1,8 +1,3 @@
-let offsetX, offsetY;
-let requestId;
-
-
-
 
 function closeWindow(windowID) {
     const windowElement = document.getElementById(windowID);
