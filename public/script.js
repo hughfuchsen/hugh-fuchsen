@@ -194,31 +194,26 @@ fetch('./playlist.json')
     loadTrack(0);
   });
 
-function loadTrack(index) {
-  const track = tracks[index];
-  if (!track) return;
-
-  const file = track.url.split('/').pop();
-
-  const nameWithoutExt = file.replace(/\.[^/.]+$/, "");
-
-  trackName.textContent = nameWithoutExt;
-  audio.src = "https://music.hughfuchsen.workers.dev/" + track.url;
-  console.log(tracks.length)
-}
-
+  function loadTrack(index) {
+    const track = tracks[index];
+    if (!track) return;
+  
+    const file = track.url.split('/').pop();
+  
+    let name = file
+      .replace(/\.[^/.]+$/, "")   // remove extension
+      .replace(/^\d+\-/, "")      // remove leading numbers + dash (01-, 24-, etc)
+      .replace(/-/g, " ");        // hyphens → spaces
+  
+    trackName.textContent = name.toLowerCase();
+    audio.src = "https://music.hughfuchsen.workers.dev/" + track.url;
+  }
 
 function shuffle(array) {
 for (let i = array.length - 1; i > 0; i--) {
   const j = Math.floor(Math.random() * (i + 1));
   [array[i], array[j]] = [array[j], array[i]];
 }
-}
-
-function camelToWords(str) {
-  // insert space before every uppercase letter, except at start
-  const withSpaces = str.replace(/([A-Z])/g, ' $1').trim();
-  return withSpaces.toLowerCase();
 }
 
 
