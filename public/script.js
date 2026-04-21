@@ -176,7 +176,7 @@ let tracks = [];      // playback queue
 let current = 0;
 
 
-fetch('/./public/playlist.json')
+fetch('./playlist.json')
   .then(res => res.json())
   .then(data => {
 
