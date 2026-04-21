@@ -202,7 +202,7 @@ fetch('./playlist.json')
   
     let name = file
       .replace(/\.[^/.]+$/, "")   // remove extension
-      .replace(/^\d+\-/, "")      // remove leading numbers + dash (01-, 24-, etc)
+      .replace(/^\d+[\s\-_]*/, "")  // remove leading numbers + dash (01-, 24-, etc)
       .replace(/-/g, " ");        // hyphens → spaces
   
     trackName.textContent = name.toLowerCase();
