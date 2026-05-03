@@ -52,6 +52,13 @@ function showWindow(windowID) {
 
   windowElement.style.display = 'block'; // make it visible
 
+  windowElement.style.transition = 'background-color 0.5s';
+  windowElement.style.backgroundColor = 'rgb(255, 255, 123)';
+
+  setTimeout(() => {
+      windowElement.style.backgroundColor = '';
+  }, 3000);
+
   if (isMobileView) {
     // small delay to ensure element is rendered
     setTimeout(() => {
@@ -78,6 +85,23 @@ function showColor(windowID) {
   setTimeout(() => {
       windowElement.style.backgroundColor = '';
   }, 3000);
+
+  const isMobileView = window.matchMedia("screen and (max-width: 1200px)").matches;
+
+  windowElement.style.display = 'block'; // make it visible
+
+  if (isMobileView) {
+    // small delay to ensure element is rendered
+    setTimeout(() => {
+      const rect = windowElement.getBoundingClientRect();
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      // target 20% down from top of viewport
+      const targetY = rect.top + scrollTop - window.innerHeight * 0.2;
+
+      window.scrollTo({ top: targetY, behavior: 'smooth' });
+    }, 50);
+  }
 }
 
 //for mouse out
