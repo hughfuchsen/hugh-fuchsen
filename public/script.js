@@ -174,6 +174,7 @@ function adjustLayout() {
           if (
               windowElement === document.getElementById('window-singer-songerwriter-music') ||
               windowElement === document.getElementById('window-game-dev')||
+              windowElement === document.getElementById('window-music-explore')||
               windowElement === document.getElementById('window-video-game-sound')||
               windowElement === document.getElementById('window-film-animation-music')||
               windowElement === document.getElementById('window-links-2')||
