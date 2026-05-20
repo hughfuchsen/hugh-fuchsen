@@ -411,6 +411,17 @@ a:active {
         padding: 0;
     }
 
+    #explore{
+        border: none;
+        background: none;
+        color: rgb(178, 0, 178);
+        text-decoration: underline;
+    }
+    
+    #explore:hover{
+        color: rgb(255, 255, 123);
+    }
+
     .pic-of-hugh {
         width: 100px; 
         aspect-ratio: 1; 
