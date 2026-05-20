@@ -1,6 +1,7 @@
 body {
     /* background-color: #008080; */
     background-color: #ffb86d;
+    font-size: 1em;
     font-family: monospace;
     line-height: 1.2rem;
     color: #303030;
@@ -32,6 +33,7 @@ button {
     background: none;
     color: rgb(178, 0, 178);
     text-decoration: underline;
+    font-size: 1em;
 }
 
 #explore:hover{
@@ -416,6 +418,7 @@ a:active {
         background: none;
         color: rgb(178, 0, 178);
         text-decoration: underline;
+        font-size: 1em;
     }
     
     #explore:hover{
