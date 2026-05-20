@@ -27,13 +27,14 @@ button {
     font-family: monospace;
 }
 
-#explore-tag{
+#explore{
     border: none;
     background: none;
     color: rgb(178, 0, 178);
+    text-decoration: underline;
 }
 
-#explore-tag:hover{
+#explore:hover{
     color: rgb(255, 255, 123);
 }
 
