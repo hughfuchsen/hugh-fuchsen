@@ -140,13 +140,13 @@ function startPlaylistBasedOnTag(tag) {
 
   currentTag = tag;
 
-  tracks = allTracks.filter(track =>
-    track.tags.includes(tag)
-  );
-
-  if (tracks.length === 0) {
-    console.log("No tracks found for:", tag);
-    return;
+  if (tag == 'all') {
+    tracks = allTracks;
+  }
+  else{
+    tracks = allTracks.filter(track =>
+      track.tags.includes(tag)
+    );
   }
 
   shuffle(tracks);
