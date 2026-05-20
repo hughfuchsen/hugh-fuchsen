@@ -31,7 +31,7 @@
             </div>
             <div>
                 <div class="content">
-                    <a href="#" onclick="event.preventDefault(); showColor('window-music-explore'); return false;">explore</a>
+                    <button id="explore-tag" onclick="showColor('window-music-explore');">explore</button>
 
                     <audio id="audio" style="display: none;" controls></audio>
                     <div id="trackName" style="margin: 10px; text-align: center;"></div>
@@ -54,12 +54,12 @@
             </div>
             <div>
                 <div class="content">
-                    <a href="#"    onclick="event.preventDefault(); startPlaylistBasedOnTag('piano'); return false;">piano</a> 
-                    // <a href="#" onclick="event.preventDefault(); startPlaylistBasedOnTag('ambient'); return false;">ambient</a>
-                    // <a href="#" onclick="event.preventDefault(); startPlaylistBasedOnTag('soundtrack'); return false;">soundtrack</a>
-                    // <a href="#" onclick="event.preventDefault(); startPlaylistBasedOnTag('singer-songwriter'); return false;">singer-songwriter</a>
-                    // <a href="#" onclick="event.preventDefault(); startPlaylistBasedOnTag('gibberish'); return false;">gibberish</a>
-                    // <a href="#" onclick="event.preventDefault(); startPlaylistBasedOnTag('guitar'); return false;">guitar</a>
+                    <button id="explore-tag"    onclick="startPlaylistBasedOnTag('piano');">piano</button> 
+                    // <button id="explore-tag" onclick="startPlaylistBasedOnTag('ambient');">ambient</button>
+                    // <button id="explore-tag" onclick="startPlaylistBasedOnTag('soundtrack');">soundtrack</button>
+                    // <button id="explore-tag" onclick="startPlaylistBasedOnTag('singer-songwriter');">singer-songwriter</button>
+                    // <button id="explore-tag" onclick="startPlaylistBasedOnTag('gibberish');">gibberish</button>
+                    // <button id="explore-tag" onclick="startPlaylistBasedOnTag('guitar');">guitar</button>
                     
                 </div>          
             </div>

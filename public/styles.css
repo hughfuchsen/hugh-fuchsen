@@ -27,6 +27,16 @@ button {
     font-family: monospace;
 }
 
+#explore-tag{
+    border: none;
+    background: none;
+    color: rgb(178, 0, 178);
+}
+
+#explore-tag:hover{
+    color: rgb(255, 255, 123);
+}
+
 a:link {
     color: rgb(178, 0, 178);
 }
