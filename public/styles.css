@@ -166,6 +166,12 @@ a:active {
     right: 4%; 
     z-index: 200;
 }
+#window-music-explore {
+    width: 20%;
+    bottom: 4%; 
+    right: 4%; 
+    z-index: 200;
+}
 
 #window-more-bio {
     width: 97%;

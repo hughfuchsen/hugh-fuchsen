@@ -122,7 +122,27 @@ function revertColor(windowID) {
 
 }
 
+function startPlaylistBasedOnTag(tag) {
 
+  tracks = allTracks.filter(track =>
+    track.tags.includes(tag)
+  );
+
+  if (tracks.length === 0) {
+    console.log("No tracks found for:", tag);
+    return;
+  }
+
+  shuffle(tracks);
+
+  current = 0;
+
+  loadTrack(current);
+
+  audio.play();
+
+  document.getElementById('playPauseToggle').textContent = '⏸';
+}
 
 // Function to adjust layout based on screen size
 function adjustLayout() {
@@ -238,6 +258,9 @@ for (let i = array.length - 1; i > 0; i--) {
   const j = Math.floor(Math.random() * (i + 1));
   [array[i], array[j]] = [array[j], array[i]];
 }
+
+
+
 }
 
 

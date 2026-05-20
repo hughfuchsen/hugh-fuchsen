@@ -31,6 +31,8 @@
             </div>
             <div>
                 <div class="content">
+                    <a href="#" id="read-more" onclick="showWindow('window-music-explore');">explore</a>
+
                     <audio id="audio" style="display: none;" controls></audio>
                     <div id="trackName" style="margin: 10px; text-align: center;"></div>
 
@@ -39,6 +41,21 @@
                         <button class="button" id="playPauseToggle">▶</button>
                         <button class="button" id="next">⏭</button>
                     </div>
+                </div>          
+            </div>
+        </div>
+
+        <div class="window" id="window-music-explore">
+            <div class="title-bar">
+                <span class="title">music</span>
+                <div class="buttons">
+                    <button class="button" onclick="closeWindow('window-music-explore');">X</button>
+                </div>
+            </div>
+            <div>
+                <div class="content">
+                    <a href="#" id="read-more" onclick="startPlaylistBasedOnTag('piano');">piano</a>
+                    
                 </div>          
             </div>
         </div>
