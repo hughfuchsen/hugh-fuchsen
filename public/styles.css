@@ -181,6 +181,7 @@ a:active {
     bottom: 4%; 
     right: 35%; 
     z-index: 201;
+    line-height: 2rem;
 }
 
 #window-more-bio {
