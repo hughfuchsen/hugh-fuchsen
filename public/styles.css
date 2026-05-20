@@ -32,12 +32,15 @@ button {
     border: none;
     background: none;
     color: rgb(178, 0, 178);
-    text-decoration: underline;
     font-size: 1em;
 }
 
 #explore:hover{
     color: rgb(255, 255, 123);
+}
+
+a{
+    text-decoration: none;       /* optional: if you don’t want underlines */
 }
 
 a:link {
@@ -417,7 +420,6 @@ a:active {
         border: none;
         background: none;
         color: rgb(178, 0, 178);
-        text-decoration: underline;
         font-size: 1em;
     }
     
