@@ -130,10 +130,10 @@ let currentTag = '';
 function updatePlaylistUI() {
 
   tagName.textContent =
-    currentTag ? currentTag + ' • ' : '';
+    currentTag ? currentTag + ' ' : '';
 
   playlistNumber.textContent =
-    `${current + 1}/${tracks.length}`;
+  `${current + 1}/${tracks.length}`;
 }
 
 function startPlaylistBasedOnTag(tag) {
