@@ -177,11 +177,11 @@ a:active {
     z-index: 200;
 }
 #window-music-explore {
+    line-height: 2rem;
     width: 20%;
     bottom: 4%; 
     right: 35%; 
     z-index: 201;
-    line-height: 2rem;
 }
 
 #window-more-bio {
