@@ -31,7 +31,7 @@
             </div>
             <div>
                 <div class="content">
-                    <a href="#" id="read-more" onclick="showWindow('window-music-explore');">explore</a>
+                    <a href="#" onclick="showColor('window-music-explore');">explore</a>
 
                     <audio id="audio" style="display: none;" controls></audio>
                     <div id="trackName" style="margin: 10px; text-align: center;"></div>
@@ -47,14 +47,19 @@
 
         <div class="window" id="window-music-explore">
             <div class="title-bar">
-                <span class="title">music</span>
+                <span class="title"><span id="tag-name"></span> music <span id="playlist-number"></span></span>
                 <div class="buttons">
                     <button class="button" onclick="closeWindow('window-music-explore');">X</button>
                 </div>
             </div>
             <div>
                 <div class="content">
-                    <a href="#" id="read-more" onclick="startPlaylistBasedOnTag('piano');">piano</a>
+                    <a href="#"    onclick="startPlaylistBasedOnTag('piano');">piano</a> 
+                    // <a href="#" onclick="startPlaylistBasedOnTag('ambient');">ambient</a>
+                    // <a href="#" onclick="startPlaylistBasedOnTag('soundtrack');">soundtrack</a>
+                    // <a href="#" onclick="startPlaylistBasedOnTag('singer-songwriter');">singer-songwriter</a>
+                    // <a href="#" onclick="startPlaylistBasedOnTag('gibberish');">gibberish</a>
+                    // <a href="#" onclick="startPlaylistBasedOnTag('guitar');">guitar</a>
                     
                 </div>          
             </div>

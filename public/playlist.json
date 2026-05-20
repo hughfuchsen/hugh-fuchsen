@@ -226,7 +226,7 @@
       },
       {
         "url": "chef-jef/ragtime-ralph.m4a",
-        "tags": []
+        "tags": ["soundtrack"]
       },
       {
         "url": "chef-jef/scaredy-cat.m4a",
@@ -426,7 +426,7 @@
       },
       {
         "url": "hugh-f/albums/do-you-have-a-minute/20-Dad-Explains-Planes.m4a",
-        "tags": []
+        "tags": ["singer-songwriter"]
       },
       {
         "url": "hugh-f/albums/do-you-have-a-minute/21-Grand-Designs.m4a",
@@ -434,11 +434,11 @@
       },
       {
         "url": "hugh-f/albums/do-you-have-a-minute/22-The-Sims-2.m4a",
-        "tags": []
+        "tags": ["guitar"]
       },
       {
         "url": "hugh-f/albums/do-you-have-a-minute/23-Overload.m4a",
-        "tags": []
+        "tags": ["singer-songwriter"]
       },
       {
         "url": "hugh-f/albums/do-you-have-a-minute/24-Fix-My-Feet.m4a",
@@ -458,11 +458,11 @@
       },
       {
         "url": "hugh-f/albums/do-you-have-a-minute/28-Crazy-Little-Bird.m4a",
-        "tags": []
+        "tags": ["gibberish"]
       },
       {
         "url": "hugh-f/albums/do-you-have-a-minute/29-Goodbye.m4a",
-        "tags": []
+        "tags": ["gibberish"]
       },
       {
         "url": "hugh-f/albums/do-you-have-a-minute/30-Slaughterhouse.m4a",
@@ -478,7 +478,7 @@
       },
       {
         "url": "hugh-f/albums/do-you-have-a-minute/33-Hillside.m4a",
-        "tags": []
+        "tags": ["guitar"]
       },
       {
         "url": "hugh-f/albums/do-you-have-a-minute/34-Woman-Up-The-Street.m4a",
@@ -522,7 +522,7 @@
       },
       {
         "url": "hugh-f/albums/rise-and-shine/10-I-Miss-You.m4a",
-        "tags": []
+        "tags": ["guitar"]
       },
       {
         "url": "hugh-f/ants-on-the-hill.m4a",

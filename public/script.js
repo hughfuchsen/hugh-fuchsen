@@ -86,22 +86,22 @@ function showColor(windowID) {
       windowElement.style.backgroundColor = '';
   }, 3000);
 
-  const isMobileView = window.matchMedia("screen and (max-width: 1200px)").matches;
+  // const isMobileView = window.matchMedia("screen and (max-width: 1200px)").matches;
 
   windowElement.style.display = 'block'; // make it visible
 
-  if (isMobileView) {
-    // small delay to ensure element is rendered
-    setTimeout(() => {
-      const rect = windowElement.getBoundingClientRect();
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  // if (isMobileView) {
+  //   // small delay to ensure element is rendered
+  //   setTimeout(() => {
+  //     const rect = windowElement.getBoundingClientRect();
+  //     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-      // target 20% down from top of viewport
-      const targetY = rect.top + scrollTop - window.innerHeight * 0.2;
+  //     // target 20% down from top of viewport
+  //     const targetY = rect.top + scrollTop - window.innerHeight * 0.2;
 
-      window.scrollTo({ top: targetY, behavior: 'smooth' });
-    }, 50);
-  }
+  //     window.scrollTo({ top: targetY, behavior: 'smooth' });
+  //   }, 50);
+  // }
 }
 
 //for mouse out
@@ -122,7 +122,23 @@ function revertColor(windowID) {
 
 }
 
+const tagName = document.getElementById('tag-name');
+const playlistNumber = document.getElementById('playlist-number');
+
+let currentTag = '';
+
+function updatePlaylistUI() {
+
+  tagName.textContent =
+    currentTag ? currentTag + ' • ' : '';
+
+  playlistNumber.textContent =
+    `${current + 1}/${tracks.length}`;
+}
+
 function startPlaylistBasedOnTag(tag) {
+
+  currentTag = tag;
 
   tracks = allTracks.filter(track =>
     track.tags.includes(tag)
@@ -238,20 +254,27 @@ fetch('./playlist.json')
     loadTrack(0);
   });
 
-  function loadTrack(index) {
-    const track = tracks[index];
-    if (!track) return;
-  
-    const file = track.url.split('/').pop();
-  
-    let name = file
-      .replace(/\.[^/.]+$/, "")   // remove extension
-      .replace(/^\d+[\s.\-_]*/, "") // remove leading numbers + dash (01-, 24-, etc)
-      .replace(/-/g, " ");        // hyphens → spaces
-  
-    trackName.textContent = name.toLowerCase();
-    audio.src = "https://music.hughfuchsen.workers.dev/" + track.url;
-  }
+
+function loadTrack(index) {
+
+  const track = tracks[index];
+
+  if (!track) return;
+
+  const file = track.url.split('/').pop();
+
+  let name = file
+    .replace(/\.[^/.]+$/, "")
+    .replace(/^\d+[\s.\-_]*/, "")
+    .replace(/-/g, " ");
+
+  trackName.textContent = name.toLowerCase();
+
+  audio.src =
+    "https://music.hughfuchsen.workers.dev/" + track.url;
+
+  updatePlaylistUI();
+}
 
 function shuffle(array) {
 for (let i = array.length - 1; i > 0; i--) {
@@ -323,158 +346,4 @@ if (e.code === 'Space') {    // spacebar pressed
 
 }
 });
-
-// let selectedTags = new Set();
-// let activeTrackIndex = null;
-
-// const BASE = "https://music.hughfuchsen.workers.dev/";
-
-// function openTagEditor(index) {
-//   activeTrackIndex = index;
-
-//   const track = allTracks[index];
-
-//   selectedTags = new Set(track.tags || []);
-
-//   document.getElementById('tag-editor').style.display = 'block';
-//   document.getElementById('editor-title').textContent = track.url;
-
-//   renderEditorTags();
-//   renderTags();
-// }
-
-// function toggleTag(tag, el) {
-//   if (selectedTags.has(tag)) {
-//     selectedTags.delete(tag);
-//     el.classList.remove('active');
-//   } else {
-//     selectedTags.add(tag);
-//     el.classList.add('active');
-//   }
-// }
-// trackName.onclick = () => openEditor(tracks[current]);
-
-
-// function playAll() {
-//   tracks = [...allTracks];
-//   shuffle(tracks);
-//   current = 0;
-
-//   loadTrack(current);
-//   audio.play();
-// }
-
-// function playTag(tag) {
-//   const filtered = allTracks.filter(t => safeTags(t).includes(tag));
-
-//   if (!filtered.length) return;
-
-//   tracks = filtered;
-//   shuffle(tracks);
-//   current = 0;
-
-//   loadTrack(current);
-//   audio.play();
-// }
-
-// function openEditor(track) {
-//   activeTrackIndex = allTracks.indexOf(track); // 🔥 find real index
-
-//   selectedTags = new Set(track.tags || []);
-
-//   document.getElementById('tag-editor').style.display = 'block';
-//   document.getElementById('editor-title').textContent = track.url;
-
-//   renderEditorTags();
-//   renderTags();
-// }
-
-// function renderEditorTags() {
-//   const container = document.getElementById('editor-tags');
-//   container.innerHTML = '';
-
-//   const track = allTracks[activeTrackIndex];
-
-//   (track.tags || []).forEach(tag => {
-//     const el = document.createElement('span');
-//     el.textContent = tag + ' ✕';
-
-//     el.onclick = () => {
-//       track.tags = track.tags.filter(t => t !== tag);
-//       renderEditorTags();
-//     };
-
-//     container.appendChild(el);
-//     container.appendChild(document.createTextNode(' '));
-//   });
-// }
-
-// function addTag() {
-//   const input = document.getElementById('new-tag');
-//   const tag = input.value.trim();
-
-//   if (!tag) return;
-
-//   const track = allTracks[activeTrackIndex];
-
-//   if (!track.tags.includes(tag)) {
-//     track.tags.push(tag);
-//   }
-
-//   input.value = '';
-//   renderEditorTags();
-// }
-
-// function saveTags() {
-//   fetch('https://music.hughfuchsen.workers.dev/save-tags', {
-//     method: 'POST',
-//     headers: { 'Content-Type': 'application/json' },
-//     body: JSON.stringify({
-//       index: activeTrackIndex,
-//       tags: [...selectedTags]
-//     })
-//   })
-//   .then(() => fetch('https://music.hughfuchsen.workers.dev/playlist.json'))
-//   .then(res => res.json())
-//   .then(data => {
-//     allTracks = data.tracks;
-
-//     tracks = [...allTracks];
-//     shuffle(tracks);
-
-//     renderTags();
-//     alert('saved');
-//   });
-// }
-
-
-
-// function safeTags(track) {
-//   if (!track.tags) track.tags = [];
-//   return track.tags;
-// }
-
-// function playSelectedTags() {
-//   if (selectedTags.size === 0) return;
-
-//   const filtered = allTracks.filter(track =>
-//     safeTags(track).some(tag => selectedTags.has(tag))
-//   );
-
-//   tracks = filtered;
-//   shuffle(tracks);
-//   current = 0;
-
-//   loadTrack(current);
-//   audio.play();
-// }
-
-// play button handles playback
-
-// controls
-
-
-
-
-
 
