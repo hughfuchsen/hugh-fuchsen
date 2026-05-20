@@ -31,7 +31,7 @@
             </div>
             <div>
                 <div class="content">
-                    <a href="javascript:void(0)" onclick="showColor('window-music-explore');">explore</a>
+                    <a href="#" onclick="event.preventDefault(); showColor('window-music-explore'); return false;">explore</a>
 
                     <audio id="audio" style="display: none;" controls></audio>
                     <div id="trackName" style="margin: 10px; text-align: center;"></div>
@@ -54,12 +54,12 @@
             </div>
             <div>
                 <div class="content">
-                    <a href="javascript:void(0)"    onclick="startPlaylistBasedOnTag('piano');">piano</a> 
-                    // <a href="javascript:void(0)" onclick="startPlaylistBasedOnTag('ambient');">ambient</a>
-                    // <a href="javascript:void(0)" onclick="startPlaylistBasedOnTag('soundtrack');">soundtrack</a>
-                    // <a href="javascript:void(0)" onclick="startPlaylistBasedOnTag('singer-songwriter');">singer-songwriter</a>
-                    // <a href="javascript:void(0)" onclick="startPlaylistBasedOnTag('gibberish');">gibberish</a>
-                    // <a href="javascript:void(0)" onclick="startPlaylistBasedOnTag('guitar');">guitar</a>
+                    <a href="#"    onclick="event.preventDefault(); startPlaylistBasedOnTag('piano'); return false;">piano</a> 
+                    // <a href="#" onclick="event.preventDefault(); startPlaylistBasedOnTag('ambient'); return false;">ambient</a>
+                    // <a href="#" onclick="event.preventDefault(); startPlaylistBasedOnTag('soundtrack'); return false;">soundtrack</a>
+                    // <a href="#" onclick="event.preventDefault(); startPlaylistBasedOnTag('singer-songwriter'); return false;">singer-songwriter</a>
+                    // <a href="#" onclick="event.preventDefault(); startPlaylistBasedOnTag('gibberish'); return false;">gibberish</a>
+                    // <a href="#" onclick="event.preventDefault(); startPlaylistBasedOnTag('guitar'); return false;">guitar</a>
                     
                 </div>          
             </div>
@@ -79,7 +79,7 @@
                        <a href="#" onclick="showWindow('window-music-player'); return false;">listen</a>  
                     // <a href="#" onclick="showWindow('window-portfolio-1')">motif design</a> 
                     // <a href="https://hughfuchsen.itch.io/pony-zone-prototype-1" target="_blank">game dev</a> 
-                    // <a href="#" onclick="showWindow('window-songkick'); showWindow('songkick-cover') ">shows</a>
+                    // <a href="#" onclick="showWindow('window-songkick'); showWindow('songkick-cover'); return false;">shows</a>
                     // <a href="https://flippinyeahindustries.bigcartel.com/artist/hugh-f" target="_blank">merch</a>               
                     // <a href="https://www.instagram.com/hughfuchsen/" target="_blank">instagram</a> 
                     // <a href="https://www.tiktok.com/@hughfuchsen?is_from_webapp=1&sender_device=pc" target="_blank">tiktok</a> 
