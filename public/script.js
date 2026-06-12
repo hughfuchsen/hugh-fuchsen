@@ -57,7 +57,7 @@ function showWindow(windowID) {
 
   setTimeout(() => {
       windowElement.style.backgroundColor = '';
-  }, 3000);
+  }, 1500);
 
   if (isMobileView) {
     // small delay to ensure element is rendered
@@ -84,7 +84,7 @@ function showColor(windowID) {
 
   setTimeout(() => {
       windowElement.style.backgroundColor = '';
-  }, 3000);
+  }, 1500);
 
   // const isMobileView = window.matchMedia("screen and (max-width: 1200px)").matches;
 
