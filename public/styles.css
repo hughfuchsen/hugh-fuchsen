@@ -6,10 +6,10 @@ body {
     line-height: 1.2rem;
     color: #303030;
     padding: 20px;
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera, and Firefox */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none; /* disables long-press menus on iOS */
+    user-select: none;           /* prevents text selection */
+    -webkit-user-select: none;   /* Safari-specific */
 }
 
 .hidden{
@@ -84,10 +84,11 @@ a:active {
     border-left: 1px solid #ffdbb4;
     background-color: #ffcd98;
     overflow: hidden; /* Ensure content inside the window doesn't overflow */
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera, and Firefox */
+}
+
+a:focus,
+button:focus {
+    outline: 3px solid #ffb86d;
 }
 
 #link-space {
@@ -209,10 +210,6 @@ a:active {
     border-bottom: 1px solid #656565;
     border-top: 1px solid #ffcd98;
     height: 25px;
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera, and Firefox */
 }
 
 .title-bar .buttons {
@@ -242,10 +239,6 @@ a:active {
     align-items: center;
     justify-content: center;
     transition: background-color 0.2s;
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera, and Firefox */
 }
 
 .player-controls {
@@ -276,10 +269,6 @@ a:active {
     align-items: center;
     justify-content: center;
     transition: background-color 0.2s;
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera, and Firefox */
 }
 
 .button:hover {
@@ -311,10 +300,6 @@ a:active {
 .content {
     padding: 1rem;
     flex-grow: 1;
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera, and Firefox */
 }
 
 .embed iframe {
@@ -580,10 +565,6 @@ a:active {
 
 
     a {
-        -webkit-tap-highlight-color: transparent;
-        -webkit-touch-callout: none; /* disables long-press menus on iOS */
-        user-select: none;           /* prevents text selection */
-        -webkit-user-select: none;   /* Safari-specific */
         color: inherit;              /* keeps your original text color */
         text-decoration: none;       /* optional: if you don’t want underlines */
       }
