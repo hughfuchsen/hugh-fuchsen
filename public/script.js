@@ -53,7 +53,7 @@ function showWindow(windowID) {
   windowElement.style.display = 'block'; // make it visible
 
   windowElement.style.transition = 'background-color 0.5s';
-  windowElement.style.backgroundColor = 'rgb(255, 255, 123)';
+  windowElement.style.backgroundColor = 'rgb(255, 132, 0)';
 
   setTimeout(() => {
       windowElement.style.backgroundColor = '';
@@ -80,7 +80,7 @@ function showColor(windowID) {
   const windowElement = document.getElementById(windowID);
 
   windowElement.style.transition = 'background-color 0.5s';
-  windowElement.style.backgroundColor = 'rgb(255, 255, 123)';
+  windowElement.style.backgroundColor = 'rgb(255, 132, 0)';
 
   setTimeout(() => {
       windowElement.style.backgroundColor = '';
