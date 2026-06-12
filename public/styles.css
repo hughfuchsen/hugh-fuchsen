@@ -86,10 +86,6 @@ a:active {
     overflow: hidden; /* Ensure content inside the window doesn't overflow */
 }
 
-a:focus,
-button:focus {
-    outline: 3px solid #00ffff;
-}
 
 #link-space {
     line-height: 3rem;
