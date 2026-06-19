@@ -290,7 +290,7 @@
       },
       {
         "url": "hallway-poems/shame.m4a",
-        "tags": ["all", "soundtrack", "piano"]
+        "tags": ["featured", "all", "soundtrack", "piano"]
       },
       {
         "url": "hallway-poems/dew.m4a",
@@ -298,7 +298,7 @@
       },
       {
         "url": "hallway-poems/cattle.m4a",
-        "tags": ["all", "soundtrack", "piano"]
+        "tags": ["featured", "all", "soundtrack", "piano"]
       },
       {
         "url": "hallway-poems/grass.m4a",
@@ -550,15 +550,15 @@
       },
       {
         "url": "hugh-f/only-clover.m4a",
-        "tags": ["all", "singer-songwriter"]
+        "tags": ["featured", "all", "singer-songwriter"]
       },
       {
         "url": "hugh-f/quarter-of-a-camel.m4a",
-        "tags": ["all", "singer-songwriter"]
+        "tags": ["featured", "all", "singer-songwriter"]
       },
       {
         "url": "hugh-f/the-bar.m4a",
-        "tags": ["all", "singer-songwriter"]
+        "tags": ["featured", "all", "singer-songwriter"]
       },
       {
         "url": "hugh-f/the-horse-is-way-too-high.m4a",
@@ -582,11 +582,11 @@
       },
       {
         "url": "minksy-bootsy/gerdy-go-do.m4a",
-        "tags": ["all", "gibberish"]
+        "tags": ["featured", "all", "gibberish"]
       },
       {
         "url": "minksy-bootsy/grubby-enough.m4a",
-        "tags": ["all", "gibberish"]
+        "tags": ["featured", "all", "gibberish"]
       },
       {
         "url": "minksy-bootsy/harold-is-just-not-waking-up.m4a",
@@ -718,7 +718,7 @@
       },
       {
         "url": "waxy-jack-symmons/hurt-no-more.m4a",
-        "tags": ["all", "guitar"]
+        "tags": ["featured", "all", "guitar"]
       },
       {
         "url": "waxy-jack-symmons/johnny-horse.m4a",
@@ -738,7 +738,7 @@
       },
       {
         "url": "waxy-jack-symmons/too-big.m4a",
-        "tags": ["all", "guitar"]
+        "tags": ["featured", "all", "guitar"]
       },
       {
         "url": "waxy-jack-symmons/wallace.m4a",
