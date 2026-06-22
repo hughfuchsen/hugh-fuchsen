@@ -237,11 +237,28 @@ let tracks = [];      // playback queue
 let current = 0;
 
 
+// fetch('./playlist.json')
+//   .then(res => res.json())
+//   .then(data => {
+
+//     // supports both formats:
+//     const list = data.tracks || data;
+
+//     allTracks = list.map(t => ({
+//       url: t.url,
+//       tags: t.tags || []
+//     }));
+
+//     tracks = [...allTracks];
+
+//     shuffle(tracks);
+//     loadTrack(0);
+//   });
+
 fetch('./playlist.json')
   .then(res => res.json())
   .then(data => {
 
-    // supports both formats:
     const list = data.tracks || data;
 
     allTracks = list.map(t => ({
@@ -249,11 +266,30 @@ fetch('./playlist.json')
       tags: t.tags || []
     }));
 
-    tracks = [...allTracks];
-
-    shuffle(tracks);
-    loadTrack(0);
+    loadPlaylistBasedOnTag('featured');
   });
+
+function loadPlaylistBasedOnTag(tag) {
+
+  currentTag = tag;
+
+  tracks = allTracks.filter(track =>
+    track.tags.includes(tag)
+  );
+
+  if (tracks.length === 0) {
+    console.log("No tracks found for:", tag);
+    return;
+  }
+
+  shuffle(tracks);
+
+  current = 0;
+
+  loadTrack(current);
+
+  document.getElementById('playPauseToggle').textContent = '▶';
+}
 
 
 function loadTrack(index) {
