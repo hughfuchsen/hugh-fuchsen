@@ -454,7 +454,7 @@
       },
       {
         "url": "hugh-f/albums/do-you-have-a-minute/23-Overload.m4a",
-        "tags": ["featured", "all", "singer-songwriter"]
+        "tags": ["all", "singer-songwriter"]
       },
       {
         "url": "hugh-f/albums/do-you-have-a-minute/24-Fix-My-Feet.m4a",
@@ -586,11 +586,11 @@
       },
       {
         "url": "minksy-bootsy/gerdy-go-do.m4a",
-        "tags": ["featured", "all", "gibberish"]
+        "tags": ["all", "gibberish"]
       },
       {
         "url": "minksy-bootsy/grubby-enough.m4a",
-        "tags": ["featured", "all", "gibberish"]
+        "tags": ["all", "gibberish"]
       },
       {
         "url": "minksy-bootsy/harold-is-just-not-waking-up.m4a",
@@ -767,6 +767,10 @@
       {
         "url": "xander-mae/yoo-hoo.m4a",
         "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "xander-mae/curse-my-parallel.m4a",
+        "tags": ["featured", "all", "singer-songwriter"]
       }
     ]
   }
