@@ -440,7 +440,6 @@ function populateAlbums() {
       button.id = 'explore';
       button.onclick = () => openAlbum(album);
 
-      currentAlbum = album.textContent;
 
       container.appendChild(button);
 
@@ -464,6 +463,9 @@ function openAlbum(albumName) {
       );
 
   });
+
+  currentAlbum = albumName.textContent;
+
 
   albumTracks.forEach((track, index) => {
 
