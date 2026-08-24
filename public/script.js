@@ -435,11 +435,12 @@ function populateAlbums() {
           .replace(/-/g, ' ')
           .toLowerCase();
 
-      currentAlbum = button.textContent;
 
 
       button.id = 'explore';
       button.onclick = () => openAlbum(album);
+
+      currentAlbum = album.textContent;
 
       container.appendChild(button);
 

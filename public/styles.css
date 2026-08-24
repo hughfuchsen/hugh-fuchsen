@@ -305,6 +305,10 @@ a:active {
     overflow-x: hidden;
 
     word-wrap: break-word;
+
+
+    
+        
 }
 #music-albums,
 #music-album-tracks button{
@@ -395,6 +399,20 @@ a:active {
 
 
 
+    /* For WebKit browsers */
+    ::-webkit-scrollbar {
+    width: 12px; /* width of the scrollbar */
+    height: 12px; /* height for horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #ffb86d; /* the track background */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff9727; /* the draggable part */
+    border-radius: 0; /* square corners */
+}
 
 
 
