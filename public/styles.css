@@ -300,7 +300,7 @@ a:active {
 
 #music-albums,
 #music-album-tracks {
-    max-height: 300px;
+    max-height: 200px;
 
     overflow-y: auto;
     overflow-x: hidden;

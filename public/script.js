@@ -441,6 +441,7 @@ function populateAlbums() {
 
       button.onclick = () => openAlbum(album);
 
+      container.appendChild(span);
       container.appendChild(button);
 
   });
