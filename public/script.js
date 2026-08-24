@@ -429,9 +429,9 @@ function populateAlbums() {
 
   albums.forEach(album => {
 
+      const br = document.createElement('br');
       const button = document.createElement('button');
 
-      span.textContent = '// '
       button.textContent = album + ''
           .replace(/-/g, ' ')
           .toLowerCase();
@@ -442,6 +442,7 @@ function populateAlbums() {
       button.id = 'explore';
       button.onclick = () => openAlbum(album);
 
+      container.appendChild(br);
       container.appendChild(button);
 
   });
@@ -468,6 +469,8 @@ function openAlbum(albumName) {
   albumTracks.forEach((track, index) => {
 
       const button = document.createElement('button');
+      const br = document.createElement('br');
+
       button.id = 'explore';
 
       const file = track.url.split('/').pop();
@@ -482,6 +485,7 @@ function openAlbum(albumName) {
 
       button.onclick = () => playAlbumTrack(albumTracks, index);
 
+      container.appendChild(br);
       container.appendChild(button);
 
   });
