@@ -437,8 +437,10 @@ function populateAlbums() {
           .replace(/-/g, ' ')
           .toLowerCase();
 
-      button.id = 'explore';
+      currentAlbum = button.textContent;
 
+
+      button.id = 'explore';
       button.onclick = () => openAlbum(album);
 
       container.appendChild(span);
@@ -452,8 +454,6 @@ function openAlbum(albumName) {
   const container = document.getElementById('music-album-tracks');
 
   container.innerHTML = '';
-
-  currentAlbum = albumName;
 
   const albumTracks = allTracks.filter(track => {
 

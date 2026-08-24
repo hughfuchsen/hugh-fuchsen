@@ -301,12 +301,17 @@ a:active {
 #music-albums,
 #music-album-tracks {
     max-height: 200px;
-    display: block;
     overflow-y: auto;
     overflow-x: hidden;
 
     word-wrap: break-word;
 }
+#music-albums,
+#music-album-tracks button{
+    display: block;
+    margin-bottom: 4px;
+}
+
 
 .embed iframe {
     height: auto;
