@@ -298,6 +298,17 @@ a:active {
     flex-grow: 1;
 }
 
+#music-albums,
+#music-album-tracks {
+    max-width: 400px;
+    max-height: 300px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    word-wrap: break-word;
+}
+
 .embed iframe {
     height: auto;
     border: none;

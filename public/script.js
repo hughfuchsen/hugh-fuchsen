@@ -429,6 +429,7 @@ function populateAlbums() {
   albums.forEach(album => {
 
       const button = document.createElement('button');
+      button.id = 'explore';
 
       button.textContent = album
           .replace(/-/g, ' ')
@@ -462,6 +463,7 @@ function openAlbum(albumName) {
   albumTracks.forEach((track, index) => {
 
       const button = document.createElement('button');
+      button.id = 'explore';
 
       const file = track.url.split('/').pop();
 
