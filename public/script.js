@@ -464,7 +464,6 @@ function openAlbum(albumName) {
 
   });
 
-  currentAlbum = albumName.textContent;
 
 
   albumTracks.forEach((track, index) => {
@@ -500,7 +499,7 @@ function playAlbumTrack(albumTracks, index) {
 
   current = index;
 
-  currentTag = currentAlbum;
+  currentTag = 'playing album';
 
   loadTrack(current);
 
