@@ -256,18 +256,21 @@ let current = 0;
 //   });
 
 fetch('./playlist.json')
-  .then(res => res.json())
-  .then(data => {
+    .then(res => res.json())
+    .then(data => {
 
-    const list = data.tracks || data;
+        const list = data.tracks || data;
 
-    allTracks = list.map(t => ({
-      url: t.url,
-      tags: t.tags || []
-    }));
+        allTracks = list.map(t => ({
+            url: t.url,
+            tags: t.tags || []
+        }));
 
-    loadPlaylistBasedOnTag('featured');
-  });
+        populateAlbums();
+
+        loadPlaylistBasedOnTag('featured');
+
+    });
 
 function loadPlaylistBasedOnTag(tag) {
 
@@ -384,3 +387,130 @@ if (e.code === 'Space') {    // spacebar pressed
 }
 });
 
+function getAlbumFromTrack(track) {
+
+  const parts = track.url.split('/');
+
+  // Expected:
+  // artist / albums / album / track.m4a
+
+  if (parts.length >= 4 && parts[1] === 'albums') {
+      return parts[2];
+  }
+
+  return null;
+}
+
+function getAlbums() {
+
+  const albums = [];
+
+  allTracks.forEach(track => {
+
+      const album = getAlbumFromTrack(track);
+
+      if (album && !albums.includes(album)) {
+          albums.push(album);
+      }
+
+  });
+
+  return albums;
+}
+
+function populateAlbums() {
+
+  const container = document.getElementById('music-albums');
+
+  container.innerHTML = '';
+
+  const albums = getAlbums();
+
+  albums.forEach(album => {
+
+      const button = document.createElement('button');
+
+      button.textContent = album
+          .replace(/-/g, ' ')
+          .toLowerCase();
+
+      button.onclick = () => openAlbum(album);
+
+      container.appendChild(button);
+
+  });
+}
+
+function openAlbum(albumName) {
+
+  const container = document.getElementById('music-album-tracks');
+
+  container.innerHTML = '';
+
+  const albumTracks = allTracks.filter(track => {
+
+      const parts = track.url.split('/');
+
+      return (
+          parts.length >= 4 &&
+          parts[1] === 'albums' &&
+          parts[2] === albumName
+      );
+
+  });
+
+  albumTracks.forEach((track, index) => {
+
+      const button = document.createElement('button');
+
+      const file = track.url.split('/').pop();
+
+      const name = file
+          .replace(/\.[^/.]+$/, '')
+          .replace(/^\d+[\s.\-_]*/, '')
+          .replace(/-/g, ' ')
+          .toLowerCase();
+
+      button.textContent = name;
+
+      button.onclick = () => playAlbumTrack(albumTracks, index);
+
+      container.appendChild(button);
+
+  });
+
+  document.getElementById('music-tags').style.display = 'none';
+  document.getElementById('music-albums-section').style.display = 'none';
+  document.getElementById('music-album-tracks-section').style.display = 'block';
+}
+
+function playAlbumTrack(albumTracks, index) {
+
+  tracks = [...albumTracks];
+
+  current = index;
+
+  currentTag = '';
+
+  loadTrack(current);
+
+  audio.play();
+
+  document.getElementById('playPauseToggle').textContent = '⏸';
+}
+
+function openAlbumsSection() {
+
+  document.getElementById('music-tags').style.display = 'none';
+  document.getElementById('music-album-tracks-section').style.display = 'none';
+  document.getElementById('music-albums-section').style.display = 'block';
+
+}
+
+function openMusicTagsIDSection() {
+
+  document.getElementById('music-albums-section').style.display = 'none';
+  document.getElementById('music-album-tracks-section').style.display = 'none';
+  document.getElementById('music-tags').style.display = 'block';
+
+}
