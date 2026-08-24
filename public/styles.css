@@ -301,7 +301,7 @@ a:active {
 #music-albums,
 #music-album-tracks {
     max-height: 200px;
-
+    display: block;
     overflow-y: auto;
     overflow-x: hidden;
 
