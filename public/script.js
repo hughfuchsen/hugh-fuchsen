@@ -429,7 +429,6 @@ function populateAlbums() {
 
   albums.forEach(album => {
 
-      const br = document.createElement('br');
       const button = document.createElement('button');
 
       span.textContent = '// '
@@ -443,7 +442,6 @@ function populateAlbums() {
       button.id = 'explore';
       button.onclick = () => openAlbum(album);
 
-      container.appendChild(br);
       container.appendChild(button);
 
   });
@@ -469,7 +467,6 @@ function openAlbum(albumName) {
 
   albumTracks.forEach((track, index) => {
 
-      const br = document.createElement('br');
       const button = document.createElement('button');
       button.id = 'explore';
 
@@ -485,7 +482,6 @@ function openAlbum(albumName) {
 
       button.onclick = () => playAlbumTrack(albumTracks, index);
 
-      container.appendChild(br);
       container.appendChild(button);
 
   });
