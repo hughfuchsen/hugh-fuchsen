@@ -429,12 +429,15 @@ function populateAlbums() {
 
   albums.forEach(album => {
 
+      const span = document.createElement('span');
       const button = document.createElement('button');
-      button.id = 'explore';
 
-      button.textContent = album
+      span.textContent = '// '
+      button.textContent = album + ''
           .replace(/-/g, ' ')
           .toLowerCase();
+
+      button.id = 'explore';
 
       button.onclick = () => openAlbum(album);
 
