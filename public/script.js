@@ -126,6 +126,7 @@ const tagName = document.getElementById('tag-name');
 const playlistNumber = document.getElementById('playlist-number');
 
 let currentTag = '';
+let currentAlbum = '';
 
 function updatePlaylistUI() {
 
@@ -448,6 +449,8 @@ function openAlbum(albumName) {
 
   container.innerHTML = '';
 
+  currentAlbum = albumName;
+
   const albumTracks = allTracks.filter(track => {
 
       const parts = track.url.split('/');
@@ -492,7 +495,7 @@ function playAlbumTrack(albumTracks, index) {
 
   current = index;
 
-  currentTag = '';
+  currentTag = currentAlbum;
 
   loadTrack(current);
 
