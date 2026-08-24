@@ -310,6 +310,7 @@ a:active {
 #music-album-tracks button{
     display: block;
     margin-bottom: 4px;
+    max-width: 100%;
 }
 
 
