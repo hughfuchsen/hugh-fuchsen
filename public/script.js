@@ -439,7 +439,7 @@ function populateAlbums() {
 
       button.id = 'explore';
       button.onclick = () => openAlbum(album);
-
+      currentAlbum = button.textContent;
 
       container.appendChild(button);
 
@@ -499,9 +499,12 @@ function playAlbumTrack(albumTracks, index) {
 
   current = index;
 
-  currentTag = 'playing album';
-
   loadTrack(current);
+
+  currentTag = currentAlbum;
+
+  updatePlaylistUI();
+
 
   audio.play();
 
