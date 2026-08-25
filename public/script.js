@@ -276,7 +276,7 @@ fetch('./playlist.json')
         }
 
     });
-
+    
 function loadPlaylistBasedOnTag(tag) {
 
   currentTag = tag;
@@ -533,12 +533,12 @@ function openMusicTagsIDSection() {
 
 function loadSongFromURL() {
 
-  const path = window.location.pathname;
+  const parts = window.location.pathname
+      .split('/')
+      .filter(part => part !== '');
 
-  // Only do this for /listen/song-name
-  const parts = path.split('/').filter(part => part !== '');
-
-  if (parts.length < 2 || parts[0] !== 'listen') {
+  // Must be /listen/song-name
+  if (parts.length !== 2 || parts[0] !== 'listen') {
       return false;
   }
 
@@ -550,6 +550,7 @@ function loadSongFromURL() {
           .split('/')
           .pop()
           .replace(/\.[^/.]+$/, '')
+          .replace(/^\d+[\s._-]*/, '')
           .toLowerCase();
 
       return filename === songSlug;
