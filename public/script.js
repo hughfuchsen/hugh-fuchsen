@@ -276,7 +276,7 @@ fetch('./playlist.json')
         }
 
     });
-    
+
 function loadPlaylistBasedOnTag(tag) {
 
   currentTag = tag;
@@ -533,46 +533,64 @@ function openMusicTagsIDSection() {
 
 function loadSongFromURL() {
 
-  const parts = window.location.pathname
-      .split('/')
-      .filter(part => part !== '');
+    const parts = window.location.pathname
+        .split('/')
+        .filter(part => part !== '');
 
-  // Must be /listen/song-name
-  if (parts.length !== 2 || parts[0] !== 'listen') {
-      return false;
-  }
+    console.log("URL path:", window.location.pathname);
+    console.log("URL parts:", parts);
 
-  const songSlug = parts[1].toLowerCase();
+    // Must be /listen/song-name
+    if (parts.length !== 2 || parts[0] !== 'listen') {
+        console.log("Not a song URL");
+        return false;
+    }
 
-  const trackIndex = allTracks.findIndex(track => {
+    const songSlug = parts[1].toLowerCase();
 
-      const filename = track.url
-          .split('/')
-          .pop()
-          .replace(/\.[^/.]+$/, '')
-          .replace(/^\d+[\s._-]*/, '')
-          .toLowerCase();
+    console.log("Looking for song:", songSlug);
 
-      return filename === songSlug;
+    const trackIndex = allTracks.findIndex(track => {
 
-  });
+        const filename = track.url
+            .split('/')
+            .pop()
+            .replace(/\.[^/.]+$/, '')
+            .replace(/^\d+[\s._-]*/, '')
+            .toLowerCase();
 
-  if (trackIndex === -1) {
-      console.log("Song not found:", songSlug);
-      return false;
-  }
+        console.log("Comparing against:", filename);
 
-  tracks = [...allTracks];
+        return filename === songSlug;
 
-  current = trackIndex;
+    });
 
-  currentTag = '';
+    console.log("Found track index:", trackIndex);
 
-  loadTrack(current);
+    if (trackIndex === -1) {
+        console.log("Song not found:", songSlug);
+        return false;
+    }
 
-  audio.play();
+    tracks = [...allTracks];
 
-  document.getElementById('playPauseToggle').textContent = '⏸';
+    current = trackIndex;
 
-  return true;
+    currentTag = '';
+
+    loadTrack(current);
+
+    console.log("Loaded:", tracks[current].url);
+
+    audio.play()
+        .then(() => {
+            console.log("Audio started");
+        })
+        .catch(error => {
+            console.log("Autoplay blocked:", error);
+        });
+
+    document.getElementById('playPauseToggle').textContent = '⏸';
+
+    return true;
 }
