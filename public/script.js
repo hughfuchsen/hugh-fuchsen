@@ -533,26 +533,31 @@ function openMusicTagsIDSection() {
 
 function loadSongFromURL() {
 
-  const params = new URLSearchParams(window.location.search);
-  const song = params.get('song');
+  const path = window.location.pathname;
 
-  if (!song) {
+  // Only do this for /listen/song-name
+  const parts = path.split('/').filter(part => part !== '');
+
+  if (parts.length < 2 || parts[0] !== 'listen') {
       return false;
   }
+
+  const songSlug = parts[1].toLowerCase();
 
   const trackIndex = allTracks.findIndex(track => {
 
       const filename = track.url
           .split('/')
           .pop()
-          .replace(/\.[^/.]+$/, '');
+          .replace(/\.[^/.]+$/, '')
+          .toLowerCase();
 
-      return filename.toLowerCase() === song.toLowerCase();
+      return filename === songSlug;
 
   });
 
   if (trackIndex === -1) {
-      console.log("Song not found:", song);
+      console.log("Song not found:", songSlug);
       return false;
   }
 
