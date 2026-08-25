@@ -269,7 +269,11 @@ fetch('./playlist.json')
 
         populateAlbums();
 
-        loadPlaylistBasedOnTag('featured');
+        const songLoaded = loadSongFromURL();
+
+        if (!songLoaded) {
+            loadPlaylistBasedOnTag('featured');
+        }
 
     });
 
@@ -525,4 +529,44 @@ function openMusicTagsIDSection() {
   document.getElementById('music-album-tracks-section').style.display = 'none';
   document.getElementById('music-tags').style.display = 'block';
 
+}
+
+function loadSongFromURL() {
+
+  const params = new URLSearchParams(window.location.search);
+  const song = params.get('song');
+
+  if (!song) {
+      return false;
+  }
+
+  const trackIndex = allTracks.findIndex(track => {
+
+      const filename = track.url
+          .split('/')
+          .pop()
+          .replace(/\.[^/.]+$/, '');
+
+      return filename.toLowerCase() === song.toLowerCase();
+
+  });
+
+  if (trackIndex === -1) {
+      console.log("Song not found:", song);
+      return false;
+  }
+
+  tracks = [...allTracks];
+
+  current = trackIndex;
+
+  currentTag = '';
+
+  loadTrack(current);
+
+  audio.play();
+
+  document.getElementById('playPauseToggle').textContent = '⏸';
+
+  return true;
 }
