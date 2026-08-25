@@ -256,7 +256,7 @@ let current = 0;
 //     loadTrack(0);
 //   });
 
-fetch('./playlist.json')
+fetch('/playlist.json')
     .then(res => res.json())
     .then(data => {
 
