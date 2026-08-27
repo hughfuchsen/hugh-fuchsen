@@ -1,8 +1,9 @@
 {
-    "rewrites": [
-      {
-        "source": "/listen/:path*",
-        "destination": "/index.html"
-      }
-    ]
-  }
+  "rewrites": [
+    {
+      "source": "/listen/:path*",
+      "destination": "/index.html"
+    }
+  ]
+}
+
