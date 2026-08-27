@@ -540,7 +540,7 @@ function playAlbumTrack(albumTracks, index) {
 
 function openAlbumsSection() {
 
-  document.getElementById('music-tags').style.display = 'none';
+  document.getElementById('music-explore').style.display = 'none';
   document.getElementById('music-album-tracks-section').style.display = 'none';
   document.getElementById('music-albums-section').style.display = 'block';
 
@@ -550,7 +550,7 @@ function openMusicTagsIDSection() {
 
   document.getElementById('music-albums-section').style.display = 'none';
   document.getElementById('music-album-tracks-section').style.display = 'none';
-  document.getElementById('music-tags').style.display = 'block';
+  document.getElementById('music-explore').style.display = 'block';
 
 }
 
