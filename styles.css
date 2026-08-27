@@ -330,15 +330,6 @@ a:active {
     flex-grow: 1;
 }
 
-#music-albums,
-#music-album-tracks {
-    overflow-y: auto;
-    overflow-x: hidden;
-
-    word-wrap: break-word;
-        
-}
-
 
 
 .embed iframe {
