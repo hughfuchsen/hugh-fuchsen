@@ -573,7 +573,7 @@ function openAtoZSection() {
 
   let currentLetter = '';
 
-  sortedTracks.forEach((track, index) => {
+  sortedTracks.forEach((track) => {
 
       const name = getTrackName(track);
 
