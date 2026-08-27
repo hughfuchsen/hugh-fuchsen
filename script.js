@@ -458,7 +458,7 @@ function populateAlbums() {
 
       const button = document.createElement('button');
 
-      button.textContent = album + ''
+      button.textContent = album
           .replace(/-/g, ' ')
           .toLowerCase();
 

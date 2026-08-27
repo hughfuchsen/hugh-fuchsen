@@ -327,24 +327,15 @@ a:active {
     flex-grow: 1;
 }
 
-/* #music-albums,
+#music-albums,
 #music-album-tracks {
-    max-height: 200px;
     overflow-y: auto;
     overflow-x: hidden;
 
     word-wrap: break-word;
-
-
-    
         
-} */
-/* #music-albums,
-#music-album-tracks button{
-    display: block;
-    margin-bottom: 4px;
-    max-width: 100%;
-} */
+}
+
 
 
 .embed iframe {
