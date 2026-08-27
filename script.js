@@ -554,6 +554,17 @@ function openMusicTagsIDSection() {
   document.getElementById('music-a-to-z-section').style.display = 'none';
 }
 
+function getTrackName(track) {
+
+  const file = track.url.split('/').pop();
+
+  return file
+      .replace(/\.[^/.]+$/, '')
+      .replace(/^\d+[\s._-]*/, '')
+      .replace(/-/g, ' ')
+      .toLowerCase();
+}
+
 
 function openAtoZSection() {
 
