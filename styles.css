@@ -41,7 +41,7 @@ button {
 
 }
 
-#explore:hover
+#explore:hover,
 #explore:active{
     color: rgb(255, 255, 123);
 }
@@ -194,9 +194,9 @@ a:active {
     right: 35%; 
     z-index: 200;
 }
-#music-explore
-#music-albums-section
-#music-album-tracks-section
+#music-explore,
+#music-albums-section,
+#music-album-tracks-section,
 #music-a-to-z-section
  {
     line-height: 2rem;
