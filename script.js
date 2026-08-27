@@ -555,7 +555,7 @@ function openMusicTagsIDSection() {
 }
 
 
-function openAtoZ() {
+function openAtoZSection() {
 
   const container = document.getElementById('music-a-to-z-tracks');
 
