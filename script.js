@@ -543,7 +543,7 @@ function openAlbumsSection() {
   document.getElementById('music-explore').style.display = 'none';
   document.getElementById('music-album-tracks-section').style.display = 'none';
   document.getElementById('music-albums-section').style.display = 'block';
-
+  document.getElementById('music-a-to-z-section').style.display = 'none';
 }
 
 function openMusicTagsIDSection() {
@@ -551,8 +551,80 @@ function openMusicTagsIDSection() {
   document.getElementById('music-albums-section').style.display = 'none';
   document.getElementById('music-album-tracks-section').style.display = 'none';
   document.getElementById('music-explore').style.display = 'block';
-
+  document.getElementById('music-a-to-z-section').style.display = 'none';
 }
+
+
+function openAtoZ() {
+
+  const container = document.getElementById('music-a-to-z-tracks');
+
+  container.innerHTML = '';
+
+  // Sort tracks alphabetically by displayed name
+  const sortedTracks = [...allTracks].sort((a, b) => {
+
+      const nameA = getTrackName(a);
+      const nameB = getTrackName(b);
+
+      return nameA.localeCompare(nameB);
+
+  });
+
+  let currentLetter = '';
+
+  sortedTracks.forEach((track, index) => {
+
+      const name = getTrackName(track);
+
+      // Get first letter
+      const letter = name.charAt(0).toLowerCase();
+
+      // Add letter heading when the letter changes
+      if (letter !== currentLetter) {
+
+          currentLetter = letter;
+
+          const heading = document.createElement('div');
+
+          heading.textContent = letter;
+          heading.className = 'a-to-z-heading';
+
+          container.appendChild(heading);
+      }
+
+      // Create track button
+      const button = document.createElement('button');
+
+      button.id = 'explore';
+      button.textContent = name;
+
+      button.onclick = () => {
+
+          tracks = [track];
+          current = 0;
+
+          loadTrack(current);
+
+          currentTag = '';
+          updatePlaylistUI();
+
+          audio.play();
+
+          document.getElementById('playPauseToggle').textContent = '⏸';
+
+      };
+
+      container.appendChild(button);
+
+  });
+
+  document.getElementById('music-explore').style.display = 'none';
+  document.getElementById('music-albums-section').style.display = 'none';
+  document.getElementById('music-album-tracks-section').style.display = 'none';
+  document.getElementById('music-a-to-z-section').style.display = 'block';
+}
+
 
 function loadSongFromURL() {
 

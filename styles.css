@@ -194,7 +194,10 @@ a:active {
     right: 35%; 
     z-index: 200;
 }
-#music-explore {
+#music-explore
+#music-albums-section
+#music-album-tracks-section
+ {
     line-height: 2rem;
 
     border-top: solid black 1px;
