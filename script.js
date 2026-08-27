@@ -515,7 +515,7 @@ function openAlbum(albumName) {
 
   });
 
-  document.getElementById('music-tags').style.display = 'none';
+  document.getElementById('music-explore').style.display = 'none';
   document.getElementById('music-albums-section').style.display = 'none';
   document.getElementById('music-album-tracks-section').style.display = 'block';
 }
