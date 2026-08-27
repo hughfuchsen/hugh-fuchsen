@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hugh fuchsen</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <link rel="icon" href="/img/favicon.png" />
 </head>
 <body>      
@@ -31,8 +31,11 @@
             </div>
             <div>
                 <div class="content">
-                    <button id="explore" onclick="showColor('window-music-explore');">explore</button>
-
+                    <div class="track-art-img">
+                        <!-- <img style="width: 100%" src="/img/img-1.jpg" alt=""> -->
+                    </div>
+                </div>  
+                <div class="content">
                     <audio id="audio" style="display: none;" controls></audio>
                     <div id="trackName" style="margin: 10px; text-align: center;"></div>
 
@@ -41,29 +44,18 @@
                         <button class="button" id="playPauseToggle">▶</button>
                         <button class="button" id="next">⏭</button>
                     </div>
-                </div>          
-            </div>
-        </div>
-
-        <div class="window" id="window-music-explore">
-            <div class="title-bar">
-                <span class="title">tags</span>
-                <div class="buttons">
-                    <button class="button" onclick="closeWindow('window-music-explore');">X</button>
-                </div>
-            </div>  
-            <div>
-                <div class="content" id="music-tags">
+                </div>  
+                <div class="content" id="music-explore">
 
                     <button id="explore" onclick="startPlaylistBasedOnTag('all');">play all</button> 
-                    // <button id="explore" onclick="openAlbumsSection();">albums</button>
-                    // <button id="explore" onclick="startPlaylistBasedOnTag('featured');">featured</button> 
-                    // <button id="explore" onclick="startPlaylistBasedOnTag('piano');">piano</button> 
-                    // <button id="explore" onclick="startPlaylistBasedOnTag('ambient');">ambient</button> 
-                    // <button id="explore" onclick="startPlaylistBasedOnTag('guitar');">guitar</button> 
-                    // <button id="explore" onclick="startPlaylistBasedOnTag('soundtrack');">soundtrack</button> 
-                    // <button id="explore" onclick="startPlaylistBasedOnTag('singer-songwriter');">singer-songwriter</button> 
-                    // <button id="explore" onclick="startPlaylistBasedOnTag('gibberish');">gibberish</button> 
+                    <button id="explore" onclick="openAlbumsSection();">albums</button>
+                    <button id="explore" onclick="startPlaylistBasedOnTag('featured');">featured</button> 
+                    <button id="explore" onclick="startPlaylistBasedOnTag('piano');">piano</button> 
+                    <button id="explore" onclick="startPlaylistBasedOnTag('ambient');">ambient</button> 
+                    <button id="explore" onclick="startPlaylistBasedOnTag('guitar');">guitar</button> 
+                    <button id="explore" onclick="startPlaylistBasedOnTag('soundtrack');">soundtrack</button> 
+                    <button id="explore" onclick="startPlaylistBasedOnTag('singer-songwriter');">singer-songwriter</button> 
+                    <button id="explore" onclick="startPlaylistBasedOnTag('gibberish');">gibberish</button> 
                 
                 </div>
                 
@@ -77,9 +69,21 @@
                     <button id="explore" onclick="openAlbumsSection();">←back</button>
                 
                     <div id="music-album-tracks"></div>
-                </div>         
+                </div>          
             </div>
         </div>
+
+        <!-- <div class="window" id="window-music-explore">
+            <div class="title-bar">
+                <span class="title">tags</span>
+                <div class="buttons">
+                    <button class="button" onclick="closeWindow('window-music-explore');">X</button>
+                </div>
+            </div>  
+            <div>
+                      
+            </div>
+        </div> -->
     
         <div class="window" id="window-links">
             <div class="title-bar">
@@ -314,6 +318,6 @@
 
 
    
-    <script src="/script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>

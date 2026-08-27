@@ -309,16 +309,23 @@ function loadTrack(index) {
   const file = track.url.split('/').pop();
 
   let name = file
-    .replace(/\.[^/.]+$/, "")
-    .replace(/^\d+[\s.\-_]*/, "")
-    .replace(/-/g, " ");
+      .replace(/\.[^/.]+$/, "")
+      .replace(/^\d+[\s.\-_]*/, "")
+      .replace(/-/g, " ");
 
   trackName.textContent = name.toLowerCase();
 
   audio.src =
-    "https://music.hughfuchsen.workers.dev/" + track.url;
+      "https://music.hughfuchsen.workers.dev/" + track.url;
 
   updatePlaylistUI();
+
+  if ('mediaSession' in navigator) {
+      navigator.mediaSession.metadata = new MediaMetadata({
+          title: name.toLowerCase(),
+          artist: "hugh huchsen"
+      });
+  }
 }
 
 function shuffle(array) {
@@ -359,6 +366,22 @@ document.getElementById('prev').onclick = () => {
   audio.play();
   document.getElementById('playPauseToggle').textContent = '⏸';
 };
+
+if ('mediaSession' in navigator) {
+
+  navigator.mediaSession.setActionHandler('previoustrack', () => {
+      current = (current - 1 + tracks.length) % tracks.length;
+      loadTrack(current);
+      audio.play();
+  });
+
+  navigator.mediaSession.setActionHandler('nexttrack', () => {
+      current = (current + 1) % tracks.length;
+      loadTrack(current);
+      audio.play();
+  });
+
+}
 
 // auto next track
 audio.addEventListener('ended', () => {
