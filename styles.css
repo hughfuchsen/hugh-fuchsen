@@ -113,6 +113,11 @@ a:active {
     margin: 0 auto;
 }
 
+#game-1{
+    width: 490px;
+    height: 320px;
+}
+
 #window-links {
     max-width: 25%;
     max-height: 80%;
@@ -625,20 +630,25 @@ a:active {
         text-decoration: none;       /* optional: if you don’t want underlines */
       }
 
-      /* For WebKit browsers */
-        ::-webkit-scrollbar {
-            width: 12px; /* width of the scrollbar */
-            height: 12px; /* height for horizontal scrollbar */
-        }
+    /* For WebKit browsers */
+    ::-webkit-scrollbar {
+        width: 12px; /* width of the scrollbar */
+        height: 12px; /* height for horizontal scrollbar */
+    }
 
-        ::-webkit-scrollbar-track {
-            background: #ffb86d; /* the track background */
-        }
+    ::-webkit-scrollbar-track {
+        background: #ffb86d; /* the track background */
+    }
 
-        ::-webkit-scrollbar-thumb {
-            background-color: #ff9727; /* the draggable part */
-            border-radius: 0; /* square corners */
-        }
-        
+    ::-webkit-scrollbar-thumb {
+        background-color: #ff9727; /* the draggable part */
+        border-radius: 0; /* square corners */
+    }
+    
+    
+    #game-1{
+        width: 100%;
+        height: auto;
+    } 
 
 }
