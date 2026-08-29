@@ -196,6 +196,7 @@ a:active {
     bottom: 7%; 
     right: 7%; 
     z-index: 600;
+    display: initial;
 }
 
 #game-dev-link{
@@ -595,6 +596,7 @@ a:active {
         left: 0rem; 
         width: 95%;
         margin: 2rem auto;
+        display: none;
     }
 
     #window-music-player {
