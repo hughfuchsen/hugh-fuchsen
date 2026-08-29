@@ -248,6 +248,26 @@
                 <iframe id="game-1" frameborder="0" src="https://itch.io/embed-upload/13741917?color=ffcd98" 
                 allowfullscreen="false">
                 </iframe>  
+
+
+
+            <script>
+                const isPhone = window.matchMedia("(max-width: 767px)").matches;
+            
+                if (!isPhone) {
+                    const iframe = document.createElement("iframe");
+            
+                    iframe.src = "https://itch.io/embed-upload/13741917?color=ffcd98";
+                    iframe.id = "game-1";
+                    iframe.allowFullscreen = false;
+                    iframe.style.border = "none";
+            
+                    document.getElementById("window-game-dev").appendChild(iframe);
+                } else {
+                    document.getElementById("window-game-dev").innerHTML =
+                        "<p>the game is currently available on desktop only.</p>";
+                }
+            </script>    
         </div>
 
         <div class="window" id="window-songkick">
