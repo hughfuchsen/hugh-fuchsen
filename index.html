@@ -260,7 +260,13 @@
                     document.getElementById("window-game-dev").appendChild(iframe);
                 } else {
                     const message = document.createElement("div");
-                    message.innerHTML = "<p>the game is currently available on desktop only.</p>";
+                    message.innerHTML = `
+                    <div style="padding: 3%;">
+                        <img style="width: 100%" src="./img/proto1.gif" alt="gif of game">
+                        <a href="https://hughfuchsen.itch.io/pony-zone-prototype-1" target="_blank">
+                            click to play prototype (desktop)
+                        </a>  
+                    </div>  `;
                     document.getElementById("window-game-dev").appendChild(message);
                 }
             </script>    
