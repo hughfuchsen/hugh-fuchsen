@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hugh fuchsen</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="img/favicon.png" />
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="/img/favicon.png" />
     <!-- Vercel Web Analytics -->
     <script>
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -87,7 +87,7 @@
                 </div>
             </div>
             <div style="padding: 3%;">
-                <img style="width: 100%" src="img/img-1.jpg" alt="picture of hugh f - photo cred: marcelle bradbeer">
+                <img style="width: 100%" src="/img/img-1.jpg" alt="picture of hugh f - photo cred: marcelle bradbeer">
             </div>    
         </div>
 
@@ -104,7 +104,7 @@
                 <p id="link-space">
                        <a href="#" onclick="showWindow('window-music-player'); return false; openMusicTagsIDSection()">listen</a>  
                     <!-- // <a href="#" onclick="showWindow('window-portfolio-1')">motif design</a>  -->
-                    // <a href="#" onclick="showWindow('window-game-dev')">game dev</a>
+                   <span id="game-dev-link">// </span><a href="#" id="game-dev-link" onclick="showWindow('window-game-dev')">game dev</a>
                     // <a href="#" onclick="showWindow('window-songkick'); showWindow('songkick-cover'); return false;">shows</a>
                     // <a href="https://flippinyeahindustries.bigcartel.com/artist/hugh-f" target="_blank">merch</a>               
                     // <a href="https://www.instagram.com/hughfuchsen/" target="_blank">instagram</a> 
@@ -245,12 +245,9 @@
                     <button class="button" onclick="closeWindow('window-game-dev')">X</button>
                 </div>
             </div>
-            <div class="content">
                 <iframe id="game-1" frameborder="0" src="https://itch.io/embed-upload/13741917?color=ffcd98" 
-                allowfullscreen="true"
-                width="490" height="320">
-                </iframe>
-            </div>  
+                allowfullscreen="false">
+                </iframe>  
         </div>
 
         <div class="window" id="window-songkick">
@@ -284,6 +281,6 @@
 
 
    
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
 </body>
 </html>
