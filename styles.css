@@ -34,8 +34,8 @@ button {
     color: rgb(178, 0, 178);
     font-size: 1em;
     display: block;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: 100%;
     text-align: left;
 
@@ -53,6 +53,11 @@ button {
 a{
     text-decoration: none; 
          /* optional: if you don’t want underlines */
+}
+
+#padding{
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 a:link {
