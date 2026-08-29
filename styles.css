@@ -185,7 +185,7 @@ a:active {
 
 
 #window-game-dev {
-    /* width: 30%; */
+    width: auto;
     bottom: 7%; 
     right: 7%; 
     z-index: 600;
