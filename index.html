@@ -252,7 +252,7 @@
 
 
             <script>
-                const isPhone = window.matchMedia("(max-width: 767px)").matches;
+                const isPhone = window.matchMedia("(max-width: 1024px)").matches;
             
                 if (!isPhone) {
                     const iframe = document.createElement("iframe");
@@ -264,8 +264,9 @@
             
                     document.getElementById("window-game-dev").appendChild(iframe);
                 } else {
-                    document.getElementById("window-game-dev").innerHTML =
-                        "<p>the game is currently available on desktop only.</p>";
+                    const message = document.createElement("div");
+                    message.innerHTML = "<p>the game is currently available on desktop only.</p>";
+                    document.getElementById("window-game-dev").appendChild(message);
                 }
             </script>    
         </div>
