@@ -544,6 +544,7 @@ function openAlbumsSection() {
   document.getElementById('music-album-tracks-section').style.display = 'none';
   document.getElementById('music-albums-section').style.display = 'block';
   document.getElementById('music-a-to-z-section').style.display = 'none';
+  document.getElementById('music-playlist-section').style.display = 'none';
 }
 
 function openMusicTagsIDSection() {
@@ -552,6 +553,16 @@ function openMusicTagsIDSection() {
   document.getElementById('music-album-tracks-section').style.display = 'none';
   document.getElementById('music-explore').style.display = 'block';
   document.getElementById('music-a-to-z-section').style.display = 'none';
+  document.getElementById('music-playlist-section').style.display = 'none';
+}
+
+function openPlaylistSection() {
+
+  document.getElementById('music-albums-section').style.display = 'none';
+  document.getElementById('music-album-tracks-section').style.display = 'none';
+  document.getElementById('music-explore').style.display = 'none';
+  document.getElementById('music-a-to-z-section').style.display = 'none';
+  document.getElementById('music-playlist-section').style.display = 'block';
 }
 
 function getTrackName(track) {
@@ -580,6 +591,7 @@ function openAtoZSection() {
       return nameA.localeCompare(nameB);
 
   });
+  
 
   let currentLetter = '';
 
@@ -633,6 +645,7 @@ function openAtoZSection() {
   document.getElementById('music-albums-section').style.display = 'none';
   document.getElementById('music-album-tracks-section').style.display = 'none';
   document.getElementById('music-a-to-z-section').style.display = 'block';
+  document.getElementById('music-playlist-section').style.display = 'none';
 }
 
 
