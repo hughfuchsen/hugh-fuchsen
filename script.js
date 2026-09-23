@@ -60,9 +60,9 @@ function showWindow(windowID) {
   }, 1500);
 
   if (window.location.pathname === "/train-chasey") {
-    showWindow("train-chasey");
+    showWindow("window-game-dev");
   }
-  
+
   if (isMobileView) {
     // small delay to ensure element is rendered
     setTimeout(() => {
