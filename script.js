@@ -60,8 +60,11 @@ function showWindow(windowID) {
   }, 1500);
 
   if (window.location.pathname === '/train-chasey') {
-    showWindow('window-game-dev');
-    setZIndex('window-game-dev');
+    setTimeout(() => {
+      showWindow('window-game-dev');
+      setZIndex('window-game-dev');;
+  }, 1500);
+    
   }
 
   if (isMobileView) {
