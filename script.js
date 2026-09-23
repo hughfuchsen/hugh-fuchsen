@@ -59,6 +59,10 @@ function showWindow(windowID) {
       windowElement.style.backgroundColor = '';
   }, 1500);
 
+  if (window.location.pathname === "/train-chasey") {
+    showWindow("train-chasey");
+  }
+  
   if (isMobileView) {
     // small delay to ensure element is rendered
     setTimeout(() => {
