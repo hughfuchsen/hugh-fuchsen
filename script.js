@@ -59,8 +59,9 @@ function showWindow(windowID) {
       windowElement.style.backgroundColor = '';
   }, 1500);
 
-  if (window.location.pathname === "/train-chasey") {
-    showWindow("window-game-dev");
+  if (window.location.pathname === '/train-chasey') {
+    showWindow('window-game-dev');
+    setZIndex('window-game-dev');
   }
 
   if (isMobileView) {
