@@ -59,11 +59,11 @@ function showWindow(windowID) {
       windowElement.style.backgroundColor = '';
   }, 1500);
 
-  if (window.location.pathname === '/train-chasey') {
-      document.addEventListener('DOMContentLoaded', () => {
-          showWindow('window-game-dev');
-      });
-  }
+  // if (window.location.pathname === '/train-chasey') {
+  //     document.addEventListener('DOMContentLoaded', () => {
+  //         showWindow('window-game-dev');
+  //     });
+  // }
 
   if (isMobileView) {
     // small delay to ensure element is rendered
@@ -718,3 +718,12 @@ function loadSongFromURL() {
 
     return true;
 }
+
+
+// vercel
+
+// ,
+//     {
+//       "source": "/train-chasey",
+//       "destination": "/index.html"
+//     }

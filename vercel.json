@@ -3,11 +3,6 @@
     {
       "source": "/listen/:path*",
       "destination": "/index.html"
-    },
-    {
-      "source": "/train-chasey",
-      "destination": "/index.html"
     }
   ]
 }
-
