@@ -54,24 +54,30 @@
                 
                 <div class="content" id="music-albums-section" style="display: none;">
                     <button id="explore" onclick="openMusicTagsIDSection();">← back</button>
+                    <hr>
                 
                     <div id="music-albums"></div>
                 </div>
                 
                 <div class="content" id="music-album-tracks-section" style="display: none;">
-                    <button id="explore" onclick="openAlbumsSection();">← back</button>
-                
+                    <div>
+                        <button id="explore"
+                        style="background-color: bisque; position: absolute;" 
+                        onclick="openAlbumsSection();">← back</button>
+                        <hr>
+                    </div>
+                    
                     <div id="music-album-tracks"></div>
                 </div>          
 
                 <div class="content" id="music-a-to-z-section" style="display: none;">
                     <button id="explore" onclick="openMusicTagsIDSection();">← back</button>
-                
+                    <hr>
                     <div id="music-a-to-z-tracks"></div>
                 </div> 
                 <div class="content" id="music-playlist-section" style="display: none;">
                     <button id="explore" onclick="openMusicTagsIDSection();">← back</button>
-
+                    <hr>
 
                     <button id="explore" onclick="startPlaylistBasedOnTag('featured');">
                         featured
