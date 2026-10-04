@@ -531,13 +531,17 @@ function playAlbumTrack(albumTracks, index) {
   tracks = [...albumTracks];
 
   current = index;
-
-  loadTrack(current);
-
   currentTag = currentAlbum;
-
+  loadTrack(current);
+  
   updatePlaylistUI();
 
+  let name = currentAlbum
+      .replace(/\.[^/.]+$/, "")
+      .replace(/^\d+[\s._-]*/, "")
+      .replace(/-/g, " ");
+
+  tagName.textContent = name.toLowerCase();
 
   audio.play();
 
