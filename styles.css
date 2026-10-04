@@ -246,15 +246,7 @@ a:active {
     background-color: #ffcd98;
 }
 
-.music-scroll-arrows {
-    position: absolute;
-    top: 0;
-    right: 0;
-    /* z-index: 100; */
-    /* width: 100%; */
-    /* box-sizing: border-box; */
-    /* background-color: #ffcd98; */
-}
+
 
 #window-more-bio {
     width: 97%;
