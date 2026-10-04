@@ -254,7 +254,6 @@ hr {
 
 .music-scroll-arrows {
     position: absolute;
-    top: 0;
     right: 10px;
     z-index: 101;
 
@@ -320,6 +319,11 @@ hr {
     justify-content: center; /* center them */
     gap: 18px; /* space between buttons */
     font-size: x-large;
+}
+
+.player-controls .button {
+    font-size: 40px;
+    padding: 10px 15px;
 }
 
 .button-language {
