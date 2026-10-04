@@ -246,6 +246,11 @@ a:active {
     background-color: #ffcd98;
 }
 
+hr {
+    border: 0;
+    border-top: 1px solid #303030;
+}
+
 .music-scroll-arrows {
     position: absolute;
     top: 0;
