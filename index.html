@@ -61,7 +61,7 @@
                 </div>
                 
                 <div class="content" id="music-album-tracks-section" style="display: none; padding-top: 0;">
-                    <div class="music-section-header">
+                    <div id="music-section-header" class="music-section-header">
                         <button id="explore" onclick="openAlbumsSection();">← back</button>
                         <hr>
                         <div class="music-scroll-arrows">↕</div>
@@ -72,7 +72,7 @@
 
                 <div class="content" id="music-a-to-z-section" style="display: none; padding-top: 0;">
 
-                    <div class="music-section-header">
+                    <div id="music-section-header" class="music-section-header">
                         <button id="explore" onclick="openMusicTagsIDSection();">← back</button>
                         <hr>
                         <div class="music-scroll-arrows">↕</div>
@@ -82,7 +82,7 @@
                 
                 </div>
                 <div class="content" id="music-playlist-section" style="display: none; padding-top: 0;">
-                    <div class="music-section-header">
+                    <div id="music-section-header" class="music-section-header">
                         <button id="explore" onclick="openMusicTagsIDSection();">← back</button>
                         <hr>
                         <div class="music-scroll-arrows">↕</div>
@@ -147,7 +147,7 @@
     
             <div class="content"> 
                 <p id="link-space">
-                       <a href="#" onclick="showWindow('window-music-player'); return false; openMusicTagsIDSection()">listen</a>  
+                       <a href="#" onclick="showWindow('window-music-player'); return false; openMusicTagsIDSection(); showWindow('music-scroll-arrows')">listen</a>  
                     <!-- // <a href="#" onclick="showWindow('window-portfolio-1')">motif design</a>  -->
                     // <a href="#" onclick="showWindow('window-game-dev')">game dev</a>
                     // <a href="#" onclick="showWindow('window-songkick'); showWindow('songkick-cover'); return false;">shows</a>
@@ -184,7 +184,7 @@
                         <a href="#" style="padding-bottom: 10px;" onclick="showWindow('window-links'); setZIndex('window-links')">links</a>
                     </p>
                     <p class="hidden">
-                        the work is usually <a href="#" onclick="showWindow('window-music-player'); setZIndex('window-music-player'); return false; setZIndex('window-music-player')">music</a> and supplementary audio effects for 
+                        the work is usually <a href="#" onclick="showWindow('window-music-player'); setZIndex('window-music-player'); return false; setZIndex('window-music-player'); showWindow('music-section-header')">music</a> and supplementary audio effects for 
                         video games and other <a href="#" onclick="showWindow('window-film-animation-music'); setZIndex('window-film-animation-music')">visual art</a>. it leans toward a cute and playful aesthetic, with inspiration derived from video games such as pikuniku and animal crossing (you've probably heard of them, maybe). you can explore a wider range of moods and styles in my <a href="#" onclick="showWindow('window-music-player'); return false;">full catalogue</a>.
                         <br><br>
                         it is good to use sound to enhance the beauty of a world inside a screen. it was proven by science (me).
@@ -214,7 +214,7 @@
                     <br><br>
                     私はヒュー・Fと申します。ドゥードゥロア族の土地にあるキーワ付近で育ちました。
                     <br><br>
-                    私の情熱は、犬についての <a href="#" onclick="showWindow('window-music-player'); setZIndex('window-music-player'); return false; setZIndex('window-music-player')">フォークストーリー</a> を歌うことにあります。
+                    私の情熱は、犬についての <a href="#" onclick="showWindow('window-music-player'); setZIndex('window-music-player'); return false; setZIndex('window-music-player'); showWindow('music-section-header')">フォークストーリー</a> を歌うことにあります。
                     この作品は、オンラインでも舞台でも好評をいただいています。
                     2019年末から2020年初めにかけて、ダレン・ハンロンやチャスティティ・ベルトといったレジェンドたちのサポートとして、オーストラリアやアメリカをツアーしました。
                     いつかあなたの町でお会いして歌える日が来るといいなと思っています。
