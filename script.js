@@ -533,13 +533,10 @@ function playAlbumTrack(albumTracks, index) {
   current = index;
 
   loadTrack(current);
-
-  currentTag = currentAlbum;
-
+  
   updatePlaylistUI();
 
-
-  let name = currentTag
+  let name = currentAlbum
       .replace(/\.[^/.]+$/, "")
       .replace(/^\d+[\s.\-_]*/, "")
       .replace(/-/g, " ");
