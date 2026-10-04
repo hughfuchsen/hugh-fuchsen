@@ -247,9 +247,11 @@ a:active {
 }
 
 .music-scroll-arrows {
-    position: absolute;
+    position: sticky;
     top: 0;
-    right: 0;
+    right: 10px;
+    z-index: 101;
+
     /* z-index: 100; */
     /* width: 100%; */
     /* box-sizing: border-box; */
