@@ -70,12 +70,19 @@
                 </div>          
 
                 <div class="content" id="music-a-to-z-section" style="display: none;">
-                    <div style="background-color: bisque; position: absolute;" >
+
+                    <div style="
+                        position: sticky;
+                        top: 0;
+                        z-index: 10;
+                    ">
                         <button id="explore" onclick="openMusicTagsIDSection();">← back</button>
                         <hr>
                     </div>
+                
                     <div id="music-a-to-z-tracks"></div>
-                </div> 
+                
+                </div>
                 <div class="content" id="music-playlist-section" style="display: none;">
                     <button id="explore" onclick="openMusicTagsIDSection();">← back</button>
                     <hr>
