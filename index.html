@@ -64,7 +64,8 @@
                         <button id="explore" onclick="openAlbumsSection();">← back</button>
                         <hr>
                     </div>
-                    
+                    <span class="music-scroll-arrows">↕</span>
+
                     <div id="music-album-tracks"></div>
                 </div>          
 
@@ -74,13 +75,17 @@
                         <button id="explore" onclick="openMusicTagsIDSection();">← back</button>
                         <hr>
                     </div>
-                
+                    <span class="music-scroll-arrows">↕</span>
+
                     <div id="music-a-to-z-tracks"></div>
                 
                 </div>
                 <div class="content" id="music-playlist-section" style="display: none;">
-                    <button id="explore" onclick="openMusicTagsIDSection();">← back</button>
-                    <hr>
+                    <div class="music-section-header"></div>
+                        <button id="explore" onclick="openMusicTagsIDSection();">← back</button>
+                        <hr>
+                    </div>
+                    <span class="music-scroll-arrows">↕</span>
 
                     <button id="explore" onclick="startPlaylistBasedOnTag('featured');">
                         featured
