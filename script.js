@@ -538,9 +538,8 @@ function playAlbumTrack(albumTracks, index) {
 
   updatePlaylistUI();
 
-  tagName = currentAlbum
 
-  let name = tagName
+  let name = currentTag
       .replace(/\.[^/.]+$/, "")
       .replace(/^\d+[\s.\-_]*/, "")
       .replace(/-/g, " ");
