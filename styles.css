@@ -247,7 +247,7 @@ a:active {
 }
 
 .music-scroll-arrows {
-    position: sticky;
+    position: absolute;
     top: 0;
     right: 10px;
     z-index: 101;
