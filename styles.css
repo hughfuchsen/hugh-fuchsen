@@ -255,6 +255,7 @@ hr {
 .music-scroll-arrows {
     position: absolute;
     right: 10px;
+    top: 1rem;
     z-index: 101;
 
     /* z-index: 100; */
