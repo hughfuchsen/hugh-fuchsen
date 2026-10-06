@@ -180,7 +180,7 @@
                         <a href="#" style="padding-bottom: 10px;" onclick="toggleReadMore(event); setZIndex('window-bio')">read more</a>
                         <br>
                         <br>
-                        <a href="#" style="padding-bottom: 10px;" onclick="showWindow('window-links'); setZIndex('window-links')">links</a>
+                        <a href="#" style="padding-bottom: 10px; padding-top: 0;" onclick="showWindow('window-links'); setZIndex('window-links')">links</a>
                     </p>
                     <p class="hidden">
                         the work is usually <a href="#" onclick="showWindow('window-music-player'); setZIndex('window-music-player'); return false; setZIndex('window-music-player'); showWindow('music-section-header')">music</a> and supplementary audio effects for 
@@ -300,6 +300,7 @@
                     iframe.src = "https://itch.io/embed-upload/19345557?color=ffcd98";
                     iframe.id = "game-1";
                     iframe.allowFullscreen = false;
+                    iframe.allow = "autoplay";
                     iframe.style.border = "none";
             
                     document.getElementById("window-game-dev").appendChild(iframe);
