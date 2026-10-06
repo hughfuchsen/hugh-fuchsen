@@ -20,6 +20,14 @@ function closeWindow(windowID) {
 
 }
 
+function toggleExpandMusicWindow(windowID) {
+
+  const windowElement = document.getElementById("music-explore");
+
+  windowElement.style.display =
+      windowElement.style.display === "none" ? "block" : "none";
+}
+
 function toggleReadMore(e) {
   e.preventDefault();
 

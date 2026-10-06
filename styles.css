@@ -205,11 +205,17 @@ a:active {
 
 #window-music-player {
     width: 400px;
-    height: 400px;
+    height: auto;
     bottom: 4%; 
     right: 35%; 
     z-index: 200;
 }
+
+.window-music-margin{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 #music-explore,
 #music-albums-section,
 #music-album-tracks-section,
