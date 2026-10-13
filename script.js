@@ -153,7 +153,7 @@ function updatePlaylistUI() {
 
 function startPlaylistBasedOnTag(tag) {
 
-  currentTag = tag;
+  currentTag = tag != 'all' ? tag : tag + 'shuffled';
 
   tracks = allTracks.filter(track =>
     track.tags.includes(tag)
@@ -695,7 +695,7 @@ function openAtoZSection() {
 
         if (current === -1) return;
 
-        currentTag = '';
+        currentTag = 'all a-z';
 
         loadTrack(current);
         updatePlaylistUI();
