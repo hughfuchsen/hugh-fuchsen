@@ -524,6 +524,7 @@ function openAlbum(albumName) {
 
   container.innerHTML = '';
   currentAlbum = albumName;
+  
   history.replaceState(null, '', `/album/${encodeURIComponent(albumName)}`);
 
   const albumTracks = allTracks.filter(track => {
@@ -561,6 +562,9 @@ function openAlbum(albumName) {
       container.appendChild(button);
 
   });
+  
+  currentTag = albumName;
+  updatePlaylistUI();
 
   document.getElementById('music-explore').style.display = 'none';
   document.getElementById('music-albums-section').style.display = 'none';
