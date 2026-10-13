@@ -645,12 +645,32 @@ hr {
         margin: 2rem auto;
     }
 
-    /* #window-music-explore {
-        top: 0rem; 
-        left: 0rem; 
-        width: 95%;
-        margin: 2rem auto;
-    } */
+    #music-explore,
+    #music-albums-section,
+    #music-album-tracks-section,
+    #music-a-to-z-section,
+    #music-playlist-section
+    {
+        line-height: 2rem;
+
+        border-top: solid black 1px;
+
+        height: 300px;
+        width: 100%;
+        box-sizing: border-box;
+
+        padding-left: 20px;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        word-wrap: break-word;
+
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
     #window-more-bio {
         top: 0rem; 
