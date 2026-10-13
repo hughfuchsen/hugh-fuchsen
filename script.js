@@ -518,17 +518,15 @@ function populateAlbums() {
   });
 }
 
+
 function openAlbum(albumName) {
-
   const container = document.getElementById('music-album-tracks');
-
   container.innerHTML = '';
   currentAlbum = albumName;
-  
+
   history.replaceState(null, '', `/album/${encodeURIComponent(albumName)}`);
 
   const albumTracks = allTracks.filter(track => {
-
       const parts = track.url.split('/');
 
       return (
@@ -536,40 +534,44 @@ function openAlbum(albumName) {
           parts[1] === 'albums' &&
           parts[2] === albumName
       );
-
   });
 
-
-
   albumTracks.forEach((track, index) => {
-
       const button = document.createElement('button');
-
       button.id = 'explore';
 
       const file = track.url.split('/').pop();
 
       const name = file
           .replace(/\.[^/.]+$/, '')
-          .replace(/^\d+[\s.\-_]*/, '')
+          .replace(/^\d+[\s._-]+/, '')
           .replace(/-/g, ' ')
           .toLowerCase();
 
       button.textContent = name;
-
       button.onclick = () => playAlbumTrack(albumTracks, index);
 
       container.appendChild(button);
-
   });
-  
+
+  // Set the album as the current playlist
+  tracks = [...albumTracks];
+  current = 0;
   currentTag = albumName;
+
+  // Load the first track, ready to play
+  if (tracks.length > 0) {
+      loadTrack(current);
+      document.getElementById('playPauseToggle').textContent = '▶';
+  }
+
   updatePlaylistUI();
 
   document.getElementById('music-explore').style.display = 'none';
   document.getElementById('music-albums-section').style.display = 'none';
   document.getElementById('music-album-tracks-section').style.display = 'block';
 }
+
 
 
 function openAlbumFromURL(albumSlug) {
