@@ -354,6 +354,37 @@ for (let i = array.length - 1; i > 0; i--) {
 }
 
 
+
+function openPlaylistFromURL(playlistSlug) {
+  const tag = playlistSlug.toLowerCase();
+
+  const matchingTracks = allTracks.filter(track =>
+      track.tags.some(t => t.toLowerCase() === tag)
+  );
+
+  if (matchingTracks.length === 0) {
+      console.log("Playlist not found:", tag);
+      return false;
+  }
+
+  currentTag = tag;
+  tracks = [...matchingTracks];
+  shuffle(tracks);
+  current = 0;
+
+  loadTrack(current);
+
+  document.getElementById('playPauseToggle').textContent = '▶';
+
+  // Show the normal music player / explore view
+  document.getElementById('music-explore').style.display = 'block';
+  document.getElementById('music-albums-section').style.display = 'block';
+  document.getElementById('music-album-tracks-section').style.display = 'none';
+
+  return true;
+}
+
+
 // play button handles playback
 
 // controls
