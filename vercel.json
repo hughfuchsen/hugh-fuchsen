@@ -3,6 +3,14 @@
     {
       "source": "/listen/:path*",
       "destination": "/index.html"
+    },
+    {
+      "source": "/album/:path*",
+      "destination": "/index.html"
+    },
+    {
+        "source": "/playlist/:path*",
+        "destination": "/index.html"
     }
   ]
 }
