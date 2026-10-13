@@ -378,7 +378,7 @@ function openPlaylistFromURL(playlistSlug) {
 
   // Show the normal music player / explore view
   document.getElementById('music-explore').style.display = 'block';
-  document.getElementById('music-albums-section').style.display = 'block';
+  document.getElementById('music-albums-section').style.display = 'none';
   document.getElementById('music-album-tracks-section').style.display = 'none';
 
   return true;
