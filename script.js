@@ -283,11 +283,12 @@ fetch('/playlist.json')
 
         populateAlbums();
 
-        const songLoaded = loadSongFromURL();
+        const musicLoaded = loadMusicFromURL();
 
-        if (!songLoaded) {
+        if (!musicLoaded) {
             loadPlaylistBasedOnTag('featured');
         }
+
 
     });
 
@@ -492,6 +493,7 @@ function openAlbum(albumName) {
 
   container.innerHTML = '';
   currentAlbum = albumName;
+  history.replaceState(null, '', `/album/${encodeURIComponent(albumName)}`);
 
   const albumTracks = allTracks.filter(track => {
 
@@ -533,6 +535,22 @@ function openAlbum(albumName) {
   document.getElementById('music-albums-section').style.display = 'none';
   document.getElementById('music-album-tracks-section').style.display = 'block';
 }
+
+
+function openAlbumFromURL(albumSlug) {
+  const album = getAlbums().find(
+      name => name.toLowerCase() === albumSlug.toLowerCase()
+  );
+
+  if (!album) {
+      console.log('Album not found:', albumSlug);
+      return false;
+  }
+
+  openAlbum(album);
+  return true;
+}
+
 
 function playAlbumTrack(albumTracks, index) {
 
@@ -664,68 +682,124 @@ function openAtoZSection() {
 }
 
 
-function loadSongFromURL() {
+// function loadSongFromURL() {
 
-    const parts = window.location.pathname
-        .split('/')
-        .filter(part => part !== '');
+//     const parts = window.location.pathname
+//         .split('/')
+//         .filter(part => part !== '');
 
-    console.log("URL path:", window.location.pathname);
-    console.log("URL parts:", parts);
+//     console.log("URL path:", window.location.pathname);
+//     console.log("URL parts:", parts);
 
-    // Must be /listen/song-name
-    if (parts.length !== 2 || parts[0] !== 'listen') {
-        console.log("Not a song URL");
-        return false;
-    }
+//     // Must be /listen/song-name
+//     if (parts.length !== 2 || parts[0] !== 'listen') {
+//         console.log("Not a song URL");
+//         return false;
+//     }
 
-    const songSlug = parts[1].toLowerCase();
+//     const songSlug = parts[1].toLowerCase();
 
-    console.log("Looking for song:", songSlug);
+//     console.log("Looking for song:", songSlug);
 
-    const trackIndex = allTracks.findIndex(track => {
+//     const trackIndex = allTracks.findIndex(track => {
 
-        const filename = track.url
-            .split('/')
-            .pop()
-            .replace(/\.[^/.]+$/, '')
-            .replace(/^\d+[\s._-]*/, '')
-            .toLowerCase();
+//         const filename = track.url
+//             .split('/')
+//             .pop()
+//             .replace(/\.[^/.]+$/, '')
+//             .replace(/^\d+[\s._-]*/, '')
+//             .toLowerCase();
 
-        console.log("Comparing against:", filename);
+//         console.log("Comparing against:", filename);
 
-        return filename === songSlug;
+//         return filename === songSlug;
 
-    });
+//     });
 
-    console.log("Found track index:", trackIndex);
+//     console.log("Found track index:", trackIndex);
 
-    if (trackIndex === -1) {
-        console.log("Song not found:", songSlug);
-        return false;
-    }
+//     if (trackIndex === -1) {
+//         console.log("Song not found:", songSlug);
+//         return false;
+//     }
 
-    tracks = [...allTracks];
+//     tracks = [...allTracks];
 
-    current = trackIndex;
+//     current = trackIndex;
 
-    currentTag = '';
+//     currentTag = '';
 
-    loadTrack(current);
+//     loadTrack(current);
 
-    console.log("Loaded:", tracks[current].url);
+//     console.log("Loaded:", tracks[current].url);
 
-    audio.play()
-        .then(() => {
-            console.log("Audio started");
-        })
-        .catch(error => {
-            console.log("Autoplay blocked:", error);
-        });
+//     audio.play()
+//         .then(() => {
+//             console.log("Audio started");
+//         })
+//         .catch(error => {
+//             console.log("Autoplay blocked:", error);
+//         });
 
-    document.getElementById('playPauseToggle').textContent = '⏸';
+//     document.getElementById('playPauseToggle').textContent = '⏸';
 
-    return true;
+//     return true;
+// }
+
+
+
+function loadMusicFromURL() {
+  const parts = window.location.pathname
+      .split('/')
+      .filter(part => part !== '');
+
+  if (parts.length !== 2) return false;
+
+  const type = parts[0].toLowerCase();
+  const slug = decodeURIComponent(parts[1]).toLowerCase();
+
+  if (type === 'listen') {
+      const trackIndex = allTracks.findIndex(track => {
+          const filename = track.url
+              .split('/')
+              .pop()
+              .replace(/\.[^/.]+$/, '')
+              .replace(/^\d+[\s._-]+/, '')
+              .toLowerCase();
+
+          return filename === slug;
+      });
+
+      if (trackIndex === -1) return false;
+
+      tracks = [...allTracks];
+      current = trackIndex;
+      currentTag = '';
+
+      loadTrack(current);
+
+      audio.play()
+          .then(() => {
+              document.getElementById('playPauseToggle').textContent = '⏸';
+          })
+          .catch(error => console.log('Autoplay blocked:', error));
+
+      return true;
+  }
+
+  if (type === 'album') {
+      openAlbumFromURL(slug);
+      return true;
+  }
+
+  
+
+  if (type === 'playlist') {
+      openPlaylistFromURL(slug);
+      return true;
+  }
+
+  return false;
 }
 
 
