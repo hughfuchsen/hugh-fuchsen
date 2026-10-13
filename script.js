@@ -559,10 +559,10 @@ function openAlbum(albumName) {
   current = 0;
   currentTag = albumName;
 
-  // Load the first track, ready to play
-  if (tracks.length > 0) {
-      loadTrack(current);
-      document.getElementById('playPauseToggle').textContent = '▶';
+  // Only load the first track if nothing is currently playing
+  if (tracks.length > 0 && audio.paused) {
+    loadTrack(current);
+    document.getElementById('playPauseToggle').textContent = '▶';
   }
 
   updatePlaylistUI();
