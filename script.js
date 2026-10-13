@@ -685,21 +685,30 @@ function openAtoZSection() {
       button.id = 'explore';
       button.textContent = name;
 
+      
       button.onclick = () => {
+        // Use the entire catalogue in alphabetical order
+        tracks = [...sortedTracks];
 
-          tracks = [track];
-          current = 0;
+        // Start at the clicked track
+        current = tracks.findIndex(t => t.url === track.url);
 
-          loadTrack(current);
+        if (current === -1) return;
 
-          currentTag = '';
-          updatePlaylistUI();
+        currentTag = '';
 
-          audio.play();
+        loadTrack(current);
+        updatePlaylistUI();
 
-          document.getElementById('playPauseToggle').textContent = '⏸';
-
+        audio.play()
+            .then(() => {
+                document.getElementById('playPauseToggle').textContent = '⏸';
+            })
+            .catch(error => {
+                console.log('Playback failed:', error);
+            });
       };
+
 
       container.appendChild(button);
 
