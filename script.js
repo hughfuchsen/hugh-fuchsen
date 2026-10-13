@@ -153,7 +153,7 @@ function updatePlaylistUI() {
 
 function startPlaylistBasedOnTag(tag) {
 
-  currentTag = tag != 'all' ? tag : tag + '  huffled';
+  currentTag = tag != 'all' ? tag : tag + ' shuffled';
 
   tracks = allTracks.filter(track =>
     track.tags.includes(tag)
