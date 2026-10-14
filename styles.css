@@ -258,18 +258,26 @@ a:active {
 
 .play-instant-row {
     display: flex;
+    flex-direction: row;
     align-items: baseline;
     justify-content: flex-start;
     gap: 8px;
     width: 100%;
 }
 
-.play-instant-row #explore {
+.play-instant-row button {
+    position: static;
+    width: auto;
+    flex: 0 0 auto;
+    margin: 0;
+}
+
+/* .play-instant-row #explore {
     width: auto;
     margin-left: 0;
     margin-right: 0;
     text-align: left;
-}
+} */
 
 .play-instant-row .playlist-play {
     flex-shrink: 0;
