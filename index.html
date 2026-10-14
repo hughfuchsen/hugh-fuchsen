@@ -47,6 +47,11 @@
                     </div>
                 </div>  
                 <div class="content" id="music-explore">
+                    <div id="music-section-header" class="music-section-header">
+                        <!-- <button id="explore" onclick="openAlbumsSection();">:)</button> -->
+                        <div id="explore"></div><div class="music-scroll-arrows"></div>
+                        <hr>
+                    </div>
 
                     <button id="explore" onclick="startPlaylistBasedOnTag('all');">shuffle all ▶</button> 
                     <button id="explore" onclick="openPlaylistSection();">showreels</button> 
@@ -56,8 +61,11 @@
                 </div>
                 
                 <div class="content" id="music-albums-section" style="display: none;">
-                    <button id="explore" onclick="openMusicTagsIDSection();">← back</button>
-                    <hr>
+                    <div id="music-section-header" class="music-section-header">
+                        <!-- <button id="explore" onclick="openAlbumsSection();">:)</button> -->
+                        <div id="explore"></div><div class="music-scroll-arrows"></div>
+                        <hr>
+                    </div>
                 
                     <div id="music-albums"></div>
                 </div>
