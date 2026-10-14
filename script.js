@@ -151,6 +151,7 @@ const playlistNumber = document.getElementById('playlist-number');
 
 let currentTag = '';
 let currentAlbum = '';
+let currentPlaylist = '';
 
 function updatePlaylistUI() {
 
@@ -619,6 +620,73 @@ function openAlbum(albumName) {
 
 
 
+function openPlaylist(playlistName) {
+  const container = document.getElementById('music-playlist-tracks');
+  container.innerHTML = '';
+
+  history.replaceState(
+      null,
+      '',
+      `/playlist/${encodeURIComponent(playlistName)}`
+  );
+
+  let playlistTracks;
+
+  if (playlistName.toLowerCase() === 'all') {
+      playlistTracks = [...allTracks];
+  } else {
+      playlistTracks = allTracks.filter(track =>
+          track.tags.some(tag =>
+              tag.toLowerCase() === playlistName.toLowerCase()
+          )
+      );
+  }
+
+  playlistTracks.forEach((track, index) => {
+      const button = document.createElement('button');
+      button.id = 'explore';
+
+      const file = track.url.split('/').pop();
+      const name = file
+          .replace(/\.[^/.]+$/, '')
+          .replace(/^\d+[\s._-]+/, '')
+          .replace(/-/g, ' ')
+          .toLowerCase();
+
+      button.textContent = name;
+      button.onclick = () => playPlaylistTrack(playlistTracks, index);
+
+      container.appendChild(button);
+  });
+
+  document.getElementById('music-explore').style.display = 'none';
+  document.getElementById('music-albums-section').style.display = 'none';
+  document.getElementById('music-album-tracks-section').style.display = 'none';
+  document.getElementById('music-a-to-z-section').style.display = 'none';
+  document.getElementById('music-playlist-section').style.display = 'none';
+  document.getElementById('music-playlist-tracks-section').style.display = 'block';
+}
+
+
+
+function playPlaylistTrack(playlistTracks, index) {
+  tracks = [...playlistTracks];
+  current = index;
+  currentTag = '';
+
+  loadTrack(current);
+  updatePlaylistUI();
+
+  audio.play()
+      .then(() => {
+          document.getElementById('playPauseToggle').textContent = '⏸';
+      })
+      .catch(error => console.log('Playback failed:', error));
+}
+
+
+
+
 function openAlbumFromURL(albumSlug) {
   const album = getAlbums().find(
       name => name.toLowerCase() === albumSlug.toLowerCase()
@@ -642,11 +710,11 @@ function playAlbumTrack(albumTracks, index) {
   currentTag = currentAlbum;
   loadTrack(current);
   
-  updatePlaylistUI();
-
   let name = currentAlbum.replace(/-/g, " ");
 
   tagName.textContent = name.toLowerCase();
+
+  updatePlaylistUI();
 
   audio.play();
 
@@ -660,6 +728,8 @@ function openAlbumsSection() {
   document.getElementById('music-albums-section').style.display = 'block';
   document.getElementById('music-a-to-z-section').style.display = 'none';
   document.getElementById('music-playlist-section').style.display = 'none';
+  document.getElementById('music-playlist-tracks-section').style.display = 'none';
+
 }
 
 function openMusicTagsIDSection() {
@@ -669,6 +739,8 @@ function openMusicTagsIDSection() {
   document.getElementById('music-explore').style.display = 'block';
   document.getElementById('music-a-to-z-section').style.display = 'none';
   document.getElementById('music-playlist-section').style.display = 'none';
+  document.getElementById('music-playlist-tracks-section').style.display = 'none';
+
 }
 
 function openPlaylistSection() {
@@ -678,6 +750,8 @@ function openPlaylistSection() {
   document.getElementById('music-explore').style.display = 'none';
   document.getElementById('music-a-to-z-section').style.display = 'none';
   document.getElementById('music-playlist-section').style.display = 'block';
+  document.getElementById('music-playlist-tracks-section').style.display = 'none';
+
 }
 
 function getTrackName(track) {
@@ -770,6 +844,8 @@ function openAtoZSection() {
   document.getElementById('music-album-tracks-section').style.display = 'none';
   document.getElementById('music-a-to-z-section').style.display = 'block';
   document.getElementById('music-playlist-section').style.display = 'none';
+  document.getElementById('music-playlist-tracks-section').style.display = 'none';
+
 }
 
 

@@ -257,18 +257,15 @@ a:active {
 
 .playlist-row {
     display: flex;
-    align-items: stretch;
-    gap: 6px;
-    width: 100%;
+    align-items: baseline;
+    gap: 8px;
 }
 
-.playlist-name {
-    flex: 1;
-    min-width: 0;
-    text-align: left;
+.playlist-row button {
+    margin: 0;
 }
 
-.playlist-play {
+.playlist-row .playlist-play {
     flex-shrink: 0;
 }
 
