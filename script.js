@@ -538,31 +538,77 @@ function getAlbums() {
   return albums;
 }
 
+// function populateAlbums() {
+
+//   const container = document.getElementById('music-albums');
+
+//   container.innerHTML = '';
+
+//   const albums = getAlbums();
+
+//   albums.forEach(album => {
+
+//       const button = document.createElement('button');
+
+//       button.textContent = 
+//       '<div class="play-instant-row">
+//       <button id="explore" class="playlist-play" onclick="startPlaylistBasedOnTag('featured');">▶</button>
+//       <button id="explore" onclick="openPlaylist('featured');">album name</button>
+//   </div>'
+//           .replace(/-/g, ' ')
+//           .toLowerCase();
+
+
+
+//       button.id = 'explore';
+//       button.onclick = () => openAlbum(album);
+
+//       container.appendChild(button);
+
+//   });
+// }
+
 function populateAlbums() {
+    const container = document.getElementById('music-albums');
+    container.innerHTML = '';
 
-  const container = document.getElementById('music-albums');
+    const albums = getAlbums();
 
-  container.innerHTML = '';
+    albums.forEach(album => {
+        const row = document.createElement('div');
+        row.className = 'play-instant-row';
 
-  const albums = getAlbums();
+        const playButton = document.createElement('button');
+        playButton.className = 'playlist-play';
+        playButton.textContent = '▶';
+        playButton.onclick = () => {
+            const albumTracks = allTracks.filter(track => {
+                const parts = track.url.split('/');
+                return parts[1] === 'albums' && parts[2] === album;
+            });
 
-  albums.forEach(album => {
+            if (albumTracks.length > 0) {
+                tracks = [...albumTracks];
+                current = 0;
+                currentTag = album;
+                loadTrack(current);
+                audio.play().catch(error =>
+                    console.log('Playback failed:', error)
+                );
+            }
+        };
 
-      const button = document.createElement('button');
+        const albumButton = document.createElement('button');
+        albumButton.id = 'explore';
+        albumButton.textContent = album.replace(/-/g, ' ').toLowerCase();
+        albumButton.onclick = () => openAlbum(album);
 
-      button.textContent = album
-          .replace(/-/g, ' ')
-          .toLowerCase();
-
-
-
-      button.id = 'explore';
-      button.onclick = () => openAlbum(album);
-
-      container.appendChild(button);
-
-  });
+        row.appendChild(playButton);
+        row.appendChild(albumButton);
+        container.appendChild(row);
+    });
 }
+
 
 
 function openAlbum(albumName) {

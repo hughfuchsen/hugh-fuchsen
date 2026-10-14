@@ -256,7 +256,7 @@ a:active {
 }
 
 
-.playlist-row {
+.play-instant-row {
     display: flex;
     align-items: baseline;
     justify-content: flex-start;
@@ -264,14 +264,14 @@ a:active {
     width: 100%;
 }
 
-.playlist-row #explore {
+.play-instant-row #explore {
     width: auto;
     margin-left: 0;
     margin-right: 0;
     text-align: left;
 }
 
-.playlist-row .playlist-play {
+.play-instant-row .playlist-play {
     flex-shrink: 0;
 }
 
@@ -672,15 +672,17 @@ hr {
     }
 
 
+
     #music-explore,
     #music-albums-section,
     #music-album-tracks-section,
     #music-a-to-z-section,
-    #music-playlist-section
+    #music-playlist-section,
+    #music-playlist-tracks-section
     {
         line-height: 2rem;
 
-        border-top: solid black 1px;
+        /* border-top: solid black 1px; */
 
         height: 45%;
         width: 100%;
