@@ -28,7 +28,7 @@ button {
     font-family: monospace;
 }
 
-.explore{
+#explore{
     background: none;
     border: none;
     color: rgb(178, 0, 178);
@@ -41,12 +41,12 @@ button {
 
 }
 
-.explore:hover,
-.explore:active{
+#explore:hover,
+#explore:active{
     color: rgb(255, 255, 123);
 }
 
-.explore:focus{
+#explore:focus{
     color: rgb(178, 0, 178);
 }
 
@@ -522,7 +522,7 @@ hr {
         color: 303030;
     }
 
-    .explore{
+    #explore{
         border: none;
         background: none;
         color: rgb(178, 0, 178);
@@ -530,11 +530,11 @@ hr {
 
     }
     
-    .explore:hover{
+    #explore:hover{
         color: rgb(178, 0, 178);
     }
 
-    .explore:active{
+    #explore:active{
         color: rgb(255, 255, 123);
     }
 
