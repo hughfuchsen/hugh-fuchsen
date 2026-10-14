@@ -580,6 +580,7 @@ function populateAlbums() {
 
         const playButton = document.createElement('button');
         playButton.className = 'playlist-play';
+        playButton.id = 'explore';
         playButton.textContent = '▶';
         playButton.onclick = () => {
             const albumTracks = allTracks.filter(track => {
