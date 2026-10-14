@@ -1,21 +1,9 @@
-// function setFixedViewportHeight() {
-//   const height = window.innerHeight - 30;
-
-//   document.documentElement.style.setProperty(
-//       '--fixed-viewport-height',
-//       `${height}px`
-//   );
-// }
-
 function setFixedViewportHeight() {
-  // const height = window.innerHeight;
-  // const smallViewportHeight = height > 0
-  //     ? Math.min(height, window.screen.height)
-  //     : window.screen.height;
+  const height = window.innerHeight - 30;
 
   document.documentElement.style.setProperty(
       '--fixed-viewport-height',
-      `calc(100svh - 30px)`
+      `${height}px`
   );
 }
 
