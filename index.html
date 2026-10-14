@@ -23,6 +23,7 @@
 
         <div class="window" id="window-music-player">
             <div class="title-bar">
+                <!-- <span class="title"><span id="tag-name"></span> <span id="playlist-number"></span></span> -->
                 <span class="title"><span id="tag-name"></span> <span id="playlist-number"></span></span>
                 <div class="buttons">
                     <button class="button" onclick="closeWindow('window-music-player'); playPause();">X</button>
@@ -35,7 +36,7 @@
                     <audio id="audio" style="display: none;" controls></audio>
                     <div id="trackName" style="margin: 10px; text-align: center;"></div>
                     <!-- <div id="albumName" style="font-size: 0.8em; margin: 3px; text-align: center;"></div> -->
-                    <div style="font-size: 0.7em; margin-bottom: 10px; text-align: center;">hugh fuchsen</div>
+                    <div style="font-size: 0.7em; margin-bottom: 10px; text-align: center;"><span class="title"><span id="tag-name"></span> <span id="playlist-number"></span></span></div>
 
                     <div class="player-controls">
                         <button class="button" id="prev">⏮</button>
