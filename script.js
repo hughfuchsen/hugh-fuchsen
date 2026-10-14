@@ -577,6 +577,7 @@ function populateAlbums() {
     albums.forEach(album => {
         const row = document.createElement('div');
         row.className = 'play-instant-row';
+        row.id = 'explore';
 
         const playButton = document.createElement('button');
         playButton.className = 'playlist-play';
