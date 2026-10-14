@@ -226,7 +226,7 @@ a:active {
  {
     line-height: 2rem;
 
-    border-top: solid black 1px;
+    /* border-top: solid black 1px; */
 
     height: 200px;
     width: 100%;
