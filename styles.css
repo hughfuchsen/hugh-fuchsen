@@ -258,7 +258,16 @@ a:active {
 .playlist-row {
     display: flex;
     align-items: baseline;
+    justify-content: flex-start;
     gap: 8px;
+    width: 100%;
+}
+
+.playlist-row #explore {
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
 }
 
 .playlist-row .playlist-play {
