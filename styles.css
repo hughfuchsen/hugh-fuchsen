@@ -254,6 +254,25 @@ a:active {
     background-color: #ffcd98;
 }
 
+
+.playlist-row {
+    display: flex;
+    align-items: stretch;
+    gap: 6px;
+    width: 100%;
+}
+
+.playlist-name {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+}
+
+.playlist-play {
+    flex-shrink: 0;
+}
+
+
 hr {
     border: 0;
     border-top: 1px solid #303030;
