@@ -261,14 +261,9 @@ a:active {
     gap: 8px;
 }
 
-.playlist-row button {
-    margin: 0;
-}
-
 .playlist-row .playlist-play {
     flex-shrink: 0;
 }
-
 
 hr {
     border: 0;
