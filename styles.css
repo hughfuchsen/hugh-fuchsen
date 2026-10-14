@@ -262,9 +262,6 @@ a:active {
     justify-content: flex-start;
     gap: 8px;
     width: 100%;
-
-    overflow-y: auto;
-    overflow-x: hidden;
 }
 
 .playlist-row #explore {
