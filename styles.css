@@ -642,12 +642,14 @@ hr {
         left: 0rem; 
         width: 95%;
 
-        height: calc(100svh - 35px);
-        max-height: calc(100svh - 35px);
-        min-height: calc(100svh - 35px);
+        height: var(--fixed-viewport-height);
+        max-height: var(--fixed-viewport-height);
+        flex-shrink: 0;
+
 
         margin: 2rem auto;
     }
+
 
     #music-explore,
     #music-albums-section,

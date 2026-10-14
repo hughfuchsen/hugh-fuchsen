@@ -1,3 +1,13 @@
+function setFixedViewportHeight() {
+  const height = window.innerHeight - 30;
+
+  document.documentElement.style.setProperty(
+      '--fixed-viewport-height',
+      `${height}px`
+  );
+}
+
+setFixedViewportHeight();
 
 function closeWindow(windowID) {
   const windowElement = document.getElementById(windowID);
