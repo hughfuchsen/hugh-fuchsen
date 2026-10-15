@@ -711,7 +711,7 @@ function playAlbumTrack(albumTracks, index) {
   tracks = [...albumTracks];
 
   current = index;
-  currentTag = currentAlbum;
+  currentTag = '';
   loadTrack(current);
   
   let name = currentAlbum.replace(/-/g, " ");
