@@ -606,7 +606,7 @@ function openAlbum(albumName) {
   // Set the album as the current playlist
   tracks = [...albumTracks];
   current = 0;
-  currentTag = albumName;
+  currentTag = '';
 
   // Only load the first track if nothing is currently playing
   if (tracks.length > 0 && audio.paused) {
@@ -701,8 +701,7 @@ function openAlbumFromURL(albumSlug) {
   }
 
   openAlbum(album);
-  tagName = '';
-  updatePlaylistUI();
+  
   return true;
 }
 
