@@ -602,14 +602,15 @@ function openAlbum(albumName) {
 
       container.appendChild(button);
   });
-
-  // Set the album as the current playlist
-  tracks = [...albumTracks];
-  current = 0;
-  currentTag = '';
-
-  // Only load the first track if nothing is currently playing
+  
   if (tracks.length > 0 && audio.paused) {
+    // Set the album as the current playlist
+    tracks = [...albumTracks];
+    current = 0;
+    currentTag = '';
+
+    // Only load the first track if nothing is currently playing
+  
     loadTrack(current);
     document.getElementById('playPauseToggle').textContent = '▶';
   }
