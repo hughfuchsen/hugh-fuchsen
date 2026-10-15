@@ -691,18 +691,15 @@ hr {
 
         padding-left: 20px;
 
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .scroll-section
-    {
         overflow-y: auto;
         overflow-x: hidden;
 
         word-wrap: break-word;
+
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     #window-more-bio {
