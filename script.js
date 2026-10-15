@@ -701,6 +701,8 @@ function openAlbumFromURL(albumSlug) {
   }
 
   openAlbum(album);
+  tagName = '';
+  updatePlaylistUI();
   return true;
 }
 
