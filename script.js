@@ -602,17 +602,19 @@ function openAlbum(albumName) {
 
       container.appendChild(button);
   });
-  
-  if (tracks.length > 0 && audio.paused) {
+  if(audio.paused)
+  {
     // Set the album as the current playlist
     tracks = [...albumTracks];
     current = 0;
     currentTag = '';
-
-    // Only load the first track if nothing is currently playing
   
+
+  // Only load the first track if nothing is currently playing
+  if (tracks.length > 0) {
     loadTrack(current);
     document.getElementById('playPauseToggle').textContent = '▶';
+  }
   }
 
   updatePlaylistUI();
