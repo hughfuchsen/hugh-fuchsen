@@ -226,8 +226,6 @@ a:active {
 
 #trackArt {
     max-height: 30%;
-    width: auto;
-    height: auto;
     object-fit: contain;
 }
 
