@@ -218,8 +218,7 @@ a:active {
 }
 
 .track-art-img {
-    height: 30vh;
-    width: 100%;
+    height: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -692,7 +691,21 @@ hr {
         margin-top: 1rem; 
     }
 
-
+    .track-art-img {
+        height: 30vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #trackArt {
+        max-height: 100%;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+    }
 
     #music-explore,
     #music-albums-section,
