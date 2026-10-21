@@ -328,6 +328,10 @@ function loadPlaylistBasedOnTag(tag) {
   document.getElementById('playPauseToggle').textContent = '▶';
 }
 
+trackArt.onerror = function () {
+  this.onerror = null;
+  this.src = '/img/track-art-place-holder.gif';
+};
 
 function loadTrack(index) {
 
@@ -359,10 +363,7 @@ function loadTrack(index) {
   }
 }
 
-trackArt.onerror = function () {
-  this.onerror = null;
-  this.src = '/img/track-art-place-holder.gif';
-};
+
 
 if ('mediaSession' in navigator) {
   navigator.mediaSession.setActionHandler('previoustrack', () => {
