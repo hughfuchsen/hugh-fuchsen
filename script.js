@@ -257,6 +257,12 @@ document.addEventListener('DOMContentLoaded', adjustLayout);
 
 const audio = document.getElementById('audio');
 const trackName = document.getElementById('trackName');
+const trackArt = document.getElementById('trackArt');
+
+trackArt.onerror = function () {
+  this.onerror = null;
+  this.src = '/img/track-art-place-holder.gif';
+};
 
 let allTracks = [];   // full dataset (with tags)
 let tracks = [];      // playback queue
@@ -340,6 +346,8 @@ function loadTrack(index) {
       .replace(/-/g, " ");
 
   trackName.textContent = name.toLowerCase();
+
+  trackArt.src = "https://music.hughfuchsen.workers.dev/" + track.img;
 
   audio.src =
       "https://music.hughfuchsen.workers.dev/" + track.url;
