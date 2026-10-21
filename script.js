@@ -259,10 +259,6 @@ const audio = document.getElementById('audio');
 const trackName = document.getElementById('trackName');
 const trackArt = document.getElementById('trackArt');
 
-trackArt.onerror = function () {
-  this.onerror = null;
-  this.src = '/img/track-art-place-holder.gif';
-};
 
 let allTracks = [];   // full dataset (with tags)
 let tracks = [];      // playback queue
@@ -363,6 +359,10 @@ function loadTrack(index) {
   }
 }
 
+trackArt.onerror = function () {
+  this.onerror = null;
+  this.src = '/img/track-art-place-holder.gif';
+};
 
 if ('mediaSession' in navigator) {
   navigator.mediaSession.setActionHandler('previoustrack', () => {
