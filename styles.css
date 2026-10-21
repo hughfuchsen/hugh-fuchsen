@@ -217,6 +217,10 @@ a:active {
     margin-bottom: 50px;
 }
 
+#trackArt{
+    height: 30%;
+}
+
 #music-explore,
 #music-albums-section,
 #music-album-tracks-section,
