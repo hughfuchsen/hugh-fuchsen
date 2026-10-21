@@ -633,12 +633,12 @@
       {
         "url": "hugh-f/albums/do-you-have-a-minute/28-Crazy-Little-Bird.m4a",
         "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "gibberish"]
+        "tags": ["all"]
       },
       {
         "url": "hugh-f/albums/do-you-have-a-minute/29-Goodbye.m4a",
         "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "gibberish"]
+        "tags": ["all"]
       },
       {
         "url": "hugh-f/albums/do-you-have-a-minute/30-Slaughterhouse.m4a",
@@ -751,9 +751,9 @@
         "tags": ["all", "singer-songwriter"]
       },
       {
-        "url": "minksy-bootsy/bugsy.m4a",
-        "img": "minksy-bootsy/bugsy.jpg",
-        "tags": ["all", "gibberish"]
+        "url": "minksy-bootsy/gerdy-go-do.m4a",
+        "img": "minksy-bootsy/gerdy-go-do.jpg",
+        "tags": ["featured", "all", "gibberish"]
       },
       {
         "url": "minksy-bootsy/contemplation.m4a",
@@ -769,11 +769,6 @@
         "url": "minksy-bootsy/forgotten-boob.m4a",
         "img": "minksy-bootsy/forgotten-boob.jpg",
         "tags": ["all", "gibberish"]
-      },
-      {
-        "url": "minksy-bootsy/gerdy-go-do.m4a",
-        "img": "minksy-bootsy/gerdy-go-do.jpg",
-        "tags": ["featured", "all", "gibberish"]
       },
       {
         "url": "minksy-bootsy/grubby-enough.m4a",
@@ -818,6 +813,11 @@
       {
         "url": "minksy-bootsy/punisher.m4a",
         "img": "minksy-bootsy/punisher.jpg",
+        "tags": ["all", "gibberish"]
+      },
+      {
+        "url": "minksy-bootsy/bugsy.m4a",
+        "img": "minksy-bootsy/bugsy.jpg",
         "tags": ["all", "gibberish"]
       },
       {

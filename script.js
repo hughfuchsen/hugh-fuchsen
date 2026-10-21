@@ -295,6 +295,7 @@ fetch('/playlist.json')
 
         allTracks = list.map(t => ({
             url: t.url,
+            img: t.img,
             tags: t.tags || []
         }));
 
