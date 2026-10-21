@@ -726,9 +726,7 @@ hr {
 
         /* border-top: solid black 1px; */
 
-        /* height: 45%; */
-        flex: 1;
-        min-height: 0;
+        height: 55%;
         width: 100%;
         box-sizing: border-box;
 
