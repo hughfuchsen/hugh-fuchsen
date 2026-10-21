@@ -224,13 +224,13 @@ a:active {
     align-items: center;
 }
 
-#trackArt {
+/* #trackArt {
     max-height: 100%;
     max-width: 100%;
     width: auto;
     height: auto;
     object-fit: contain;
-}
+} */
 
 #music-explore,
 #music-albums-section,
