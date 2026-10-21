@@ -217,8 +217,20 @@ a:active {
     margin-bottom: 50px;
 }
 
-#trackArt{
-    height: 30%;
+.track-art-img {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#trackArt {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
 }
 
 #music-explore,
