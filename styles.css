@@ -217,9 +217,20 @@ a:active {
     margin-bottom: 50px;
 }
 
-.track-art-img {
+/* .track-art-img {
     height: 30%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#trackArt {
+    max-height: 30%;
+    object-fit: contain;
+} */
+
+.track-art-img {
+    display: none;
     justify-content: center;
     align-items: center;
 }
