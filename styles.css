@@ -372,6 +372,7 @@ hr {
     justify-content: center; /* center them */
     gap: 18px; /* space between buttons */
     font-size: x-large;
+    /* z-index: ; */
 }
 
 
@@ -726,7 +727,7 @@ hr {
 
         /* border-top: solid black 1px; */
 
-        height: 55%;
+        height: 50%;
         width: 100%;
         box-sizing: border-box;
 
