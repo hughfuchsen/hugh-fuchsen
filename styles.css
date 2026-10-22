@@ -806,7 +806,7 @@ hr {
         box-sizing: border-box;
     }
     
-    /* #window-music-player .music-browser > .content {
+    #window-music-player .music-browser > .content {
         position: absolute;
         inset: 0;
         width: 100%;
@@ -816,7 +816,8 @@ hr {
         line-height: 2rem;
         overflow-y: auto;
         overflow-x: hidden;
-    } */
+        z-index: 1000;
+    }
     
     #music-explore,
     #music-albums-section,
