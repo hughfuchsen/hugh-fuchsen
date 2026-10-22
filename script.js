@@ -364,6 +364,34 @@ function loadTrack(index) {
 }
 
 
+const timeSlider = document.getElementById('timeSlider');
+const currentTimeDisplay = document.getElementById('currentTime');
+const durationDisplay = document.getElementById('duration');
+
+function formatTime(seconds) {
+    if (!Number.isFinite(seconds)) return '0:00';
+
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+
+    return `${minutes}:${String(remainingSeconds).padStart(2, '0')}`;
+}
+
+audio.addEventListener('loadedmetadata', () => {
+    timeSlider.max = audio.duration;
+    durationDisplay.textContent = formatTime(audio.duration);
+});
+
+audio.addEventListener('timeupdate', () => {
+    timeSlider.max = Number.isFinite(audio.duration) ? audio.duration : 0;
+    timeSlider.value = audio.currentTime;
+    currentTimeDisplay.textContent = formatTime(audio.currentTime);
+});
+
+timeSlider.addEventListener('input', () => {
+    audio.currentTime = Number(timeSlider.value);
+});
+
 
 if ('mediaSession' in navigator) {
   navigator.mediaSession.setActionHandler('previoustrack', () => {

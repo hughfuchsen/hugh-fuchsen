@@ -23,136 +23,163 @@
 
         <div class="window" id="window-music-player">
             <div class="title-bar">
-                <!-- <span class="title"><span id="tag-name"></span> <span id="playlist-number"></span></span> -->
                 <span class="title">hugh fuchsen</span>
                 <div class="buttons">
-                    <button class="button" onclick="closeWindow('window-music-player'); playPause();">X</button>
-                    <!-- <button class="button" onclick="toggleExpandMusicWindow('window-music-margin');">⤢</button> -->
+                    <button class="button"
+                        onclick="closeWindow('window-music-player'); playPause();">
+                        X
+                    </button>
                 </div>
             </div>
-            <div >
-                <div class="content">
-                    <div class="track-art-img"> <img id="trackArt" src="/img/track-art-place-holder.gif" alt="album art"></div>
-                    <audio id="audio" style="display: none;" controls></audio>
-                    <div id="trackName" style="margin: 10px; text-align: center;"></div>
-                    <!-- <div id="albumName" style="font-size: 0.8em; margin: 3px; text-align: center;"></div> -->
-                    <div style="font-size: 0.7em; margin-bottom: 10px; text-align: center;" class="title">
-                        <span id="tag-name"></span> <span id="playlist-number"></span>
+        
+            <div class="music-player-layout">
+        
+                <!-- TOP HALF: PLAYER -->
+                <div class="music-player-top">
+                    <div class="track-art-img">
+                        <img id="trackArt"
+                             src="/img/track-art-place-holder.gif"
+                             alt="album art">
                     </div>
-
+        
+                    <div id="trackName"> </div>
+        
+                    <div class="title track-info">
+                        <span id="tag-name"></span>
+                        <span id="playlist-number"></span>
+                    </div>
+        
                     <div class="player-controls">
                         <button class="button" id="prev">⏮</button>
                         <button class="button" id="playPauseToggle">▶</button>
                         <button class="button" id="next">⏭</button>
                     </div>
-                </div>  
-                <div class="content" id="music-explore">
-                    <div id="music-section-header" class="music-section-header">
-                        <button id="explore" onclick="">♫</button>
-                        <hr>
-                        <div class="music-scroll-arrows">↕ scroll ↕</div>
+        
+                    <!-- TRACK TIME SLIDER -->
+                    <div class="track-timeline">
+                        <span id="currentTime">0:00</span>
+                        <input type="range" id="timeSlider"
+                               min="0" max="100" value="0" step="0.1">
+                        <span id="duration">0:00</span>
                     </div>
-
-                    <button id="explore" onclick="startPlaylistBasedOnTag('all');">shuffle all ▶</button> 
-                    <button id="explore" onclick="openPlaylistSection();">showreels</button> 
-                    <button id="explore" onclick="openAlbumsSection();">albums</button>
-                    <button id="explore" onclick="openAtoZSection();">tracks a-z</button>
-                    <button id="explore" onclick="openPlaylistSection();">playlists</button> 
+        
+                    <audio id="audio" style="display: none;" controls></audio>
                 </div>
-                
-                <div class="content" id="music-albums-section" style="display: none;">
-                    <div id="music-section-header" class="music-section-header">
-                        <button id="explore" onclick="openMusicTagsIDSection();">← back</button>
-                        <hr>
-                        <div class="music-scroll-arrows"></div>
-                        <!-- <div class="music-scroll-arrows">↕ scroll ↕</div> -->
+        
+                <!-- BOTTOM HALF: BROWSER -->
+                <div class="music-browser">
+        
+                    <div class="content" id="music-explore">
+                        <div id="music-section-header" class="music-section-header">
+                            <button id="explore" onclick="">♫</button>
+                            <hr>
+                            <div class="music-scroll-arrows">↕ scroll ↕</div>
+                        </div>
+    
+                        <button id="explore" onclick="startPlaylistBasedOnTag('all');">shuffle all ▶</button> 
+                        <button id="explore" onclick="openPlaylistSection();">showreels</button> 
+                        <button id="explore" onclick="openAlbumsSection();">albums</button>
+                        <button id="explore" onclick="openAtoZSection();">tracks a-z</button>
+                        <button id="explore" onclick="openPlaylistSection();">playlists</button> 
                     </div>
-                
-                    <div id="music-albums"></div>
+                    
+                    <div class="content" id="music-albums-section" style="display: none;">
+                        <div id="music-section-header" class="music-section-header">
+                            <button id="explore" onclick="openMusicTagsIDSection();">← back</button>
+                            <hr>
+                            <div class="music-scroll-arrows"></div>
+                            <!-- <div class="music-scroll-arrows">↕ scroll ↕</div> -->
+                        </div>
+                    
+                        <div id="music-albums"></div>
+                    </div>
+                    
+                    <div class="content" id="music-album-tracks-section" style="display: none; padding-top: 0;">
+                        <div id="music-section-header" class="music-section-header">
+                            <button id="explore" onclick="openAlbumsSection();">← albums</button>
+                            <hr>
+                            <div class="music-scroll-arrows">↕ scroll ↕</div>
+                        </div>
+    
+                        <div id="music-album-tracks"></div>
+                    </div>          
+    
+                    <div class="content" id="music-a-to-z-section" style="display: none; padding-top: 0;">
+    
+                        <div id="music-section-header" class="music-section-header">
+                            <button id="explore" onclick="openMusicTagsIDSection();">← back</button>
+                            <hr>
+                            <div class="music-scroll-arrows">↕ scroll ↕</div>
+                        </div>
+    
+                        <div id="music-a-to-z-tracks"></div>
+                    
+                    </div>
+    
+                    <div class="content" id="music-playlist-section" style="display: none; padding-top: 0;">
+                        <div id="music-section-header" class="music-section-header">
+                            <button id="explore" onclick="openMusicTagsIDSection();">← back</button>
+                            <hr>
+                            <div class="music-scroll-arrows">↕ scroll ↕</div>
+                        </div>
+    
+                        <div class="play-instant-row">
+                            <button id="explore" class="playlist-play" onclick="startPlaylistBasedOnTag('featured');">▶</button>
+                            <button id="explore" onclick="openPlaylist('featured');">featured</button>
+                        </div>
+    
+                        <div class="play-instant-row">
+                            <button id="explore" class="playlist-play" onclick="startPlaylistBasedOnTag('game soundtrack');">▶</button>
+                            <button id="explore" onclick="openPlaylist('game soundtrack');">game soundtrack</button>
+                        </div>
+    
+                        <div class="play-instant-row">
+                            <button id="explore" class="playlist-play" onclick="startPlaylistBasedOnTag('singer-songwriter');">▶</button>
+                            <button id="explore" onclick="openPlaylist('singer-songwriter');">singer-songwriter</button>
+                        </div>
+    
+                        <div class="play-instant-row">
+                            <button id="explore" class="playlist-play" onclick="startPlaylistBasedOnTag('piano');">▶</button>
+                            <button id="explore" onclick="openPlaylist('piano');">piano</button>
+                        </div>
+    
+                        <div class="play-instant-row">
+                            <button id="explore" class="playlist-play" onclick="startPlaylistBasedOnTag('ambient-d#');">▶</button>
+                            <button id="explore" onclick="openPlaylist('ambient-d#');">ambient d#</button>
+                        </div>
+    
+                        <div class="play-instant-row">
+                            <button id="explore" class="playlist-play" onclick="startPlaylistBasedOnTag('guitar');">▶</button>
+                            <button id="explore" onclick="openPlaylist('guitar');">guitar</button>
+                        </div>
+    
+                        <div class="play-instant-row">
+                            <button id="explore" class="playlist-play" onclick="startPlaylistBasedOnTag('gibberish');">▶</button>
+                            <button id="explore" onclick="openPlaylist('gibberish');">gibberish</button>
+                        </div>
+    
+                        <div class="play-instant-row">
+                            <button id="explore" class="playlist-play" onclick="startPlaylistBasedOnTag('all');">▶</button>
+                            <button id="explore" onclick="openPlaylist('all');">all tracks</button>
+                        </div>
+                    </div>
+                    
+                    <div class="content" id="music-playlist-tracks-section" style="display: none; padding-top: 0;">
+                        <div class="music-section-header">
+                            <button id="explore" onclick="openPlaylistSection();">← playlists</button>
+                            <hr>
+                            <div class="music-scroll-arrows">↕ scroll ↕</div>
+                        </div>
+    
+                        <div id="music-playlist-tracks"></div>
+                    </div>
+        
                 </div>
-                
-                <div class="content" id="music-album-tracks-section" style="display: none; padding-top: 0;">
-                    <div id="music-section-header" class="music-section-header">
-                        <button id="explore" onclick="openAlbumsSection();">← albums</button>
-                        <hr>
-                        <div class="music-scroll-arrows">↕ scroll ↕</div>
-                    </div>
-
-                    <div id="music-album-tracks"></div>
-                </div>          
-
-                <div class="content" id="music-a-to-z-section" style="display: none; padding-top: 0;">
-
-                    <div id="music-section-header" class="music-section-header">
-                        <button id="explore" onclick="openMusicTagsIDSection();">← back</button>
-                        <hr>
-                        <div class="music-scroll-arrows">↕ scroll ↕</div>
-                    </div>
-
-                    <div id="music-a-to-z-tracks"></div>
-                
-                </div>
-
-                <div class="content" id="music-playlist-section" style="display: none; padding-top: 0;">
-                    <div id="music-section-header" class="music-section-header">
-                        <button id="explore" onclick="openMusicTagsIDSection();">← back</button>
-                        <hr>
-                        <div class="music-scroll-arrows">↕ scroll ↕</div>
-                    </div>
-
-                    <div class="play-instant-row">
-                        <button id="explore" class="playlist-play" onclick="startPlaylistBasedOnTag('featured');">▶</button>
-                        <button id="explore" onclick="openPlaylist('featured');">featured</button>
-                    </div>
-
-                    <div class="play-instant-row">
-                        <button id="explore" class="playlist-play" onclick="startPlaylistBasedOnTag('game soundtrack');">▶</button>
-                        <button id="explore" onclick="openPlaylist('game soundtrack');">game soundtrack</button>
-                    </div>
-
-                    <div class="play-instant-row">
-                        <button id="explore" class="playlist-play" onclick="startPlaylistBasedOnTag('singer-songwriter');">▶</button>
-                        <button id="explore" onclick="openPlaylist('singer-songwriter');">singer-songwriter</button>
-                    </div>
-
-                    <div class="play-instant-row">
-                        <button id="explore" class="playlist-play" onclick="startPlaylistBasedOnTag('piano');">▶</button>
-                        <button id="explore" onclick="openPlaylist('piano');">piano</button>
-                    </div>
-
-                    <div class="play-instant-row">
-                        <button id="explore" class="playlist-play" onclick="startPlaylistBasedOnTag('ambient-d#');">▶</button>
-                        <button id="explore" onclick="openPlaylist('ambient-d#');">ambient d#</button>
-                    </div>
-
-                    <div class="play-instant-row">
-                        <button id="explore" class="playlist-play" onclick="startPlaylistBasedOnTag('guitar');">▶</button>
-                        <button id="explore" onclick="openPlaylist('guitar');">guitar</button>
-                    </div>
-
-                    <div class="play-instant-row">
-                        <button id="explore" class="playlist-play" onclick="startPlaylistBasedOnTag('gibberish');">▶</button>
-                        <button id="explore" onclick="openPlaylist('gibberish');">gibberish</button>
-                    </div>
-
-                    <div class="play-instant-row">
-                        <button id="explore" class="playlist-play" onclick="startPlaylistBasedOnTag('all');">▶</button>
-                        <button id="explore" onclick="openPlaylist('all');">all tracks</button>
-                    </div>
-                </div>
-                
-                <div class="content" id="music-playlist-tracks-section" style="display: none; padding-top: 0;">
-                    <div class="music-section-header">
-                        <button id="explore" onclick="openPlaylistSection();">← playlists</button>
-                        <hr>
-                        <div class="music-scroll-arrows">↕ scroll ↕</div>
-                    </div>
-
-                    <div id="music-playlist-tracks"></div>
-                </div>
-       
             </div>
         </div>
+
+
+
 
         <div class="window" id="window-picture">
             <div class="title-bar">
