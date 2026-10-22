@@ -702,6 +702,17 @@ hr {
 
 
     #window-music-player {
+        top: 0rem; 
+        left: 0rem; 
+        width: 95%;
+
+        height: var(--fixed-viewport-height);
+        max-height: var(--fixed-viewport-height);
+        flex-shrink: 0;
+
+        margin: 2rem auto;
+        margin-top: 1rem; 
+        
         display: flex;
         flex-direction: column;
         overflow: hidden;
