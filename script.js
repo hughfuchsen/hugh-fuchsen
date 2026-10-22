@@ -330,7 +330,7 @@ function loadPlaylistBasedOnTag(tag) {
 
 trackArt.onerror = function () {
   this.onerror = null;
-  this.src = '/img/track-art-place-holder.gif';
+  this.src = '/img/favicon.png';
 };
 
 function loadTrack(index) {
