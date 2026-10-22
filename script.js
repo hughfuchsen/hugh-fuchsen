@@ -350,6 +350,8 @@ function loadTrack(index) {
 
   trackArt.src = "https://music.hughfuchsen.workers.dev/" + track.img;
 
+  console.log("Artwork URL:", trackArt.src);
+
   audio.src =
       "https://music.hughfuchsen.workers.dev/" + track.url;
 
