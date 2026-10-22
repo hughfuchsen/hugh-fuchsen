@@ -730,7 +730,6 @@ hr {
     
     #window-music-player .music-player-top {
         height: 50%;
-        max-height: 50%;
         flex: 0 0 50%;
         min-height: 0;
         box-sizing: border-box;
@@ -818,7 +817,34 @@ hr {
         overflow-y: auto;
         overflow-x: hidden;
     }
-
+    
+    #music-explore,
+    #music-albums-section,
+    #music-album-tracks-section,
+    #music-a-to-z-section,
+    #music-playlist-section,
+    #music-playlist-tracks-section
+     {
+        line-height: 2rem;
+    
+    /* border-top: solid black 1px; */
+    
+    /* height: take up whatever available space :) */
+        width: 100%;
+        box-sizing: border-box;
+    
+        padding-left: 20px;
+    
+        overflow-y: auto;
+        overflow-x: hidden;
+    
+        word-wrap: break-word;
+    
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
     
     /* .track-art-img {
         height: 20vh;
