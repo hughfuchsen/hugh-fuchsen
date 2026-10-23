@@ -409,37 +409,37 @@ timeSlider.addEventListener('input', () => {
 });
 
 
-// if ('mediaSession' in navigator) {
-//   navigator.mediaSession.setActionHandler('previoustrack', () => {
-//       if (!tracks.length) return;
+if ('mediaSession' in navigator) {
+  navigator.mediaSession.setActionHandler('prev', () => {
+      if (!tracks.length) return;
 
-//       current = (current - 1 + tracks.length) % tracks.length;
-//       loadTrack(current);
+      current = (current - 1 + tracks.length) % tracks.length;
+      loadTrack(current);
 
-//       audio.play().catch(error => {
-//           console.log('Playback failed:', error);
-//       });
-//   });
+      audio.play().catch(error => {
+          console.log('Playback failed:', error);
+      });
+  });
 
-//   navigator.mediaSession.setActionHandler('nexttrack', () => {
-//       if (!tracks.length) return;
+  navigator.mediaSession.setActionHandler('next', () => {
+      if (!tracks.length) return;
 
-//       current = (current + 1) % tracks.length;
-//       loadTrack(current);
+      current = (current + 1) % tracks.length;
+      loadTrack(current);
 
-//       audio.play().catch(error => {
-//           console.log('Playback failed:', error);
-//       });
-//   });
+      audio.play().catch(error => {
+          console.log('Playback failed:', error);
+      });
+  });
 
-//   // Disable the 10-second seek actions where supported
-//   try {
-//       navigator.mediaSession.setActionHandler('seekbackward', null);
-//       navigator.mediaSession.setActionHandler('seekforward', null);
-//   } catch (error) {
-//       console.log('Seek handlers unavailable:', error);
-//   }
-// }
+  // Disable the 10-second seek actions where supported
+  try {
+      navigator.mediaSession.setActionHandler('seekbackward', null);
+      navigator.mediaSession.setActionHandler('seekforward', null);
+  } catch (error) {
+      console.log('Seek handlers unavailable:', error);
+  }
+}
 
 
 
@@ -565,15 +565,37 @@ function toggleRepeat() {
 document.getElementById('shuffle').onclick = toggleShuffle;
 document.getElementById('repeat').onclick = toggleRepeat;
 
+
+audio.addEventListener('ended', () => {
+  if (repeatMode === 2) {
+      // Repeat the current track
+      audio.currentTime = 0;
+      audio.play();
+      return;
+  }
+
+  if (repeatMode === 0 && !shuffleEnabled && current === tracks.length - 1) {
+      // Stop at the end when repeat is off
+      document.getElementById('playPauseToggle').textContent = '▶';
+      return;
+  }
+
+  // Continue to another track
+  current = getNextTrackIndex(1);
+  loadTrack(current);
+  audio.play();
+});
+
+
 if ('mediaSession' in navigator) {
 
-  navigator.mediaSession.setActionHandler('previoustrack', () => {
+  navigator.mediaSession.setActionHandler('prev', () => {
       current = (current - 1 + tracks.length) % tracks.length;
       loadTrack(current);
       audio.play();
   });
 
-  navigator.mediaSession.setActionHandler('nexttrack', () => {
+  navigator.mediaSession.setActionHandler('next', () => {
       current = (current + 1) % tracks.length;
       loadTrack(current);
       audio.play();
