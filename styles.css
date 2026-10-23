@@ -801,10 +801,51 @@ hr {
         font-size: 0.7em;
     }
     
+
     #window-music-player #timeSlider {
+        appearance: none;
+        -webkit-appearance: none;
         flex: 1;
         min-width: 0;
+        height: 12px;
+        margin: 0;
+        background: transparent;
         cursor: pointer;
+    }
+    
+    /* The track — Chrome, Safari, Edge */
+    #window-music-player #timeSlider::-webkit-slider-runnable-track {
+        height: 4px;
+        background: #aaa69e;
+        border: 1px solid #77736b;
+    }
+    
+    /* The thumb — Chrome, Safari, Edge */
+    #window-music-player #timeSlider::-webkit-slider-thumb {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 10px;
+        height: 12px;
+        margin-top: -5px;
+        background: #ffb86d;
+        border: 1px solid #222;
+        border-radius: 0;
+    }
+    
+    /* Firefox track */
+    #window-music-player #timeSlider::-moz-range-track {
+        height: 4px;
+        background: #aaa69e;
+        border: 1px solid #77736b;
+    }
+    
+    /* Firefox thumb */
+    #window-music-player #timeSlider::-moz-range-thumb {
+        width: 8px;
+        height: 10px;
+        background: #ffb86d;
+        border: 1px solid #222;
+        border-radius: 0;
     }
     
     /* BOTTOM HALF: CATALOGUE */
