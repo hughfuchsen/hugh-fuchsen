@@ -583,6 +583,7 @@ audio.addEventListener('ended', () => {
   // Continue to another track
   current = getNextTrackIndex(1);
   loadTrack(current);
+  document.getElementById('playPauseToggle').textContent = '⏸';
   audio.play();
 });
 
@@ -602,14 +603,6 @@ if ('mediaSession' in navigator) {
   });
 
 }
-
-// auto next track
-audio.addEventListener('ended', () => {
-  current = (current + 1) % tracks.length;
-  loadTrack(current);
-  audio.play();
-  document.getElementById('playPauseToggle').textContent = '⏸';
-});
 
 const musicWindow = document.getElementById('window-music-player');
 
