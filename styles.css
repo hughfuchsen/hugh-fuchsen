@@ -814,7 +814,7 @@ hr {
     /* The track — Chrome, Safari, Edge */
     #window-music-player #timeSlider::-webkit-slider-runnable-track {
         height: 4px;
-        background: #aaa69e;
+        background: none;
         border: 1px solid #77736b;
     }
     
