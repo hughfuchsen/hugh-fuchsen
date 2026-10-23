@@ -788,9 +788,7 @@ hr {
         justify-content: center;
         gap: 10px;
     }
-    
-    /* TRACK TIMELINE */
-    
+
     #window-music-player .track-timeline {
         width: 100%;
         flex-shrink: 0;
@@ -847,6 +845,7 @@ hr {
         border: 1px solid #222;
         border-radius: 0;
     }
+    
     
     /* BOTTOM HALF: CATALOGUE */
     
