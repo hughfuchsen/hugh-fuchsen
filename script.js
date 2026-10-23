@@ -164,7 +164,7 @@ function updatePlaylistUI() {
 
 function startPlaylistBasedOnTag(tag) {
 
-  currentTag = tag != 'all' ? tag : tag + ' shuffled';
+  currentTag = tag;
 
   tracks = allTracks.filter(track =>
     track.tags.includes(tag)
@@ -782,7 +782,7 @@ function openPlaylist(playlistName) {
           .toLowerCase();
 
       button.textContent = name;
-      button.onclick = () => playPlaylistTrack(playlistTracks, index);
+      button.onclick = () => playPlaylistTrack(playlistTracks, index, playlistName);
 
       container.appendChild(button);
   });
@@ -797,10 +797,10 @@ function openPlaylist(playlistName) {
 
 
 
-function playPlaylistTrack(playlistTracks, index) {
+function playPlaylistTrack(playlistTracks, index, playlistName) {
   tracks = [...playlistTracks];
   current = index;
-  currentTag = '';
+  currentTag = playlistName;
 
   loadTrack(current);
   updatePlaylistUI();
