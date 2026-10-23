@@ -271,7 +271,6 @@ document.addEventListener('DOMContentLoaded', adjustLayout);
 
 const audio = document.getElementById('audio');
 const trackName = document.getElementById('trackName');
-const trackArt = document.getElementById('trackArt');
 
 
 let allTracks = [];   // full dataset (with tags)
@@ -342,10 +341,6 @@ function loadPlaylistBasedOnTag(tag) {
   document.getElementById('playPauseToggle').textContent = '▶';
 }
 
-trackArt.onerror = function () {
-  this.onerror = null;
-  this.src = '/img/favicon.png';
-};
 
 function loadTrack(index) {
 
@@ -361,6 +356,8 @@ function loadTrack(index) {
       .replace(/-/g, " ");
 
   trackName.textContent = name.toLowerCase();
+
+  const trackArt = document.getElementById('trackArt');
 
   trackArt.src = "https://music.hughfuchsen.workers.dev/" + track.img;
 
@@ -409,48 +406,45 @@ timeSlider.addEventListener('input', () => {
 });
 
 
-// if ('mediaSession' in navigator) {
-//   navigator.mediaSession.setActionHandler('previoustrack', () => {
-//       if (!tracks.length) return;
+if ('mediaSession' in navigator) {
+  navigator.mediaSession.setActionHandler('previoustrack', () => {
+      if (!tracks.length) return;
 
-//       current = (current - 1 + tracks.length) % tracks.length;
-//       loadTrack(current);
+      current = (current - 1 + tracks.length) % tracks.length;
+      loadTrack(current);
 
-//       audio.play().catch(error => {
-//           console.log('Playback failed:', error);
-//       });
-//   });
+      audio.play().catch(error => {
+          console.log('Playback failed:', error);
+      });
+  });
 
-//   navigator.mediaSession.setActionHandler('nexttrack', () => {
-//       if (!tracks.length) return;
+  navigator.mediaSession.setActionHandler('nexttrack', () => {
+      if (!tracks.length) return;
 
-//       current = (current + 1) % tracks.length;
-//       loadTrack(current);
+      current = (current + 1) % tracks.length;
+      loadTrack(current);
 
-//       audio.play().catch(error => {
-//           console.log('Playback failed:', error);
-//       });
-//   });
+      audio.play().catch(error => {
+          console.log('Playback failed:', error);
+      });
+  });
 
-//   // Disable the 10-second seek actions where supported
-//   try {
-//       navigator.mediaSession.setActionHandler('seekbackward', null);
-//       navigator.mediaSession.setActionHandler('seekforward', null);
-//   } catch (error) {
-//       console.log('Seek handlers unavailable:', error);
-//   }
-// }
-
-
-
-function shuffle(array) {
-for (let i = array.length - 1; i > 0; i--) {
-  const j = Math.floor(Math.random() * (i + 1));
-  [array[i], array[j]] = [array[j], array[i]];
+  // Disable the 10-second seek actions where supported
+  try {
+      navigator.mediaSession.setActionHandler('seekbackward', null);
+      navigator.mediaSession.setActionHandler('seekforward', null);
+  } catch (error) {
+      console.log('Seek handlers unavailable:', error);
+  }
 }
 
 
 
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
 }
 
 
