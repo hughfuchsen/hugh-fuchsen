@@ -375,6 +375,11 @@ hr {
     /* z-index: ; */
 }
 
+.player-controls button.active {
+    background: #ffb86d;
+    box-shadow: inset 1px 1px 2px #000;
+}
+
 
 .button-language {
     background-color: #ffb86d;
