@@ -175,7 +175,7 @@ function startPlaylistBasedOnTag(tag) {
     return;
   }
 
-  shuffle(tracks);
+  // shuffle(tracks);
 
   current = 0;
 
@@ -185,6 +185,20 @@ function startPlaylistBasedOnTag(tag) {
 
   document.getElementById('playPauseToggle').textContent = '⏸';
 }
+
+function playRandomTrack() {
+  if (tracks.length === 0) return;
+
+  let randomIndex;
+
+  do {
+      randomIndex = Math.floor(Math.random() * tracks.length);
+  } while (tracks.length > 1 && randomIndex === currentTrackIndex);
+
+  loadTrack(randomIndex);
+  audio.play();
+}
+
 
 // Function to adjust layout based on screen size
 function adjustLayout() {
@@ -319,7 +333,7 @@ function loadPlaylistBasedOnTag(tag) {
     return;
   }
 
-  shuffle(tracks);
+  // shuffle(tracks);
 
   current = 0;
 
@@ -455,7 +469,7 @@ function openPlaylistFromURL(playlistSlug) {
 
   currentTag = tag;
   tracks = [...matchingTracks];
-  shuffle(tracks);
+  // shuffle(tracks);
   current = 0;
 
   loadTrack(current);
@@ -488,19 +502,68 @@ document.getElementById('playPauseToggle').onclick = () => {
   }
 };
 
+function getNextTrackIndex(direction = 1) {
+  if (shuffleEnabled && tracks.length > 1) {
+      let randomIndex;
+
+      do {
+          randomIndex = Math.floor(Math.random() * tracks.length);
+      } while (randomIndex === current);
+
+      return randomIndex;
+  }
+
+  return (current + direction + tracks.length) % tracks.length;
+}
+
 document.getElementById('next').onclick = () => {
-  current = (current + 1) % tracks.length;
+  current = getNextTrackIndex(1);
   loadTrack(current);
   audio.play();
   document.getElementById('playPauseToggle').textContent = '⏸';
 };
 
 document.getElementById('prev').onclick = () => {
-  current = (current - 1 + tracks.length) % tracks.length;
+  current = getNextTrackIndex(-1);
   loadTrack(current);
   audio.play();
   document.getElementById('playPauseToggle').textContent = '⏸';
 };
+
+
+
+let shuffleEnabled = false;
+let repeatMode = 0; // 0 = off, 1 = repeat all, 2 = repeat one
+
+function toggleShuffle() {
+    shuffleEnabled = !shuffleEnabled;
+
+    const button = document.getElementById('shuffle');
+    button.classList.toggle('active', shuffleEnabled);
+}
+
+function toggleRepeat() {
+    repeatMode = (repeatMode + 1) % 3;
+
+    const button = document.getElementById('repeat');
+
+    if (repeatMode === 0) {
+        button.textContent = '🔁';
+        button.classList.remove('active');
+        button.title = 'Repeat off';
+    } else if (repeatMode === 1) {
+        button.textContent = '🔁';
+        button.classList.add('active');
+        button.title = 'Repeat all';
+    } else {
+        button.textContent = '🔂';
+        button.classList.add('active');
+        button.title = 'Repeat one';
+    }
+}
+
+document.getElementById('shuffle').onclick = toggleShuffle;
+document.getElementById('repeat').onclick = toggleRepeat;
 
 if ('mediaSession' in navigator) {
 
