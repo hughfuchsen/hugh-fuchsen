@@ -511,14 +511,24 @@ function getNextTrackIndex(direction = 1) {
 }
 
 document.getElementById('next').onclick = () => {
-  current = getNextTrackIndex(1);
-  loadTrack(current);
-  audio.play();
-  document.getElementById('playPauseToggle').textContent = '⏸';
+  if (shuffleEnabled) {
+      playNextShuffledTrack();
+  } else {
+      current = (current + 1) % tracks.length;
+      loadTrack(current);
+      audio.play();
+      document.getElementById('playPauseToggle').textContent = '⏸';
+  }
 };
 
 document.getElementById('prev').onclick = () => {
-  current = getNextTrackIndex(-1);
+  if (shuffleEnabled && shuffleHistoryPosition > 0) {
+      shuffleHistoryPosition--;
+      current = shuffleHistory[shuffleHistoryPosition];
+  } else {
+      current = (current - 1 + tracks.length) % tracks.length;
+  }
+
   loadTrack(current);
   audio.play();
   document.getElementById('playPauseToggle').textContent = '⏸';
@@ -528,6 +538,30 @@ document.getElementById('prev').onclick = () => {
 
 let shuffleEnabled = false;
 let repeatMode = 0; // 0 = off, 1 = repeat all, 2 = repeat one
+
+let shuffleHistory = [];
+let shuffleHistoryPosition = -1;
+
+function playNextShuffledTrack() {
+  if (tracks.length <= 1) return;
+
+  // If we've gone backwards in history, discard the future
+  shuffleHistory = shuffleHistory.slice(0, shuffleHistoryPosition + 1);
+
+  let availableTracks = tracks
+      .map((_, index) => index)
+      .filter(index => index !== current);
+
+  const randomIndex = Math.floor(Math.random() * availableTracks.length);
+  current = availableTracks[randomIndex];
+
+  shuffleHistory.push(current);
+  shuffleHistoryPosition = shuffleHistory.length - 1;
+
+  loadTrack(current);
+  audio.play();
+  document.getElementById('playPauseToggle').textContent = '⏸';
+}
 
 function toggleShuffle() {
     shuffleEnabled = !shuffleEnabled;
