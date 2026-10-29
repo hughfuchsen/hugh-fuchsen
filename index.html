@@ -347,31 +347,44 @@
                 </div>
             </div>
 
-            <!-- <script> -->
-                // const isPhone = window.matchMedia("(max-width: 1024px)").matches;
-            
-                // if (!isPhone) {
-                //     const iframe = document.createElement("iframe");
-            
-                //     iframe.src = "https://itch.io/embed-upload/19345557?color=ffcd98";
-                //     iframe.id = "game-1";
-                //     iframe.allowFullscreen = false;
-                //     iframe.allow = "autoplay";
-                //     iframe.style.border = "none";
-            
-                //     document.getElementById("window-game-dev").appendChild(iframe);
-                // } else {
-                    // const message = document.createElement("div");
-                    // message.innerHTML = `
-                    <div style="padding: 3%;">
-                        <img style="width: 100%" src="/img/proto1.gif" alt="gif of game">
-                        <a href="https://hughfuchsen.itch.io/pony-zone-prototype-1" target="_blank">
-                            click to play prototype (desktop)
-                        </a>  
-                    </div>  `;
-                    // document.getElementById("window-game-dev").appendChild(message);
-                // }
-            <!-- </script>     -->
+            <script>
+                const isPhone = window.matchMedia("(max-width: 1024px)").matches;
+                const gameWindow = document.getElementById("window-game-dev");
+                
+                if (!isPhone) {
+                    const button = document.createElement("button");
+                    button.textContent = "load game";
+                
+                    button.onclick = function () {
+                        if (document.getElementById("game-1")) return;
+                
+                        const iframe = document.createElement("iframe");
+                        iframe.src = "https://itch.io/embed-upload/19345557?color=ffcd98";
+                        iframe.id = "game-1";
+                        iframe.allowFullscreen = false;
+                        iframe.allow = "autoplay";
+                        iframe.style.border = "none";
+                        iframe.style.width = "100%";
+                
+                        gameWindow.appendChild(iframe);
+                        button.remove();
+                    };
+                
+                    gameWindow.appendChild(button);
+                } else {
+                    const message = document.createElement("div");
+                    message.innerHTML = `
+                        <div style="padding: 3%;">
+                            <img style="width: 100%" src="/img/proto1.gif" alt="gif of game">
+                            <a href="https://hughfuchsen.itch.io/pony-zone-prototype-1" target="_blank">
+                                click to play prototype (desktop)
+                            </a>
+                        </div>
+                    `;
+                
+                    gameWindow.appendChild(message);
+                }
+            </script>   
         </div>
 
         <div class="window" id="window-songkick">
