@@ -347,31 +347,31 @@
                 </div>
             </div>
 
-            <script>
-                const isPhone = window.matchMedia("(max-width: 1024px)").matches;
+            <!-- <script> -->
+                // const isPhone = window.matchMedia("(max-width: 1024px)").matches;
             
-                if (!isPhone) {
-                    const iframe = document.createElement("iframe");
+                // if (!isPhone) {
+                //     const iframe = document.createElement("iframe");
             
-                    iframe.src = "https://itch.io/embed-upload/19345557?color=ffcd98";
-                    iframe.id = "game-1";
-                    iframe.allowFullscreen = false;
-                    iframe.allow = "autoplay";
-                    iframe.style.border = "none";
+                //     iframe.src = "https://itch.io/embed-upload/19345557?color=ffcd98";
+                //     iframe.id = "game-1";
+                //     iframe.allowFullscreen = false;
+                //     iframe.allow = "autoplay";
+                //     iframe.style.border = "none";
             
-                    document.getElementById("window-game-dev").appendChild(iframe);
-                } else {
-                    const message = document.createElement("div");
-                    message.innerHTML = `
+                //     document.getElementById("window-game-dev").appendChild(iframe);
+                // } else {
+                    // const message = document.createElement("div");
+                    // message.innerHTML = `
                     <div style="padding: 3%;">
                         <img style="width: 100%" src="/img/proto1.gif" alt="gif of game">
                         <a href="https://hughfuchsen.itch.io/pony-zone-prototype-1" target="_blank">
                             click to play prototype (desktop)
                         </a>  
                     </div>  `;
-                    document.getElementById("window-game-dev").appendChild(message);
-                }
-            </script>    
+                    // document.getElementById("window-game-dev").appendChild(message);
+                // }
+            <!-- </script>     -->
         </div>
 
         <div class="window" id="window-songkick">
