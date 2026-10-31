@@ -230,13 +230,13 @@ a:active {
 } */
 
 .track-art-img {
-    display: none;
+    display: block;
     justify-content: center;
     align-items: center;
 }
 
 #trackArt {
-    max-height: 30%;
+    height: 10%;
     object-fit: contain;
 }
 

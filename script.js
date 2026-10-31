@@ -270,6 +270,7 @@ document.addEventListener('DOMContentLoaded', adjustLayout);
 
 
 const audio = document.getElementById('audio');
+const trackArt = document.getElementById('trackArt');
 const trackName = document.getElementById('trackName');
 
 
@@ -340,7 +341,7 @@ function loadPlaylistBasedOnTag(tag) {
 
   document.getElementById('playPauseToggle').textContent = '▶';
 }
-const trackArt = document.getElementById('trackArt');
+
 
 
 function loadTrack(index) {
