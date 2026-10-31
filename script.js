@@ -360,9 +360,18 @@ function loadTrack(index) {
   trackName.textContent = name.toLowerCase();
 
 
-  trackArt.src = "https://music.hughfuchsen.workers.dev/" + track.img;
+  const artworkUrl = "https://music.hughfuchsen.workers.dev/" + track.img;
 
-  console.log("Artwork URL:", trackArt.src);
+  trackArt.onload = () => {
+      console.log("Artwork loaded:", artworkUrl);
+  };
+
+  trackArt.onerror = () => {
+      console.error("Artwork failed to load:", artworkUrl);
+      trackArt.src = "/img/track-art-place-holder.gif";
+  };
+
+  trackArt.src = artworkUrl;
 
   audio.src =
       "https://music.hughfuchsen.workers.dev/" + track.url;
