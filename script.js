@@ -340,6 +340,7 @@ function loadPlaylistBasedOnTag(tag) {
 
   document.getElementById('playPauseToggle').textContent = '▶';
 }
+const trackArt = document.getElementById('trackArt');
 
 
 function loadTrack(index) {
@@ -357,7 +358,6 @@ function loadTrack(index) {
 
   trackName.textContent = name.toLowerCase();
 
-  const trackArt = document.getElementById('trackArt');
 
   trackArt.src = "https://music.hughfuchsen.workers.dev/" + track.img;
 
