@@ -373,6 +373,36 @@ function loadTrack(index) {
           title: name.toLowerCase(),
           artist: "hugh fuchsen"
       });
+
+      navigator.mediaSession.setActionHandler('previoustrack', () => {
+        if (!tracks.length) return;
+  
+        current = (current - 1 + tracks.length) % tracks.length;
+        loadTrack(current);
+  
+        audio.play().catch(error => {
+            console.log('Playback failed:', error);
+        });
+    });
+  
+    navigator.mediaSession.setActionHandler('nexttrack', () => {
+        if (!tracks.length) return;
+  
+        current = (current + 1) % tracks.length;
+        loadTrack(current);
+  
+        audio.play().catch(error => {
+            console.log('Playback failed:', error);
+        });
+    });
+  
+    // Disable the 10-second seek actions where supported
+    try {
+        navigator.mediaSession.setActionHandler('seekbackward', null);
+        navigator.mediaSession.setActionHandler('seekforward', null);
+    } catch (error) {
+        console.log('Seek handlers unavailable:', error);
+    }
   }
 }
 
@@ -406,37 +436,37 @@ timeSlider.addEventListener('input', () => {
 });
 
 
-if ('mediaSession' in navigator) {
-  navigator.mediaSession.setActionHandler('previoustrack', () => {
-      if (!tracks.length) return;
+// if ('mediaSession' in navigator) {
+//   navigator.mediaSession.setActionHandler('previoustrack', () => {
+//       if (!tracks.length) return;
 
-      current = (current - 1 + tracks.length) % tracks.length;
-      loadTrack(current);
+//       current = (current - 1 + tracks.length) % tracks.length;
+//       loadTrack(current);
 
-      audio.play().catch(error => {
-          console.log('Playback failed:', error);
-      });
-  });
+//       audio.play().catch(error => {
+//           console.log('Playback failed:', error);
+//       });
+//   });
 
-  navigator.mediaSession.setActionHandler('nexttrack', () => {
-      if (!tracks.length) return;
+//   navigator.mediaSession.setActionHandler('nexttrack', () => {
+//       if (!tracks.length) return;
 
-      current = (current + 1) % tracks.length;
-      loadTrack(current);
+//       current = (current + 1) % tracks.length;
+//       loadTrack(current);
 
-      audio.play().catch(error => {
-          console.log('Playback failed:', error);
-      });
-  });
+//       audio.play().catch(error => {
+//           console.log('Playback failed:', error);
+//       });
+//   });
 
-  // Disable the 10-second seek actions where supported
-  try {
-      navigator.mediaSession.setActionHandler('seekbackward', null);
-      navigator.mediaSession.setActionHandler('seekforward', null);
-  } catch (error) {
-      console.log('Seek handlers unavailable:', error);
-  }
-}
+//   // Disable the 10-second seek actions where supported
+//   try {
+//       navigator.mediaSession.setActionHandler('seekbackward', null);
+//       navigator.mediaSession.setActionHandler('seekforward', null);
+//   } catch (error) {
+//       console.log('Seek handlers unavailable:', error);
+//   }
+// }
 
 
 
