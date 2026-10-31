@@ -205,7 +205,7 @@ a:active {
 
 #window-music-player {
     width: 400px;
-    height: 400px;
+    height: 450px;
     /* height: auto; */
     bottom: 4%; 
     right: 1%; 
@@ -215,6 +215,19 @@ a:active {
 .window-music-margin{
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+.music-player-top {
+    height: 30%;
+    flex: 0 0 50%;
+    min-height: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+    padding: 6px 12px;
 }
 
 /* .track-art-img {
@@ -236,7 +249,7 @@ a:active {
 }
 
 #trackArt {
-    height: 10%;
+    height: 100px;
     object-fit: contain;
 }
 
@@ -741,6 +754,7 @@ hr {
     /* TOP HALF: ARTWORK + PLAYER CONTROLS */
     
     #window-music-player .music-player-top {
+        margin-top: 1em;
         height: 50%;
         flex: 0 0 50%;
         min-height: 0;
@@ -755,17 +769,17 @@ hr {
     
     #window-music-player .track-art-img {
         flex: 1;
-        /* height: 30px; */
+        height: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
     
     #window-music-player #trackArt {
-        max-width: 180px;
+        /* max-width: 180px; */
         /* max-height: 100%; */
         width: auto;
-        height: auto;
+        height: 200px;
         object-fit: contain;
     }
     
