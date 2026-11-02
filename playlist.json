@@ -1,6 +1,326 @@
 {
     "tracks": [
       {
+        "url": "hugh-f/albums/childhood-reunion/01-Pumpkin-Boy-.m4a",
+        "img": "hugh-f/albums/childhood-reunion/childhood-reunion.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/childhood-reunion/02-Life-Goes-On-My-Furry-Friends-.m4a",
+        "img": "hugh-f/albums/childhood-reunion/childhood-reunion.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/childhood-reunion/03-The-Dog-Is-Back-In-Town-.m4a",
+        "img": "hugh-f/albums/childhood-reunion/childhood-reunion.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/childhood-reunion/04-Winter-City-Girl-.m4a",
+        "img": "hugh-f/albums/childhood-reunion/childhood-reunion.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/childhood-reunion/05-I-Got-Spat-Out-Again-.m4a",
+        "img": "hugh-f/albums/childhood-reunion/childhood-reunion.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/childhood-reunion/06-Father's-Jeans.m4a",
+        "img": "hugh-f/albums/childhood-reunion/childhood-reunion.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/childhood-reunion/07-Rabbit-Hole.m4a",
+        "img": "hugh-f/albums/childhood-reunion/childhood-reunion.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/childhood-reunion/08-My-New-Fam.m4a",
+        "img": "hugh-f/albums/childhood-reunion/childhood-reunion.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/childhood-reunion/09-Wyoming.m4a",
+        "img": "hugh-f/albums/childhood-reunion/childhood-reunion.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/childhood-reunion/10-City-On-The-Moon.m4a",
+        "img": "hugh-f/albums/childhood-reunion/childhood-reunion.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/childhood-reunion/11-Rainy-Day.m4a",
+        "img": "hugh-f/albums/childhood-reunion/childhood-reunion.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/childhood-reunion/12-Childhood-Reunion.m4a",
+        "img": "hugh-f/albums/childhood-reunion/childhood-reunion.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/childhood-reunion/13-Father's-Genes.m4a",
+        "img": "hugh-f/albums/childhood-reunion/childhood-reunion.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/01-Co-Star.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/02-Castle-Hill.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/03-Money-Man.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/04-Man-Out-On-The-Road.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/05-I'm-Not-A-Deadbeat.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/06-I'm-Not-Your-Father.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/07-Trying-To-Forget-You.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/08-Get-Outta-My-Grill.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "singer-songwriter", "guitar"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/09-Bedroom-Sit.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "guitar"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/10-What-Would-I-Know-About-You.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/11-Winter-City-Girl.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/12-Family-Dinner.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/13-Scrambled-Eggs.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/14-Two-Of-Us.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/15-Leave-Me-Here.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/16-Connie-Didn't-Listen.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/17-Be-Still.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/18-I-Can't-Get-To-Sleep.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/19-Quiet,-Lazy-Life.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/20-Dad-Explains-Planes.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/21-Grand-Designs.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/22-The-Sims-2.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "guitar"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/23-Overload.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/24-Fix-My-Feet.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/25-Share-House-Scene.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/26-Measure-Up.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/27-Short-And-Sweet.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/28-Crazy-Little-Bird.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/29-Goodbye.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/30-Slaughterhouse.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "guitar"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/31-You-Will-Remember-Love.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/32-The-Sun-Just-Keeps-On-Rising.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/33-Hillside.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "guitar"]
+      },
+      {
+        "url": "hugh-f/albums/do-you-have-a-minute/34-Woman-Up-The-Street.m4a",
+        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/rise-and-shine/01-Annabelle.m4a",
+        "img": "hugh-f/albums/rise-and-shine/rise-and-shine.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/rise-and-shine/02-Got-Gacked-At-Guerns.m4a",
+        "img": "hugh-f/albums/rise-and-shine/rise-and-shine.jpg",
+        "tags": ["all", "guitar"]
+      },
+      {
+        "url": "hugh-f/albums/rise-and-shine/03-Long-Walk.m4a",
+        "img": "hugh-f/albums/rise-and-shine/rise-and-shine.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/rise-and-shine/04-Lulu.m4a",
+        "img": "hugh-f/albums/rise-and-shine/rise-and-shine.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/rise-and-shine/05-Punt-Road-Goanna-Beach.m4a",
+        "img": "hugh-f/albums/rise-and-shine/rise-and-shine.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/rise-and-shine/06-Checking-Out-Some-Oppo-Shoppos-With-Mum.m4a",
+        "img": "hugh-f/albums/rise-and-shine/rise-and-shine.jpg",
+        "tags": ["all", "guitar"]
+      },
+      {
+        "url": "hugh-f/albums/rise-and-shine/07-Jeffs-Zoomy-Car.m4a",
+        "img": "hugh-f/albums/rise-and-shine/rise-and-shine.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/rise-and-shine/08-A-Day-On-The-Fruit-Farm.m4a",
+        "img": "hugh-f/albums/rise-and-shine/rise-and-shine.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/rise-and-shine/09-Rise-And-Shine.m4a",
+        "img": "hugh-f/albums/rise-and-shine/rise-and-shine.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/albums/rise-and-shine/10-I-Miss-You.m4a",
+        "img": "hugh-f/albums/rise-and-shine/rise-and-shine.jpg",
+        "tags": ["all", "guitar"]
+      },
+      {
+        "url": "hugh-f/ants-on-the-hill.m4a",
+        "img": "hugh-f/ants-on-the-hill.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/frogs-return.m4a",
+        "img": "hugh-f/frogs-return.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/itty-bitty-beast.m4a",
+        "img": "hugh-f/itty-bitty-beast.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/only-clover.m4a",
+        "img": "hugh-f/only-clover.jpg",
+        "tags": ["featured", "all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/quarter-of-a-camel.m4a",
+        "img": "hugh-f/quarter-of-a-camel.jpg",
+        "tags": ["featured", "all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/the-bar.m4a",
+        "img": "hugh-f/the-bar.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
+        "url": "hugh-f/the-horse-is-way-too-high.m4a",
+        "img": "hugh-f/the-horse-is-way-too-high.jpg",
+        "tags": ["all", "singer-songwriter"]
+      },
+      {
         "url": "all-the-big-bangs/alignment-point.m4a",
         "img": "all-the-big-bangs/alignment-point.jpg",
         "tags": ["all", "ambient-d#"]
@@ -429,326 +749,6 @@
         "url": "hallway-poems/fish.m4a",
         "img": "hallway-poems/fish.jpg",
         "tags": ["all", "piano"]
-      },
-      {
-        "url": "hugh-f/albums/childhood-reunion/01-Pumpkin-Boy-.m4a",
-        "img": "hugh-f/albums/childhood-reunion/childhood-reunion.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/childhood-reunion/02-Life-Goes-On-My-Furry-Friends-.m4a",
-        "img": "hugh-f/albums/childhood-reunion/childhood-reunion.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/childhood-reunion/03-The-Dog-Is-Back-In-Town-.m4a",
-        "img": "hugh-f/albums/childhood-reunion/childhood-reunion.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/childhood-reunion/04-Winter-City-Girl-.m4a",
-        "img": "hugh-f/albums/childhood-reunion/childhood-reunion.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/childhood-reunion/05-I-Got-Spat-Out-Again-.m4a",
-        "img": "hugh-f/albums/childhood-reunion/childhood-reunion.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/childhood-reunion/06-Father's-Jeans.m4a",
-        "img": "hugh-f/albums/childhood-reunion/childhood-reunion.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/childhood-reunion/07-Rabbit-Hole.m4a",
-        "img": "hugh-f/albums/childhood-reunion/childhood-reunion.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/childhood-reunion/08-My-New-Fam.m4a",
-        "img": "hugh-f/albums/childhood-reunion/childhood-reunion.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/childhood-reunion/09-Wyoming.m4a",
-        "img": "hugh-f/albums/childhood-reunion/childhood-reunion.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/childhood-reunion/10-City-On-The-Moon.m4a",
-        "img": "hugh-f/albums/childhood-reunion/childhood-reunion.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/childhood-reunion/11-Rainy-Day.m4a",
-        "img": "hugh-f/albums/childhood-reunion/childhood-reunion.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/childhood-reunion/12-Childhood-Reunion.m4a",
-        "img": "hugh-f/albums/childhood-reunion/childhood-reunion.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/childhood-reunion/13-Father's-Genes.m4a",
-        "img": "hugh-f/albums/childhood-reunion/childhood-reunion.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/01-Co-Star.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/02-Castle-Hill.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/03-Money-Man.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/04-Man-Out-On-The-Road.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/05-I'm-Not-A-Deadbeat.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/06-I'm-Not-Your-Father.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/07-Trying-To-Forget-You.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/08-Get-Outta-My-Grill.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "singer-songwriter", "guitar"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/09-Bedroom-Sit.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "guitar"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/10-What-Would-I-Know-About-You.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/11-Winter-City-Girl.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/12-Family-Dinner.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/13-Scrambled-Eggs.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/14-Two-Of-Us.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/15-Leave-Me-Here.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/16-Connie-Didn't-Listen.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/17-Be-Still.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/18-I-Can't-Get-To-Sleep.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/19-Quiet,-Lazy-Life.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/20-Dad-Explains-Planes.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/21-Grand-Designs.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/22-The-Sims-2.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "guitar"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/23-Overload.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/24-Fix-My-Feet.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/25-Share-House-Scene.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/26-Measure-Up.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/27-Short-And-Sweet.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/28-Crazy-Little-Bird.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/29-Goodbye.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/30-Slaughterhouse.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "guitar"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/31-You-Will-Remember-Love.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/32-The-Sun-Just-Keeps-On-Rising.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/33-Hillside.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "guitar"]
-      },
-      {
-        "url": "hugh-f/albums/do-you-have-a-minute/34-Woman-Up-The-Street.m4a",
-        "img": "hugh-f/albums/do-you-have-a-minute/do-you-have-a-minute.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/rise-and-shine/01-Annabelle.m4a",
-        "img": "hugh-f/albums/rise-and-shine/rise-and-shine.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/rise-and-shine/02-Got-Gacked-At-Guerns.m4a",
-        "img": "hugh-f/albums/rise-and-shine/rise-and-shine.jpg",
-        "tags": ["all", "guitar"]
-      },
-      {
-        "url": "hugh-f/albums/rise-and-shine/03-Long-Walk.m4a",
-        "img": "hugh-f/albums/rise-and-shine/rise-and-shine.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/rise-and-shine/04-Lulu.m4a",
-        "img": "hugh-f/albums/rise-and-shine/rise-and-shine.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/rise-and-shine/05-Punt-Road-Goanna-Beach.m4a",
-        "img": "hugh-f/albums/rise-and-shine/rise-and-shine.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/rise-and-shine/06-Checking-Out-Some-Oppo-Shoppos-With-Mum.m4a",
-        "img": "hugh-f/albums/rise-and-shine/rise-and-shine.jpg",
-        "tags": ["all", "guitar"]
-      },
-      {
-        "url": "hugh-f/albums/rise-and-shine/07-Jeffs-Zoomy-Car.m4a",
-        "img": "hugh-f/albums/rise-and-shine/rise-and-shine.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/rise-and-shine/08-A-Day-On-The-Fruit-Farm.m4a",
-        "img": "hugh-f/albums/rise-and-shine/rise-and-shine.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/rise-and-shine/09-Rise-And-Shine.m4a",
-        "img": "hugh-f/albums/rise-and-shine/rise-and-shine.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/albums/rise-and-shine/10-I-Miss-You.m4a",
-        "img": "hugh-f/albums/rise-and-shine/rise-and-shine.jpg",
-        "tags": ["all", "guitar"]
-      },
-      {
-        "url": "hugh-f/ants-on-the-hill.m4a",
-        "img": "hugh-f/ants-on-the-hill.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/frogs-return.m4a",
-        "img": "hugh-f/frogs-return.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/itty-bitty-beast.m4a",
-        "img": "hugh-f/itty-bitty-beast.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/only-clover.m4a",
-        "img": "hugh-f/only-clover.jpg",
-        "tags": ["featured", "all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/quarter-of-a-camel.m4a",
-        "img": "hugh-f/quarter-of-a-camel.jpg",
-        "tags": ["featured", "all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/the-bar.m4a",
-        "img": "hugh-f/the-bar.jpg",
-        "tags": ["all", "singer-songwriter"]
-      },
-      {
-        "url": "hugh-f/the-horse-is-way-too-high.m4a",
-        "img": "hugh-f/the-horse-is-way-too-high.jpg",
-        "tags": ["all", "singer-songwriter"]
       },
       {
         "url": "minksy-bootsy/gerdy-go-do.m4a",
