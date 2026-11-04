@@ -743,13 +743,13 @@ hr {
         overflow: hidden;
     }
     
-    /* #window-music-player .music-player-layout {
+    #window-music-player .music-player-layout {
         display: flex;
         flex-direction: column;
         flex: 1;
         min-height: 0;
         overflow: hidden;
-    } */
+    }
     
     /* TOP HALF: ARTWORK + PLAYER CONTROLS */
     
