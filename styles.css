@@ -862,7 +862,7 @@ hr {
     
     /* ARTWORK */
     #window-music-player .track-art-img {
-        flex: 1 1 200px;
+        flex: 1 1 100px;
         min-height: 0;
         min-width: 0;
         width: 100%;
@@ -872,14 +872,14 @@ hr {
         /* overflow: hidden; */
     }
     
-    #window-music-player #trackArt {
-        /* display: block; */
+    /* #window-music-player #trackArt {
+        display: block;
         max-width: 80%;
         max-height: 80%;
         width: auto;
         height: auto;
-        /* object-fit: contain; */
-    } 
+        object-fit: contain;
+    }  */
    
     
     /* TRACK NAME */
