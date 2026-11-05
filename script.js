@@ -649,15 +649,15 @@ function toggleRepeat() {
     const button = document.getElementById('repeat');
 
     if (repeatMode === 0) {
-        button.textContent = '🔁';
+        button.textContent = 'rep';
         button.classList.remove('active');
         button.title = 'Repeat off';
     } else if (repeatMode === 1) {
-        button.textContent = '🔁';
+        button.textContent = 'rep';
         button.classList.add('active');
         button.title = 'Repeat all';
     } else {
-        button.textContent = '🔂';
+        button.textContent = 'rep1';
         button.classList.add('active');
         button.title = 'Repeat one';
     }
