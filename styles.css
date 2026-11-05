@@ -855,7 +855,7 @@ hr {
         gap: 5px;
         overflow: hidden;
         padding: 6px 12px 0;
-        margin-top: 2em;
+        margin-top: 3em;
     }
     
 
@@ -1086,7 +1086,7 @@ hr {
 }
 
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 380px) {
 
     #window-music-player .track-art-img {
         flex: 1 1 100px;
