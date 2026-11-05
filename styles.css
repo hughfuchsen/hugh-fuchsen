@@ -286,6 +286,12 @@ a:active {
     margin-top: 0.5em;
 }
 
+#window-music-player .player-controls button {
+    font-family: Arial, sans-serif;
+    font-variant-emoji: text;
+    /* color: black; */
+}
+
     /* TIMELINE */
  #window-music-player .track-timeline {
     width: 100%;
@@ -296,7 +302,11 @@ a:active {
     font-size: 0.7em;
     margin-top: 1em;
 }
-
+#window-music-player .player-controls button {
+    font-family: Arial, sans-serif;
+    font-variant-emoji: text;
+    color: black;
+}
 #window-music-player #timeSlider {
     appearance: none;
     -webkit-appearance: none;
