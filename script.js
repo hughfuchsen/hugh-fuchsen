@@ -359,7 +359,6 @@ function loadTrack(index) {
 
   trackName.textContent = name.toLowerCase();
 
-
   const artworkUrl = "https://music.hughfuchsen.workers.dev/" + track.img;
 
   trackArt.onload = () => {
