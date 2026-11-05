@@ -856,7 +856,7 @@ hr {
         gap: 5px;
         overflow: hidden;
         padding: 6px 12px 0;
-        margin-top: 1em;
+        margin-top: 0.3em;
     }
     
     /* ARTWORK */
@@ -988,7 +988,7 @@ hr {
     
     /* border-top: solid black 1px; */
     
-        height: 45%;
+        height: 50%;
         width: 100%;
         box-sizing: border-box;
     
