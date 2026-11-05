@@ -286,11 +286,6 @@ a:active {
     margin-top: 0.5em;
 }
 
-#window-music-player .player-controls button {
-    /* font-family: Arial, sans-serif; */
-    font-variant-emoji: text;
-    /* color: black; */
-}
 
     /* TIMELINE */
  #window-music-player .track-timeline {
@@ -993,7 +988,7 @@ hr {
     
     /* border-top: solid black 1px; */
     
-        height: 50%;
+        height: 45%;
         width: 100%;
         box-sizing: border-box;
     
