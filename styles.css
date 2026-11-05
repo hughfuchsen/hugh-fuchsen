@@ -761,33 +761,33 @@ hr {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: space-evenly;
         gap: 5px;
         overflow: hidden;
         padding: 6px 12px 0;
-        margin: 0;
+        margin-top: 2em;
     }
     
     /* ARTWORK */
     #window-music-player .track-art-img {
-        flex: 0 1 150px;
+        flex: 1 1 100px;
         min-height: 0;
         min-width: 0;
         width: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
-        overflow: hidden;
+        /* justify-content: center; */
+        /* overflow: hidden; */
     }
     
-    #window-music-player #trackArt {
+    /* #window-music-player #trackArt {
         display: block;
         max-width: 100%;
         max-height: 100%;
         width: auto;
         height: auto;
         object-fit: contain;
-    }
+    } */
     
     /* TRACK NAME */
     #window-music-player #trackName {
