@@ -791,14 +791,19 @@ function openAlbum(albumName) {
   
 
   // Only load the first track if nothing is currently playing
-  if (tracks.length > 0 && audio.paused) {
-    // Set the album as the current playlist
+  // Load the first album track if nothing has been loaded yet
+  if (albumTracks.length > 0 && !audio.src) {
     tracks = [...albumTracks];
     current = 0;
     currentTag = '';
+
     loadTrack(current);
+
+    // Make sure it doesn't autoplay
+    audio.pause();
     document.getElementById('playPauseToggle').textContent = '▶';
   }
+
 
   updatePlaylistUI();
 
