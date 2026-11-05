@@ -862,7 +862,7 @@ hr {
     
     /* ARTWORK */
     #window-music-player .track-art-img {
-        flex: 1 1 250px;
+        flex: 1 1 200px;
         min-height: 0;
         min-width: 0;
         width: 100%;
@@ -1085,7 +1085,7 @@ hr {
 }
 
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
 
     #window-music-player .track-art-img {
         flex: 1 1 100px;
