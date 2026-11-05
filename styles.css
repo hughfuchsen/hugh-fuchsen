@@ -824,6 +824,7 @@ hr {
 
         height: var(--fixed-viewport-height);
         max-height: var(--fixed-viewport-height);
+        min-height: 570px;
         flex-shrink: 0;
 
         margin: 2rem auto;
