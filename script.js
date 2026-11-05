@@ -1133,20 +1133,6 @@ function loadMusicFromURL() {
       current = trackIndex;
       currentTag = '';
 
-      const artworkUrl = "https://music.hughfuchsen.workers.dev/" + track.img;
-
-      trackArt.onload = () => {
-          console.log("Artwork loaded:", artworkUrl);
-      };
-
-      trackArt.onerror = () => {
-          console.error("Artwork failed to load:", artworkUrl);
-          trackArt.src = "/img/track-art-place-holder.gif";
-      };
-
-      trackArt.src = artworkUrl;
-
-
       loadTrack(current);
 
       audio.play()
