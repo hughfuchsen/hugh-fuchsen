@@ -495,6 +495,23 @@ timeSlider.addEventListener('input', () => {
 // }
 
 
+document.getElementById('share').addEventListener('click', async () => {
+  try {
+      await navigator.clipboard.writeText(window.location.href);
+
+      const toast = document.getElementById('share-toast');
+
+      toast.classList.add('show');
+
+      setTimeout(() => {
+          toast.classList.remove('show');
+      }, 2000);
+
+  } catch (error) {
+      console.error('Could not copy URL:', error);
+  }
+});
+
 
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
