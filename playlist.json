@@ -321,6 +321,106 @@
         "tags": ["all", "singer-songwriter"]
       },
       {
+        "url": "waxy-jack-symmons/already-made-it.m4a",
+        "img": "waxy-jack-symmons/already-made-it.jpg",
+        "tags": ["all", "guitar"]
+      },
+      {
+        "url": "waxy-jack-symmons/be-a-good-sport.m4a",
+        "img": "waxy-jack-symmons/be-a-good-sport.jpg",
+        "tags": ["all", "guitar"]
+      },
+      {
+        "url": "waxy-jack-symmons/buddies.m4a",
+        "img": "waxy-jack-symmons/buddies.jpg",
+        "tags": ["all", "guitar"]
+      },
+      {
+        "url": "waxy-jack-symmons/calm-collected-coq.m4a",
+        "img": "waxy-jack-symmons/calm-collected-coq.jpg",
+        "tags": ["all", "guitar"]
+      },
+      {
+        "url": "waxy-jack-symmons/coming-to.m4a",
+        "img": "waxy-jack-symmons/coming-to.jpg",
+        "tags": ["all", "guitar"]
+      },
+      {
+        "url": "waxy-jack-symmons/crazy-sit-and-think.m4a",
+        "img": "waxy-jack-symmons/crazy-sit-and-think.jpg",
+        "tags": ["all", "guitar"]
+      },
+      {
+        "url": "waxy-jack-symmons/curmudgeon.m4a",
+        "img": "waxy-jack-symmons/curmudgeon.jpg",
+        "tags": ["all", "guitar"]
+      },
+      {
+        "url": "waxy-jack-symmons/daily-daze.m4a",
+        "img": "waxy-jack-symmons/daily-daze.jpg",
+        "tags": ["all", "guitar"]
+      },
+      {
+        "url": "waxy-jack-symmons/daily-dose.m4a",
+        "img": "waxy-jack-symmons/daily-dose.jpg",
+        "tags": ["all", "guitar"]
+      },
+      {
+        "url": "waxy-jack-symmons/dirt-track.m4a",
+        "img": "waxy-jack-symmons/dirt-track.jpg",
+        "tags": ["all", "guitar"]
+      },
+      {
+        "url": "waxy-jack-symmons/grow-up.m4a",
+        "img": "waxy-jack-symmons/grow-up.jpg",
+        "tags": ["all", "guitar"]
+      },
+      {
+        "url": "waxy-jack-symmons/horsie-hunters.m4a",
+        "img": "waxy-jack-symmons/horsie-hunters.jpg",
+        "tags": ["all", "guitar"]
+      },
+      {
+        "url": "waxy-jack-symmons/hurt-no-more.m4a",
+        "img": "waxy-jack-symmons/hurt-no-more.jpg",
+        "tags": ["featured", "all", "guitar"]
+      },
+      {
+        "url": "waxy-jack-symmons/johnny-horse.m4a",
+        "img": "waxy-jack-symmons/johnny-horse.jpg",
+        "tags": ["all", "guitar"]
+      },
+      {
+        "url": "waxy-jack-symmons/krib-babes.m4a",
+        "img": "waxy-jack-symmons/krib-babes.jpg",
+        "tags": ["all", "guitar"]
+      },
+      {
+        "url": "waxy-jack-symmons/mommy-out-there.m4a",
+        "img": "waxy-jack-symmons/mommy-out-there.jpg",
+        "tags": ["all", "guitar"]
+      },
+      {
+        "url": "waxy-jack-symmons/reflecting-on-my-clucks.m4a",
+        "img": "waxy-jack-symmons/reflecting-on-my-clucks.jpg",
+        "tags": ["all", "guitar"]
+      },
+      {
+        "url": "waxy-jack-symmons/too-big.m4a",
+        "img": "waxy-jack-symmons/too-big.jpg",
+        "tags": ["featured", "all", "guitar"]
+      },
+      {
+        "url": "waxy-jack-symmons/wallace.m4a",
+        "img": "waxy-jack-symmons/wallace.jpg",
+        "tags": ["all", "guitar"]
+      },
+      {
+        "url": "waxy-jack-symmons/welcome-rooster.m4a",
+        "img": "waxy-jack-symmons/welcome-rooster.jpg",
+        "tags": ["all", "guitar"]
+      },
+      {
         "url": "all-the-big-bangs/alignment-point.m4a",
         "img": "all-the-big-bangs/alignment-point.jpg",
         "tags": ["all", "ambient-d#"]
@@ -879,106 +979,6 @@
         "url": "minksy-bootsy/grosto-bunken.m4a",
         "img": "minksy-bootsy/grosto-bunken.jpg",
         "tags": ["all", "gibberish"]
-      },
-      {
-        "url": "waxy-jack-symmons/already-made-it.m4a",
-        "img": "waxy-jack-symmons/already-made-it.jpg",
-        "tags": ["all", "guitar"]
-      },
-      {
-        "url": "waxy-jack-symmons/be-a-good-sport.m4a",
-        "img": "waxy-jack-symmons/be-a-good-sport.jpg",
-        "tags": ["all", "guitar"]
-      },
-      {
-        "url": "waxy-jack-symmons/buddies.m4a",
-        "img": "waxy-jack-symmons/buddies.jpg",
-        "tags": ["all", "guitar"]
-      },
-      {
-        "url": "waxy-jack-symmons/calm-collected-coq.m4a",
-        "img": "waxy-jack-symmons/calm-collected-coq.jpg",
-        "tags": ["all", "guitar"]
-      },
-      {
-        "url": "waxy-jack-symmons/coming-to.m4a",
-        "img": "waxy-jack-symmons/coming-to.jpg",
-        "tags": ["all", "guitar"]
-      },
-      {
-        "url": "waxy-jack-symmons/crazy-sit-and-think.m4a",
-        "img": "waxy-jack-symmons/crazy-sit-and-think.jpg",
-        "tags": ["all", "guitar"]
-      },
-      {
-        "url": "waxy-jack-symmons/curmudgeon.m4a",
-        "img": "waxy-jack-symmons/curmudgeon.jpg",
-        "tags": ["all", "guitar"]
-      },
-      {
-        "url": "waxy-jack-symmons/daily-daze.m4a",
-        "img": "waxy-jack-symmons/daily-daze.jpg",
-        "tags": ["all", "guitar"]
-      },
-      {
-        "url": "waxy-jack-symmons/daily-dose.m4a",
-        "img": "waxy-jack-symmons/daily-dose.jpg",
-        "tags": ["all", "guitar"]
-      },
-      {
-        "url": "waxy-jack-symmons/dirt-track.m4a",
-        "img": "waxy-jack-symmons/dirt-track.jpg",
-        "tags": ["all", "guitar"]
-      },
-      {
-        "url": "waxy-jack-symmons/grow-up.m4a",
-        "img": "waxy-jack-symmons/grow-up.jpg",
-        "tags": ["all", "guitar"]
-      },
-      {
-        "url": "waxy-jack-symmons/horsie-hunters.m4a",
-        "img": "waxy-jack-symmons/horsie-hunters.jpg",
-        "tags": ["all", "guitar"]
-      },
-      {
-        "url": "waxy-jack-symmons/hurt-no-more.m4a",
-        "img": "waxy-jack-symmons/hurt-no-more.jpg",
-        "tags": ["featured", "all", "guitar"]
-      },
-      {
-        "url": "waxy-jack-symmons/johnny-horse.m4a",
-        "img": "waxy-jack-symmons/johnny-horse.jpg",
-        "tags": ["all", "guitar"]
-      },
-      {
-        "url": "waxy-jack-symmons/krib-babes.m4a",
-        "img": "waxy-jack-symmons/krib-babes.jpg",
-        "tags": ["all", "guitar"]
-      },
-      {
-        "url": "waxy-jack-symmons/mommy-out-there.m4a",
-        "img": "waxy-jack-symmons/mommy-out-there.jpg",
-        "tags": ["all", "guitar"]
-      },
-      {
-        "url": "waxy-jack-symmons/reflecting-on-my-clucks.m4a",
-        "img": "waxy-jack-symmons/reflecting-on-my-clucks.jpg",
-        "tags": ["all", "guitar"]
-      },
-      {
-        "url": "waxy-jack-symmons/too-big.m4a",
-        "img": "waxy-jack-symmons/too-big.jpg",
-        "tags": ["featured", "all", "guitar"]
-      },
-      {
-        "url": "waxy-jack-symmons/wallace.m4a",
-        "img": "waxy-jack-symmons/wallace.jpg",
-        "tags": ["all", "guitar"]
-      },
-      {
-        "url": "waxy-jack-symmons/welcome-rooster.m4a",
-        "img": "waxy-jack-symmons/welcome-rooster.jpg",
-        "tags": ["all", "guitar"]
       },
       {
         "url": "xander-mae/pissed-my-pants.m4a",
