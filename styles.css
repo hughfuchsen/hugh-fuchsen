@@ -772,7 +772,7 @@ hr {
         /* flex: 1 1 0; */
         min-height: 0;
         min-width: 0;
-        height: 16em;
+        height: 25vh;
         width: 100%;
     
         display: flex;
