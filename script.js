@@ -375,6 +375,23 @@ function loadTrack(index) {
   audio.src =
       "https://music.hughfuchsen.workers.dev/" + track.url;
 
+
+
+
+  if (currentSection === 'atoz') 
+  {
+    const track = tracks[current];
+
+    const filename = track.url
+        .split('/')
+        .pop()
+        .replace(/\.[^/.]+$/, '')
+        .replace(/^\d+[\s.\_-]+/, '')
+        .toLowerCase();
+
+    history.replaceState(null, '', `/listen/${encodeURIComponent(filename)}`);
+  }    
+
   updatePlaylistUI();
 
   if ('mediaSession' in navigator) {
@@ -758,6 +775,8 @@ function openAlbum(albumName) {
   container.innerHTML = '';
   currentAlbum = albumName;
 
+  currentSection = 'album';
+
   history.replaceState(null, '', `/album/${encodeURIComponent(albumName)}`);
 
   const albumTracks = allTracks.filter(track => {
@@ -817,6 +836,8 @@ function openAlbum(albumName) {
 function openPlaylist(playlistName) {
   const container = document.getElementById('music-playlist-tracks');
   container.innerHTML = '';
+
+  currentSection = 'playlist';
 
   history.replaceState(
       null,
@@ -959,6 +980,7 @@ function getTrackName(track) {
       .replace(/-/g, ' ')
       .toLowerCase();
 }
+let currentSection = '';
 
 function openAtoZSection() {
 
@@ -976,8 +998,9 @@ function openAtoZSection() {
 
   });
   
-
   let currentLetter = '';
+
+  currentSection = 'atoz';
 
   sortedTracks.forEach((track) => {
 
@@ -1015,9 +1038,20 @@ function openAtoZSection() {
 
         if (current === -1) return;
 
-        currentTag = 'all a-z';
+        currentTag = 'all';
 
         loadTrack(current);
+        
+        const filename = track.url
+        .split('/')
+        .pop()
+        .replace(/\.[^/.]+$/, '')
+        .replace(/^\d+[\s.\_-]+/, '')
+        .toLowerCase();
+    
+        history.replaceState(null, '', `/listen/${encodeURIComponent(filename)}`);
+
+
         updatePlaylistUI();
 
         audio.play()

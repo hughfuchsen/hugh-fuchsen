@@ -250,7 +250,7 @@ a:active {
 }
 
 #trackArt {
-    height: 100px;
+    height: 80px;
     object-fit: contain;
 }
 
@@ -301,7 +301,7 @@ a:active {
     appearance: none;
     -webkit-appearance: none;
     flex: 1;
-    min-width: 0;
+    /* max-width: 150px; */
     height: 12px;
     margin: 0;
     background: transparent;
