@@ -901,7 +901,7 @@ hr {
         display: flex;
         justify-content: center;
         gap: 10px;
-        margin-top: 0.5em;
+        /* margin-top: 0.2em; */
     }
     
     /* TIMELINE */
@@ -912,7 +912,6 @@ hr {
         align-items: center;
         gap: 16px;
         font-size: 0.7em;
-        margin-top: 0.5px;
     }
     
     #window-music-player #timeSlider {
