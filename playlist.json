@@ -856,24 +856,19 @@
         "tags": ["featured", "all", "gibberish"]
       },
       {
-        "url": "minksy-bootsy/contemplation.m4a",
-        "img": "minksy-bootsy/contemplation.jpg",
-        "tags": ["all", "gibberish"]
+        "url": "minksy-bootsy/grubby-enough.m4a",
+        "img": "minksy-bootsy/grubby-enough.jpg",
+        "tags": ["featured", "all", "gibberish"]
       },
       {
-        "url": "minksy-bootsy/do-go-gerdy.m4a",
-        "img": "minksy-bootsy/do-go-gerdy.jpg",
+        "url": "minksy-bootsy/town-egg.m4a",
+        "img": "minksy-bootsy/town-egg.jpg",
         "tags": ["all", "gibberish"]
       },
       {
         "url": "minksy-bootsy/forgotten-boob.m4a",
         "img": "minksy-bootsy/forgotten-boob.jpg",
         "tags": ["all", "gibberish"]
-      },
-      {
-        "url": "minksy-bootsy/grubby-enough.m4a",
-        "img": "minksy-bootsy/grubby-enough.jpg",
-        "tags": ["featured", "all", "gibberish"]
       },
       {
         "url": "minksy-bootsy/harold-is-just-not-waking-up.m4a",
@@ -921,18 +916,23 @@
         "tags": ["all", "gibberish"]
       },
       {
-        "url": "minksy-bootsy/regular-couch-joe.m4a",
-        "img": "minksy-bootsy/regular-couch-joe.jpg",
-        "tags": ["all", "gibberish"]
-      },
-      {
         "url": "minksy-bootsy/ricky-smidge.m4a",
         "img": "minksy-bootsy/ricky-smidge.jpg",
         "tags": ["all", "gibberish"]
       },
       {
+        "url": "minksy-bootsy/contemplation.m4a",
+        "img": "minksy-bootsy/contemplation.jpg",
+        "tags": ["all", "gibberish"]
+      },
+      {
         "url": "minksy-bootsy/run-wit-sigmud.m4a",
         "img": "minksy-bootsy/run-wit-sigmud.jpg",
+        "tags": ["all", "gibberish"]
+      },
+      {
+        "url": "minksy-bootsy/regular-couch-joe.m4a",
+        "img": "minksy-bootsy/regular-couch-joe.jpg",
         "tags": ["all", "gibberish"]
       },
       {
@@ -956,8 +956,8 @@
         "tags": ["all", "gibberish"]
       },
       {
-        "url": "minksy-bootsy/town-egg.m4a",
-        "img": "minksy-bootsy/town-egg.jpg",
+        "url": "minksy-bootsy/do-go-gerdy.m4a",
+        "img": "minksy-bootsy/do-go-gerdy.jpg",
         "tags": ["all", "gibberish"]
       },
       {
