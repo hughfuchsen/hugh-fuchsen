@@ -566,8 +566,28 @@
         "tags": ["all", "ambient-d#"]
       },
       {
+        "url": "chef-jef/squaggo.m4a",
+        "img": "chef-jef/squaggo.jpg",
+        "tags": ["featured", "all", "game soundtrack"]
+      },
+      {
+        "url": "chef-jef/shopping-roco.m4a",
+        "img": "chef-jef/shopping-roco.jpg",
+        "tags": ["all", "game soundtrack"]
+      },
+      {
+        "url": "chef-jef/marimba-sam.m4a",
+        "img": "chef-jef/marimba-sam.jpg",
+        "tags": ["featured", "all", "game soundtrack"]
+      },
+      {
         "url": "chef-jef/boss-of-the-apple.m4a",
         "img": "chef-jef/boss-of-the-apple.jpg",
+        "tags": ["all", "game soundtrack"]
+      },
+      {
+        "url": "chef-jef/wound-up.m4a",
+        "img": "chef-jef/wound-up.jpg",
         "tags": ["all", "game soundtrack"]
       },
       {
@@ -666,11 +686,6 @@
         "tags": ["all", "game soundtrack"]
       },
       {
-        "url": "chef-jef/marimba-sam.m4a",
-        "img": "chef-jef/marimba-sam.jpg",
-        "tags": ["featured", "all", "game soundtrack"]
-      },
-      {
         "url": "chef-jef/mouse-lounge.m4a",
         "img": "chef-jef/mouse-lounge.jpg",
         "tags": ["all", "game soundtrack"]
@@ -711,19 +726,9 @@
         "tags": ["all", "game soundtrack"]
       },
       {
-        "url": "chef-jef/shopping-roco.m4a",
-        "img": "chef-jef/shopping-roco.jpg",
-        "tags": ["all", "game soundtrack"]
-      },
-      {
         "url": "chef-jef/skipping-through-the-night-dunes.m4a",
         "img": "chef-jef/skipping-through-the-night-dunes.jpg",
         "tags": ["all", "game soundtrack"]
-      },
-      {
-        "url": "chef-jef/squaggo.m4a",
-        "img": "chef-jef/squaggo.jpg",
-        "tags": ["featured", "all", "game soundtrack"]
       },
       {
         "url": "chef-jef/take-me-back-susie.m4a",
@@ -738,11 +743,6 @@
       {
         "url": "chef-jef/where-are-the-worms.m4a",
         "img": "chef-jef/where-are-the-worms.jpg",
-        "tags": ["all", "game soundtrack"]
-      },
-      {
-        "url": "chef-jef/wound-up.m4a",
-        "img": "chef-jef/wound-up.jpg",
         "tags": ["all", "game soundtrack"]
       },
       {
